@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class NewAPI {
     @GetMapping("/new")
     public String getNew() {
-        return "Hello";
+        return "Hello word!!";
     }
 }
