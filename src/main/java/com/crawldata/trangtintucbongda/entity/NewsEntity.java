@@ -2,7 +2,11 @@ package com.crawldata.trangtintucbongda.entity;
 
 import jakarta.persistence.*;
 
+import javax.swing.text.View;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Table(name = "News")
 
@@ -11,13 +15,28 @@ public class NewsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @OneToMany(mappedBy = "viewedEntity", cascade = CascadeType.ALL)
+
+   // private List<ViewedEntity>  list = new ArrayList<>();
+
+    private  CategoryEntity categoryEntity;
 
     private Long news_id;
+    @Column(name = "news_title")
     private  String news_title;
+    @Column(name = "news_images")
     private String news_images;
+    @Column(name = "news_submitdate")
+
     private Date news_submitdate;
+    @Column(name = "news_describe")
+
     private String news_describe;
+    @Column(name = "news_author")
+
     private String news_author;
+
+
 
     public Long getNews_id() {
         return news_id;

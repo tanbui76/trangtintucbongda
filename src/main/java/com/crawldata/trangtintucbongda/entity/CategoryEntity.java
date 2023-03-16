@@ -4,14 +4,25 @@ package com.crawldata.trangtintucbongda.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.Generated;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
+@Table(name = "Category")
 
 public class CategoryEntity {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   @OneToMany(mappedBy = "Viewed", cascade = CascadeType.ALL)
+   @OneToMany(mappedBy = "categoryEntity", cascade = CascadeType.ALL)
+//   @JoinColumn(name = "category_id")
+   private List<NewsEntity> newsEntitys = new ArrayList<>();
+
+
     private int category_id ;
+
+    @Column(name = "category_name")
+
     private int category_name;
 
     public int getCategory_name() {
@@ -26,11 +37,5 @@ public class CategoryEntity {
         this.category_name = category_name;
     }
 
-    @Override
-    public String toString() {
-        return "CategoryEntity{" +
-                "category_id=" + category_id +
-                ", category_name=" + category_name +
-                '}';
-    }
+
 }
