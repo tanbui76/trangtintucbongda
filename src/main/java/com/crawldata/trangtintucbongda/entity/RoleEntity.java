@@ -11,7 +11,9 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long role_id;
 
-    @OneToMany(mappedBy = "role_id")
+    @OneToMany
+    @JoinColumn(name = "role_id")
+    @JoinTable(name = "Account")
     private List<AccountEntity> accountEntities;
 
     @Column(name = "role_name")

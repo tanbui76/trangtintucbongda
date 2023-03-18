@@ -13,15 +13,15 @@ import java.util.List;
 public class NewsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    @OneToMany(mappedBy = "viewedEntity", cascade = CascadeType.ALL)
+    private Long news_id;
 
-   // private List<ViewedEntity>  list = new ArrayList<>();
 
     private  CategoryEntity categoryEntity;
 
-    private Long news_id;
+//    @OneToMany(mappedBy = "viewedEntity", cascade = CascadeType.ALL)
+
+
+    // private List<ViewedEntity>  list = new ArrayList<>();
     @Column(name = "news_title")
     private  String news_title;
     @Column(name = "news_images")

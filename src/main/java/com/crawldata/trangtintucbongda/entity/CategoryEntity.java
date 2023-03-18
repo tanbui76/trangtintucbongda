@@ -9,20 +9,18 @@ import java.util.List;
 
 @Entity
 @Table(name = "Category")
-
 public class CategoryEntity {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   @OneToMany(mappedBy = "categoryEntity", cascade = CascadeType.ALL)
-//   @JoinColumn(name = "category_id")
+   private int category_id ;
+
+   @OneToMany
+   @JoinColumn(name = "category_id")
    private List<NewsEntity> newsEntitys = new ArrayList<>();
 
 
-    private int category_id ;
-
     @Column(name = "category_name")
-
     private int category_name;
 
     public int getCategory_name() {

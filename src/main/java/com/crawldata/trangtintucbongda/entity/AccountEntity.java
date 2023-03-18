@@ -9,10 +9,8 @@ import java.util.Date;
 public class AccountEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long account_id;
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    @JoinTable(name = "Role")
+    private Long account_id;
+
     private Long role_id;
 
     @Column(name = "account_fullname")

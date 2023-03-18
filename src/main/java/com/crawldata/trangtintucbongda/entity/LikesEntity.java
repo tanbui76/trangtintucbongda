@@ -11,36 +11,47 @@ public class LikesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long likes_id;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "news_id")
     @JoinTable(name = "News")
-    private long news_id;
+    private List<NewsEntity> newsEntities;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "account_id")
-    private long account_id;
+    @JoinTable(name = "Account")
+    private List<AccountEntity> accountEntities;
 
     public LikesEntity() {
     }
 
-    public LikesEntity(long news_id, long account_id) {
-        this.news_id = news_id;
-        this.account_id = account_id;
+    public LikesEntity(long likes_id, List<NewsEntity> newsEntities, List<AccountEntity> accountEntities) {
+        this.likes_id = likes_id;
+        this.newsEntities = newsEntities;
+        this.accountEntities = accountEntities;
     }
 
-    public long getNews_id() {
-        return news_id;
+    public long getLikes_id() {
+        return likes_id;
     }
 
-    public void setNews_id(long news_id) {
-        this.news_id = news_id;
+    public void setLikes_id(long likes_id) {
+        this.likes_id = likes_id;
     }
 
-    public long getAccount_id() {
-        return account_id;
+    public List<NewsEntity> getNewsEntities() {
+        return newsEntities;
     }
 
-    public void setAccount_id(long account_id) {
-        this.account_id = account_id;
+    public void setNewsEntities(List<NewsEntity> newsEntities) {
+        this.newsEntities = newsEntities;
     }
+
+    public List<AccountEntity> getAccountEntities() {
+        return accountEntities;
+    }
+
+    public void setAccountEntities(List<AccountEntity> accountEntities) {
+        this.accountEntities = accountEntities;
+    }
+
 }
