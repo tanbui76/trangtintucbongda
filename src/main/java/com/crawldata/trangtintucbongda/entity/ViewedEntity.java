@@ -3,12 +3,12 @@ package com.crawldata.trangtintucbongda.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Likes")
-public class LikesEntity {
+@Table(name = "Viewed")
+public class ViewedEntity {
     @Id
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long likes_id;
+    private Long viewed_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
@@ -18,10 +18,10 @@ public class LikesEntity {
     @JoinColumn(name = "news_id")
     private NewsEntity news;
 
-    public LikesEntity() {
+    public ViewedEntity() {
     }
 
-    public LikesEntity(AccountEntity account, NewsEntity news) {
+    public ViewedEntity(AccountEntity account, NewsEntity news) {
         this.account = account;
         this.news = news;
     }
@@ -42,7 +42,8 @@ public class LikesEntity {
         this.news = news;
     }
 
-    public Long getLikes_id() {
-        return likes_id;
+    public Long getViewed_id() {
+        return viewed_id;
     }
+
 }

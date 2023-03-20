@@ -3,45 +3,87 @@ package com.crawldata.trangtintucbongda.entity;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "Account")
 public class AccountEntity {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long account_id;
 
-    private Long role_id;
 
     @Column(name = "account_fullname")
-    private  String account_fullname;
+    private String account_fullname;
     @Column(name = "account_email")
-    private  String account_email;
+    private String account_email;
     @Column(name = "account_telephone")
-    private  String account_telephone;
+    private String account_telephone;
     @Column(name = "account_country")
-    private  String account_country;
+    private String account_country;
     @Column(name = "account_password")
-    private  String account_password;
+    private String account_password;
     @Column(name = "account_createdate")
     private Date account_createdate;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "role_id")
+    private RoleEntity role;
+
+    @OneToMany(mappedBy = "account")
+    private Set<CommentEntity> comments;
+
+    @OneToMany(mappedBy = "account")
+    private Set<ViewedEntity> viewed;
+
+    @OneToMany(mappedBy = "account")
+    private Set<LikesEntity> likes;
 
     public AccountEntity() {
     }
 
-    public AccountEntity(String account_fullname, String account_email, String account_telephone, String account_country, String account_password, Date account_createdate) {
+    public AccountEntity(String account_fullname, String account_email, String account_telephone, String account_country, String account_password, Date account_createdate, RoleEntity role, Set<CommentEntity> comments, Set<ViewedEntity> viewed, Set<LikesEntity> likes) {
         this.account_fullname = account_fullname;
         this.account_email = account_email;
         this.account_telephone = account_telephone;
         this.account_country = account_country;
         this.account_password = account_password;
         this.account_createdate = account_createdate;
+        this.role = role;
+        this.comments = comments;
+        this.viewed = viewed;
+        this.likes = likes;
     }
 
     public Long getAccount_id() {
         return account_id;
     }
 
+    public Set<CommentEntity> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<CommentEntity> comments) {
+        this.comments = comments;
+    }
+
+    public Set<LikesEntity> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Set<LikesEntity> likes) {
+        this.likes = likes;
+    }
+
+    public RoleEntity getRole() {
+        return role;
+    }
+
+    public void setRole(RoleEntity role) {
+        this.role = role;
+    }
 
     public String getAccount_fullname() {
         return account_fullname;
@@ -90,5 +132,4 @@ public class AccountEntity {
     public void setAccount_createdate(Date account_createdate) {
         this.account_createdate = account_createdate;
     }
-
 }
