@@ -1,5 +1,6 @@
 package com.crawldata.trangtintucbongda.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -16,6 +17,7 @@ public class CategoryEntity {
     private String category_name;
 
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private Set<NewsEntity> news;
 
     public CategoryEntity() {

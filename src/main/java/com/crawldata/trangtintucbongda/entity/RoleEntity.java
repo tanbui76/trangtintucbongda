@@ -1,5 +1,6 @@
 package com.crawldata.trangtintucbongda.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -13,9 +14,11 @@ public class RoleEntity {
     private Long role_id;
 
     @Column(name = "role_name")
+    @JsonIgnore
     private String role_name;
 
     @OneToMany(mappedBy = "role")
+    @JsonIgnore
     private Set<AccountEntity> accounts;
 
     public Long getRoleId() {
