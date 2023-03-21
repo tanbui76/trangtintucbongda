@@ -24,6 +24,9 @@ public class CategoryAPI {
         //convert entity to dto
         // cần xử lý chớ ko thể nào lấy entity đổ ra (chỉ đổ ra dữ liệu cần)
 
+
+
+
         return categoryService.getAllCategory();
     }
 
