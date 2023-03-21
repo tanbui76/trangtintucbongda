@@ -11,8 +11,19 @@
 
 <body>
   <script>
+    class News {
+      constructor(id, title, content, image, created_at) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.image = image;
+        this.created_at = created_at;
+      }
+    }
+  </script>
+  <script>
     $.ajax({
-      url: "https://example.com/api/data",
+      url: "http://localhost:8088/news",
       method: "GET",
       dataType: "json",
       success: function (data) {
