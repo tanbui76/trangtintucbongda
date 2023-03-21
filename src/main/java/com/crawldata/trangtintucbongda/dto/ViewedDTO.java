@@ -1,4 +1,4 @@
 package com.crawldata.trangtintucbongda.dto;
 
-public class NewsEntity {
+public class ViewedDTO {
 }
