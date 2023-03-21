@@ -1,5 +1,6 @@
 package com.crawldata.trangtintucbongda.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -30,12 +31,15 @@ public class AccountEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
+    @JsonIgnore
     private RoleEntity role;
 
     @OneToMany(mappedBy = "account")
+    @JsonIgnore
     private Set<CommentEntity> comments;
 
     @OneToMany(mappedBy = "account")
+    @JsonIgnore
     private Set<ViewedEntity> viewed;
 
     @OneToMany(mappedBy = "account")

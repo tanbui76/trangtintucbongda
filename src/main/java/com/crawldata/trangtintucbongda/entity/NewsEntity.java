@@ -1,5 +1,6 @@
 package com.crawldata.trangtintucbongda.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -14,13 +15,16 @@ public class NewsEntity {
     private Long news_id;
 
     @OneToMany(mappedBy = "news")
+    @JsonIgnore
     private Set<LikesEntity> likes;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
+    @JsonIgnore
     private CategoryEntity category;
 
     @OneToMany(mappedBy = "news")
+    @JsonIgnore
     private Set<CommentEntity> comments;
 
     @Column(name = "news_title")
