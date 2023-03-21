@@ -1,5 +1,6 @@
 package com.crawldata.trangtintucbongda.api;
 
+import com.crawldata.trangtintucbongda.converter.CategoryMapper;
 import com.crawldata.trangtintucbongda.entity.CategoryEntity;
 import com.crawldata.trangtintucbongda.service.CategoryService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import java.util.List;
 @RequestMapping("/category")
 public class CategoryAPI {
     private CategoryService categoryService;
+    private CategoryMapper categoryMapper;
 
     public CategoryAPI(CategoryService categoryService) {
         this.categoryService = categoryService;
@@ -19,6 +21,9 @@ public class CategoryAPI {
     // build create api get all category
     @GetMapping
     public List<CategoryEntity> getAllCategory(){
+        //convert entity to dto
+        // cần xử lý chớ ko thể nào lấy entity đổ ra (chỉ đổ ra dữ liệu cần)
+
         return categoryService.getAllCategory();
     }
 
