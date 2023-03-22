@@ -3,6 +3,7 @@ package com.crawldata.trangtintucbongda.api;
 import com.crawldata.trangtintucbongda.converter.CategoryMapper;
 import com.crawldata.trangtintucbongda.entity.CategoryEntity;
 import com.crawldata.trangtintucbongda.service.CategoryService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ public class CategoryAPI {
         this.categoryService = categoryService;
     }
     // build create api get all category
+    @CrossOrigin
     @GetMapping
     public List<CategoryEntity> getAllCategory(){
         //convert entity to dto
