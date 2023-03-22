@@ -251,8 +251,8 @@
                 <div class="card">
                   <div class="card-body">
                     <h2>Category</h2>
-                    <ul class="vertical-menu">
-                      <li><a href="#">Politics</a></li>
+                    <ul id="category-list" class="vertical-menu">
+                      <!-- <li><a href="#">Politics</a></li>
                       <li><a href="#">International</a></li>
                       <li><a href="#">Finance</a></li>
                       <li><a href="#">Health care</a></li>
@@ -263,7 +263,7 @@
                       <li><a href="#">Sports</a></li>
                       <li><a href="#">Game</a></li>
                       <li><a href="#">Art</a></li>
-                      <li><a href="#">Kids</a></li>
+                      <li><a href="#">Kids</a></li> -->
                     </ul>
                   </div>
                 </div>
@@ -989,9 +989,27 @@
     <script src="/static/assets/js/demo.js"></script>
     <script src="/static/assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
+
+  <script>
+    const getApi = 'http://localhost:8088/category';
+
+    fetch(getApi)
+    .then(function(response){
+      return response.json();
+      // JSON.parse -> Javascript type
+    })
+    .then(function(gets){
+      console.log(gets);
+      var categorys = gets.map(function(gets){
+        return`
+        <li><a href="#">${gets.category_name}</a></li>
+        `;
+      });
+      var html = categorys.join('');
+    var listCatgory =  document.getElementById('category-list').innerHTML = html;
+    console.log(listCatgory);
+    })
+    .catch(err => console.log('Error:',err));
+  </script>
   </body>
-
-
-
-
 </html>
