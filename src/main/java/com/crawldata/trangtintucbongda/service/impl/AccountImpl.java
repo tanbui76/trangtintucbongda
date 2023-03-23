@@ -19,4 +19,11 @@ public class AccountImpl implements AccountService {
     public List<AccountEntity> getAllAccount() {
         return accountRepository.findAll();
     }
+
+    @Override
+    public AccountEntity addAccount(AccountEntity account) {
+        return accountRepository.save(account);
+    }
+
+
 }
