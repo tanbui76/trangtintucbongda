@@ -16,15 +16,15 @@ public class AccountEntity {
     private Long account_id;
 
 
-    @Column(name = "account_fullname")
+    @Column(name = "account_fullname", columnDefinition = "nvarchar(max)")
     private String account_fullname;
-    @Column(name = "account_email")
+    @Column(name = "account_email", columnDefinition = "nvarchar(max)")
     private String account_email;
-    @Column(name = "account_telephone")
+    @Column(name = "account_telephone", columnDefinition = "nvarchar(max)")
     private String account_telephone;
-    @Column(name = "account_country")
+    @Column(name = "account_country", columnDefinition = "nvarchar(max)")
     private String account_country;
-    @Column(name = "account_password")
+    @Column(name = "account_password", columnDefinition = "nvarchar(max)")
     private String account_password;
     @Column(name = "account_createdate")
     private Date account_createdate;

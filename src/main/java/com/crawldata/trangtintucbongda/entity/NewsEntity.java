@@ -27,18 +27,17 @@ public class NewsEntity {
     @JsonIgnore
     private Set<CommentEntity> comments;
 
-    @Column(name = "news_title")
+    @Column(name = "news_title", columnDefinition = "nvarchar(max)")
     private String news_title;
-    @Column(name = "news_images")
+    @Column(name = "news_images", columnDefinition = "nvarchar(max)")
     private String news_images;
     @Column(name = "news_submitdate")
 
     private Date news_submitdate;
-    @Column(name = "news_describe")
+    @Column(name = "news_describe", columnDefinition = "nvarchar(max)")
 
     private String news_describe;
-    @Column(name = "news_author")
-
+    @Column(name = "news_author", columnDefinition = "nvarchar(max)")
     private String news_author;
 
     public NewsEntity() {
