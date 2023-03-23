@@ -19,8 +19,9 @@ public class NewsAPI {
     }
 
     @CrossOrigin
-    @GetMapping
+    @GetMapping("/getAllNews")
     public List<NewsEntity> getAllNews() {
         return newsService.getAllNews();
     }
+
 }
