@@ -2,10 +2,7 @@ package com.crawldata.trangtintucbongda.api;
 
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.service.NewsService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,8 +16,15 @@ public class NewsAPI {
     }
 
     @CrossOrigin
-    @GetMapping
+    @GetMapping("/getAllNews")
     public List<NewsEntity> getAllNews() {
         return newsService.getAllNews();
     }
+
+    @CrossOrigin
+    @GetMapping("/getNewsByID/{id}")
+    public NewsEntity getNewsByID(@PathVariable Long id){
+        return newsService.getNewsById(id);
+    }
+
 }
