@@ -11,7 +11,7 @@ public class CommentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long comment_id;
 
-    @Column(name = "comment_title")
+    @Column(name = "comment_title", columnDefinition = "nvarchar(max)")
     private String comment_title;
 
     @ManyToOne(fetch = FetchType.LAZY)
