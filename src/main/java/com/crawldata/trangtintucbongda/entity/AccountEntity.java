@@ -10,6 +10,7 @@ import java.util.Set;
 @Table(name = "Account")
 public class AccountEntity {
 
+
     @Id
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
