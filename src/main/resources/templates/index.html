@@ -268,10 +268,12 @@
                   </div>
                 </div>
               </div>
+
+
               <div class="col-lg-9 stretch-card grid-margin">
                 <div class="card">
-                  <div class="card-body">
-                    <div class="row">
+                  <div id="" class="card-body">
+                    <div id="listNew" class="row">
                       <div class="col-sm-4 grid-margin">
                         <div class="position-relative">
                           <div class="rotate-img">
@@ -303,7 +305,7 @@
                       </div>
                     </div>
 
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-sm-4 grid-margin">
                         <div class="position-relative">
                           <div class="rotate-img">
@@ -363,7 +365,7 @@
                           text ever since the 1500s, when an
                         </p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -992,6 +994,29 @@
 
   <script>
     const getApi = 'http://localhost:8088/category';
+    const getNewsApi = 'http://localhost:8088//homePage';
+
+     fetch(getNewsApi)
+    .then(function(response){
+      return response.json();
+      // JSON.parse -> Javascript type
+    })
+    .then(function(gets){
+      console.log(gets);
+      var news = gets.map(function(gets){
+        return`
+        <li><a href="#">${gets.category_name}</a></li>
+        `;
+      });
+      var html = categorys.join('');
+    var listCatgory =  document.getElementById('category-list').innerHTML = html;
+    console.log(listCatgory);
+    })
+    .catch(err => console.log('Error:',err));
+
+
+
+
 
     fetch(getApi)
     .then(function(response){
