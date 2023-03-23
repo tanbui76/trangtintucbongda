@@ -4,49 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  // Nếu sử dụng jQuery
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
   <div id="content"></div>
-  <script>
-    // tao class News de chua du lieu co dam bao tinh dong goi
-    class News {
-      constructor(id, title, content, image, created_at) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.image = image;
-        this.created_at = created_at;
-      }
-    }
-  </script>
   <script>
     $.ajax({
       url: "http://localhost:8088/news",
       method: "GET",
       dataType: "json",
       success: function (data) {
+        var container = document.getElementById("content");
         console.log(data);
-        // tao danh sach ListSach chua cac news
-        var listNews = [];
-        // convert du lieu tu json sang danh sach cac doi tuong News
-        for (var i = 0; i < data.length; i++) {
-          var news = new News(data[i].id, data[i].title, data[i].content, data[i].image, data[i].created_at);
-          listNews.push(news);
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          var news = {
+            news_author: element.news_author,
+            news_describe: element.news_describe,
+            news_id: element.news_id,
+            news_images: element.news_images,
+            news_submitdate: element.news_submitdate,
+            news_title: element.news_title,
+          }
+          var temp = "<p>"+news.news_id +"</p>" + "<p>"+news.news_author +"</p>"+"<p>"+news.news_describe +"</p>"+"<p>"+news.news_title +"</p>";
+          container.innerHTML += temp;
         }
-        console.log(listNews);
-        // do danh sach listNews vao trong the html
-        var content = "";
-        for (var i = 0; i < listNews.length; i++) {
-          content += "<div>";
-          content += "<h3>" + listNews[i].title + "</h3>";
-          content += "<p>" + listNews[i].content + "</p>";
-          content += "<img src='" + listNews[i].image + "' width='100px' height='100px'/>";
-          content += "<p>" + listNews[i].created_at + "</p>";
-          content += "</div>";
-        }
-        document.getElementById("content").innerHTML = content;
       },
       error: function (xhr, status, error) {
         console.log(error);
