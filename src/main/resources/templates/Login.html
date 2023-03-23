@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="/static/css/Login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div class="scroll-down">SCROLL DOWN
@@ -14,23 +15,25 @@
 <div class="container"></div>
 <div class="modal">
     <div class="modal-container">
-        <div class="modal-left">
-            <h1 class="modal-title">Welcome!</h1>
-            <p class="modal-desc">Fanny pack hexagon food truck, street art waistcoat kitsch.</p>
-            <div class="input-block">
-                <label for="email" class="input-label">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+        <form id="LoginForm" action="http://localhost:8088/account/getAccountByUserAndPass" method="post">
+            <div class="modal-left">
+                <h1 class="modal-title">Welcome!</h1>
+                <p class="modal-desc">Please login below.</p>
+                <div class="input-block">
+                    <label for="username" class="input-label">Username</label>
+                    <input type="username" name="Username" id="Username" placeholder="Username">
+                </div>
+                <div class="input-block">
+                    <label for="password" class="input-label">Password</label>
+                    <input type="password" name="Password" id="Password" placeholder="Password">
+                </div>
+                <div class="modal-buttons">
+                <!--    <a href="" class="">Forgot your password?</a>-->
+                    <button class="input-button">Login</button>
+                </div>
+                <p class="sign-up">Don't have an account? <a href="#">Sign up now</a></p>
             </div>
-            <div class="input-block">
-                <label for="password" class="input-label">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </div>
-            <div class="modal-buttons">
-                <a href="" class="">Forgot your password?</a>
-                <button class="input-button">Login</button>
-            </div>
-            <p class="sign-up">Don't have an account? <a href="#">Sign up now</a></p>
-        </div>
+        </form>
         <div class="modal-right">
             <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfd2ec5a01006fd8c4d7592a381d3776&auto=format&fit=crop&w=1000&q=80"
                  alt="">
@@ -46,5 +49,27 @@
     <script src="/static/js/Login.js"></script>
 
 </div>
+<script>
+$(document).ready(function() {
+  $('#LoginForm').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: $(this).attr('action'),
+      type: $(this).attr('method'),
+      data: $(this).serialize(),
+      success: function(data) {
+        if(data==""){
+            alert("Username or password wrong!");
+        }
+        window.location.href = "index.html";
+      },
+      error: function(xhr, status, error) {
+        // Xử lý lỗi nếu có.
+        console.log(error);
+      }
+    });
+  });
+});
+  </script>
 </body>
 </html>
