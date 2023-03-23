@@ -42,6 +42,7 @@ public class AccountEntity {
     @JsonIgnore
     private Set<ViewedEntity> viewed;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "account")
     private Set<LikesEntity> likes;
 
