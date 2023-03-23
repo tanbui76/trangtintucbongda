@@ -10,13 +10,13 @@ public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long notification_id;
 
-    @Column(name = "notification_content")
+    @Column(name = "notification_content", columnDefinition = "nvarchar(max)")
     private String notification_content;
 
-    @Column(name = "notification_title")
+    @Column(name = "notification_title", columnDefinition = "nvarchar(max)")
     private String notification_title;
 
-    @Column(name = "notification_datetime")
+    @Column(name = "notification_datetime", columnDefinition = "nvarchar(max)")
     private String notification_datetime;
 
     public NotificationEntity() {

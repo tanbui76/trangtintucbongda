@@ -13,7 +13,7 @@ public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long category_id;
 
-    @Column(name = "category_name")
+    @Column(name = "category_name", columnDefinition = "nvarchar(max)")
     private String category_name;
 
     @OneToMany(mappedBy = "category")
