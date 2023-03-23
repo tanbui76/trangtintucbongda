@@ -1,9 +1,9 @@
 package com.crawldata.trangtintucbongda.dto;
 
 public class ViewedDTO {
-     private Long viewed_id;
-     private Long account_id;
-     private Long news_id;
+    private Long viewed_id;
+    private Long account_id;
+    private Long news_id;
 
     public ViewedDTO() {
     }

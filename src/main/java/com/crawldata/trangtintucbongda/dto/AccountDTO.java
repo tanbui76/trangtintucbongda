@@ -23,7 +23,6 @@ public class AccountDTO {
         this.account_createdate = account_createdate;
         this.role_id = role_id;
     }
-
     public String getAccount_fullname() {
         return account_fullname;
     }
@@ -79,4 +78,5 @@ public class AccountDTO {
     public void setRole_id(Long role_id) {
         this.role_id = role_id;
     }
+
 }
