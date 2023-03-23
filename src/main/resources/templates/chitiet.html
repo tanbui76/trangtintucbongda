@@ -4,30 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  // Nếu sử dụng jQuery
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-
 <body>
-  <script>
-    class News {
-      constructor(id, title, content, image, created_at) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.image = image;
-        this.created_at = created_at;
-      }
-    }
-  </script>
+  <div id="content"></div>
   <script>
     $.ajax({
       url: "http://localhost:8088/news",
       method: "GET",
       dataType: "json",
       success: function (data) {
+        var container = document.getElementById("content");
         console.log(data);
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          var news = {
+            news_author: element.news_author,
+            news_describe: element.news_describe,
+            news_id: element.news_id,
+            news_images: element.news_images,
+            news_submitdate: element.news_submitdate,
+            news_title: element.news_title,
+          }
+          var temp = "<p>"+news.news_id +"</p>" + "<p>"+news.news_author +"</p>"+"<p>"+news.news_describe +"</p>"+"<p>"+news.news_title +"</p>";
+          container.innerHTML += temp;
+        }
       },
       error: function (xhr, status, error) {
         console.log(error);

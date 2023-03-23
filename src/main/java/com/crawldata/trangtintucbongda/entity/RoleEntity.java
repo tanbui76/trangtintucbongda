@@ -14,7 +14,7 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long role_id;
 
-    @Column(name = "role_name")
+    @Column(name = "role_name", columnDefinition = "nvarchar(max)")
     @JsonIgnore
     private String role_name;
 

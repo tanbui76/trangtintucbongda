@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $.ajax({
+          url: "http://localhost:8088/category",
+          method: "GET",
+          dataType: "json",
+          success: function (data) {
+            var container = document.getElementById("content");
+            console.log(data);
+            for(let i = 0; i < data.length; i++) {
+                const element = data[i];
+                var category = {
+                    category_id: element.category_id,
+                    category_name: element.category_name,
+                }
+                var temp = "<p>" + category.category_id + "</p>" + "<p>" + category.category_name + "</p>";
+                container.innerHTML += temp;
+            }
+          },
+          error: function (xhr, status, error) {
+            console.log(error);
+          }
+        });
+      </script>
+</body>
+</html>

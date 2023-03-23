@@ -27,24 +27,26 @@ public class NewsEntity {
     @JsonIgnore
     private Set<CommentEntity> comments;
 
-    @Column(name = "news_title")
+    @Column(name = "news_title", columnDefinition = "nvarchar(max)")
     private String news_title;
-    @Column(name = "news_images")
+    @Column(name = "news_images", columnDefinition = "nvarchar(max)")
     private String news_images;
     @Column(name = "news_submitdate")
 
     private Date news_submitdate;
-    @Column(name = "news_describe")
+    @Column(name = "news_describe", columnDefinition = "nvarchar(max)")
 
     private String news_describe;
-    @Column(name = "news_author")
-
+    @Column(name = "news_author", columnDefinition = "nvarchar(max)")
     private String news_author;
+
+    @Column(name="news_detailContent",columnDefinition = "nvarchar(max)")
+    private String news_detailContent;
 
     public NewsEntity() {
     }
 
-    public NewsEntity(Set<LikesEntity> likes, CategoryEntity category, Set<CommentEntity> comments, String news_title, String news_images, Date news_submitdate, String news_describe, String news_author) {
+    public NewsEntity(Set<LikesEntity> likes, CategoryEntity category, Set<CommentEntity> comments, String news_title, String news_images, Date news_submitdate, String news_describe, String news_author,String news_detailContent) {
         this.likes = likes;
         this.category = category;
         this.comments = comments;
@@ -53,6 +55,7 @@ public class NewsEntity {
         this.news_submitdate = news_submitdate;
         this.news_describe = news_describe;
         this.news_author = news_author;
+        this.news_detailContent = news_detailContent;
     }
 
     public Set<LikesEntity> getLikes() {
@@ -113,5 +116,21 @@ public class NewsEntity {
 
     public void setCategory(CategoryEntity category) {
         this.category = category;
+    }
+
+    public Set<CommentEntity> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<CommentEntity> comments) {
+        this.comments = comments;
+    }
+
+    public String getNews_detailContent() {
+        return news_detailContent;
+    }
+
+    public void setNews_detailContent(String news_detailContent) {
+        this.news_detailContent = news_detailContent;
     }
 }
