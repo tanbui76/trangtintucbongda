@@ -21,7 +21,7 @@
     <!-- endinject -->
   </head>
 
-  <body>
+  <body onload="getAccount()">
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
@@ -888,11 +888,21 @@
     <script src="/static/assets/js/demo.js"></script>
     <script src="/static/assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
+
   <script>
-    function getAccount(){
+  function getAccount(){
+  var accountName = sessionStorage.getItem('Account');
+  const account =  document.getElementById('AccountName');
+  console.log(accountName);
+  console.log('Hello');
 
     }
+
   </script>
+
+
+
+
   <script>
     const getApi = 'http://localhost:8088/category';
     const getNewsApi = 'http://localhost:8088/news/getAllNews';
