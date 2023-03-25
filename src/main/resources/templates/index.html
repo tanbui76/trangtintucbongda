@@ -52,10 +52,11 @@
                       <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a href="Login.html" class="nav-link">Logout</a>
+                      <a href="#" class="nav-link">Sign in</a>
+                      <input type="text" readonly="readonly" value="" id="AccountName" />
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Sign in</a>
+                      <a href="Login.html" class="nav-link">Logout</a>
                     </li>
                   </ul>
                 </div>
@@ -887,7 +888,11 @@
     <script src="/static/assets/js/demo.js"></script>
     <script src="/static/assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
+  <script>
+    function getAccount(){
 
+    }
+  </script>
   <script>
     const getApi = 'http://localhost:8088/category';
     const getNewsApi = 'http://localhost:8088/news/getAllNews';
