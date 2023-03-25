@@ -69,7 +69,9 @@ $(document).ready(function() {
         if(data==""){
             alert("Tên đăng nhập hoặc mật khẩu không đúng!");
         }else{
-            sessionStorage.setItem("Account", data);
+            sessionStorage.setItem("Account",JSON.stringify(data));
+           
+
             window.location.href = "index.html";
         }
       },
