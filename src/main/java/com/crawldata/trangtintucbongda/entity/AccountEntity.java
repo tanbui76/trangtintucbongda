@@ -10,6 +10,7 @@ import java.util.Set;
 @Table(name = "Account")
 public class AccountEntity {
 
+
     @Id
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,6 +43,7 @@ public class AccountEntity {
     @JsonIgnore
     private Set<ViewedEntity> viewed;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "account")
     private Set<LikesEntity> likes;
 

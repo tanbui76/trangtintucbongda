@@ -6,6 +6,9 @@ import java.util.List;
 
 
 public interface AccountService {
-
     List<AccountEntity> getAllAccount();
+
+    AccountEntity getAccountByUserAndPass(String Username, String Password);
+
+    AccountEntity addAccount(AccountEntity account);
 }
