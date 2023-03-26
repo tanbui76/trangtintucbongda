@@ -11,6 +11,7 @@ import java.util.List;
 public class AccountAPI {
     private AccountService accountService;
 
+
     public AccountAPI(AccountService accountService){
         this.accountService = accountService;
     }
@@ -26,8 +27,6 @@ public class AccountAPI {
     public  AccountEntity getAccountByUserAndPass(String Username, String Password){
         return accountService.getAccountByUserAndPass(Username, Password);
     }
-
-
 
     @CrossOrigin
     @PostMapping("/addAccount")
