@@ -27,4 +27,9 @@ public class NewsAPI {
         return newsService.getNewsById(id);
     }
 
+    @CrossOrigin
+    @GetMapping("/getAllNewsByCategoryID/{id}")
+    public List<NewsEntity> getAllNewsByCategoryID(@PathVariable Long id){
+        return newsService.getAllNewsByCategoryId(id);
+    }
 }

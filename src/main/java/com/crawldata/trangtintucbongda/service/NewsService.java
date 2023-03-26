@@ -10,6 +10,8 @@ public interface NewsService {
 
     NewsEntity getNewsById(Long id);// lấy tin tức theo id
 
+    List<NewsEntity> getAllNewsByCategoryId(Long id);// lấy tất cả các tin tức theo id của category
+
     NewsEntity saveNews(NewsEntity newsEntity);// lưu tin tức
 
     NewsEntity updateNews(NewsEntity newsEntity);// cập nhật tin tức
