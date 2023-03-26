@@ -36,7 +36,7 @@
                             <a  href="" title="Bài đăng">Bài đăng</a>
                         </li> -->
                         <li>
-                            <a href="javascript:void(0);" id="myvne_logout_link_left">
+                            <a href="index.html" id="myvne_logout_link_left">
                                 Thoát                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H6.25716C6.00353 15.6929 5.78261 15.3578 5.59971 15H2C1.44772 15 1 14.5523 1 14V2C1 1.44772 1.44772 1 2 1H10C10.5523 1 11 1.44772 11 2V7.02242C11.3434 7.05337 11.6777 7.11588 12 7.20703V2C12 0.895431 11.1046 0 10 0H2ZM4 8C4 8.55229 3.55228 9 3 9C2.44772 9 2 8.55229 2 8C2 7.44771 2.44772 7 3 7C3.55228 7 4 7.44771 4 8ZM10.5 17C12.9853 17 15 14.9853 15 12.5C15 10.0147 12.9853 8 10.5 8C8.01472 8 6 10.0147 6 12.5C6 14.9853 8.01472 17 10.5 17ZM10.8536 14.8536C10.6583 15.0488 10.3417 15.0488 10.1464 14.8536C9.95118 14.6583 9.95118 14.3417 10.1464 14.1464L11.2929 13H8.5C8.22386 13 8 12.7761 8 12.5C8 12.2239 8.22386 12 8.5 12H11.2929L10.1464 10.8536C9.95119 10.6583 9.95119 10.3417 10.1464 10.1464C10.3417 9.95118 10.6583 9.95118 10.8536 10.1464L12.8536 12.1464C12.9015 12.1944 12.9377 12.2496 12.9621 12.3086C12.9861 12.3667 12.9996 12.4303 13 12.497L13 12.5L13 12.503C12.9996 12.5697 12.9861 12.6333 12.9621 12.6914C12.938 12.7495 12.9026 12.804 12.8557 12.8514L12.8532 12.854L10.8536 14.8536Z" fill="#757575"></path>
                             </svg>
@@ -45,9 +45,7 @@
                     </ul>
                 </div>
 
-                <div class="width_common box_category box_support" style="margin-top: 15px;">
-                    Cần hỗ trợ, vui lòng liên hệ:<br><a href="mailto:bandoc@vnexpress.net">bandoc@vnexpress.net</a>
-                </div>
+                
             </div>
 
 
@@ -84,30 +82,7 @@
                                 </div>
                             </div>
 
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Ảnh đại diện</div>
-                                    <p class="main_txt">
-                            <span class="img_upload_c">
-                                <img src="https://a1.vnecdn.net/t41768758468331016575.png?w=60&amp;h=60&amp;s=HUgGO-RyVMZ35GNiF0Ruug" alt="">                            </span>
-                                    </p>
-                                    <!--Uload complate-->
-                                    <div class="width_common box_upload_anh" id="box_upload" style="display:none;">
-                                        <input type="hidden" id="myvne_avatar_input" name="myvne_avatar" value="">
-                                        <div class="width_common upload_complete flex">
-                                <span class="img_upload_c">
-                                    <img id="myvne_avatar_img" src="https://a1.vnecdn.net/t41768758468331016575.png?w=60&amp;h=60&amp;s=HUgGO-RyVMZ35GNiF0Ruug">
-                                    <img src="https://a1.vnecdn.net/t41768758468331016575.png?w=60&amp;h=60&amp;s=HUgGO-RyVMZ35GNiF0Ruug" alt="">                                </span>
-                                            <span class="txt_note_upload name_file_upload" style="display:none;"></span>
-                                            <div class="item_input_log item_button_act">
-                                                <button id="btn_select_avatar" class="pri_button btn_lv2 has_transition">Chọn lại ảnh</button>
-                                                <button id="btn_save_avatar" class="pri_button btn_log has_transition">Lưu thay đổi</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="javascript:;" class="click_edit js_click_edit" id="edit_avatar">Thay ảnh đại diện</a>
-                                </div>
-                            </div>
+                            
 
                             <div class="item_fill_user">
                                 <div class="ctn_fill">
@@ -275,7 +250,7 @@
                             <div class="item_fill_user">
                                 <div class="ctn_fill">
                                     <div class="label_fill">Địa chỉ</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_address" class="width_common box_edit_form" style="display: none">
+                                    <p class="main_txt" id="country"></p>                        <div id="form_update_address" class="width_common box_edit_form" style="display: none">
                                     <p class="width_common tit_edit">Nhập địa chỉ</p>
                                     <div class="width_common form_edit form_log">
                                         <div class="item_input_log wrap-suggest">
@@ -298,231 +273,7 @@
                     <div class="width_common row_info_user">
                         <div class="tit_row">Công việc và học vấn</div>
                         <div class="width_common list_fill_user">
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Bằng cấp / Trình độ học vấn</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_school_level" class="width_common box_edit_form" style="display:none;">
-                                    <p class="width_common tit_edit">Chọn bằng cấp</p>
-                                    <div class="width_common form_edit form_log">
-                                        <div class="item_input_log">
-                                            <select class="input_form has_transition" name="school_level" id="school_level">
-                                                <option>----Tất cả----</option>
-                                                <option value="7">Trên đại học</option>
-                                                <option value="6">Đại học</option>
-                                                <option value="5">Cao đẳng</option>
-                                                <option value="4">Trung cấp</option>
-                                                <option value="3">Trung học phổ thông</option>
-                                                <option value="2">Trung học cơ sở</option>
-                                                <option value="1">Tiểu học</option>
-                                            </select>
-                                        </div>
-                                        <div class="item_input_log item_button_act">
-                                            <button id="btn_save_school_level" class="pri_button btn_log btn_disable has_transition" disabled="disabled">Lưu thay đổi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <a id="btn_change_school_level" href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                </div>
-                            </div>
-
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Ngành nghề</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_job_detail" class="width_common box_edit_form" style="display:none;">
-                                    <p class="width_common tit_edit">Chọn ngành nghề</p>
-                                    <div class="width_common form_edit form_log">
-                                        <div class="item_input_log">
-                                            <select class="input_form has_transition" name="job_detail" id="job_detail">
-                                                <option>----Tất cả----</option>
-                                                <option value="1">Kinh doanh / Bán hàng</option>
-                                                <option value="2">Biên / Phiên dịch</option>
-                                                <option value="3">Báo chí / Truyền hình</option>
-                                                <option value="4">Bưu chính - Viễn thông</option>
-                                                <option value="5">Bảo hiểm</option>
-                                                <option value="6">Bất động sản</option>
-                                                <option value="7">Chứng khoán / Vàng / Ngoại tệ</option>
-                                                <option value="8">Công nghệ cao</option>
-                                                <option value="9">Cơ khí / Chế tạo / Tự động hóa</option>
-                                                <option value="10">Du lịch</option>
-                                                <option value="11">Dầu khí/Hóa chất</option>
-                                                <option value="12">Dệt may / Da giày</option>
-                                                <option value="13">Dịch vụ khách hàng</option>
-                                                <option value="14">Điện tử viễn thông</option>
-                                                <option value="15">Điện / Điện tử / Điện lạnh</option>
-                                                <option value="16">Giáo dục / Đào tạo</option>
-                                                <option value="17">Hoá học / Sinh học</option>
-                                                <option value="18">Hoạch định/Dự án</option>
-                                                <option value="19">Hàng gia dụng</option>
-                                                <option value="20">Hàng hải</option>
-                                                <option value="21">Hàng không</option>
-                                                <option value="22">Hành chính / Văn phòng</option>
-                                                <option value="23">In ấn / Xuất bản</option>
-                                                <option value="24">IT Phần cứng / Mạng</option>
-                                                <option value="25">IT phần mềm</option>
-                                                <option value="26">Khách sạn / Nhà hàng</option>
-                                                <option value="27">Kế toán / Kiểm toán</option>
-                                                <option value="28">Marketing / Truyền thông / Quảng cáo</option>
-                                                <option value="29">Môi trường / Xử lý chất thải</option>
-                                                <option value="30">Mỹ phẩm / Trang sức</option>
-                                                <option value="31">Mỹ thuật / Nghệ thuật / Điện ảnh</option>
-                                                <option value="32">Ngân hàng / Tài chính</option>
-                                                <option value="33">Nhân sự</option>
-                                                <option value="34">Nông / Lâm / Ngư nghiệp</option>
-                                                <option value="35">Luật/Pháp lý</option>
-                                                <option value="36">Quản lý chất lượng (QA/QC)</option>
-                                                <option value="37">Quản lý điều hành</option>
-                                                <option value="38">Thiết kế đồ họa</option>
-                                                <option value="39">Thời trang</option>
-                                                <option value="40">Thực phẩm / Đồ uống</option>
-                                                <option value="41">Tư vấn</option>
-                                                <option value="42">Tổ chức sự kiện / Quà tặng</option>
-                                                <option value="43">Vận tải / Kho vận</option>
-                                                <option value="44">Logistics</option>
-                                                <option value="45">Xuất nhập khẩu</option>
-                                                <option value="46">Xây dựng</option>
-                                                <option value="47">Y tế / Dược</option>
-                                                <option value="48">Công nghệ Ô tô</option>
-                                                <option value="49">An toàn lao động</option>
-                                                <option value="50">Bán hàng kỹ thuật</option>
-                                                <option value="51">Bán lẻ / bán sỉ</option>
-                                                <option value="52">Bảo trì / Sữa chữa</option>
-                                                <option value="53">Dược phẩm / Công nghệ sinh học</option>
-                                                <option value="54">Địa chất / Khoáng sản</option>
-                                                <option value="55">Hàng cao cấp</option>
-                                                <option value="56">Hàng tiêu dùng</option>
-                                                <option value="57">Kiến trúc</option>
-                                                <option value="58">Phi chính phủ / Phi lợi nhuận</option>
-                                                <option value="59">Sản phẩm công nghiệp</option>
-                                                <option value="60">Sản xuất</option>
-                                                <option value="61">Tài chính / Đầu tư</option>
-                                                <option value="62">Thiết kế nội thất</option>
-                                                <option value="63">Thư ký / Trợ lý</option>
-                                                <option value="64">Spa / Làm đẹp</option>
-                                                <option value="65">Công nghệ thông tin</option>
-                                                <option value="66">NGO / Phi chính phủ / Phi lợi nhuận</option>
-                                                <option value="67">Ngành nghề khác</option>
-                                            </select>
-                                        </div>
-                                        <div class="item_input_log item_button_act">
-                                            <button id="btn_save_job_detail" class="pri_button btn_log btn_disable has_transition" disabled="disabled">Lưu thay đổi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <a id="btn_change_job_detail" href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                </div>
-                            </div>
-
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Cấp bậc</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_job_level" class="width_common box_edit_form" style="display:none;">
-                                    <p class="width_common tit_edit">Chọn cấp bậc</p>
-                                    <div class="width_common form_edit form_log">
-                                        <div class="item_input_log">
-                                            <select class="input_form has_transition" name="job_level" id="job_level">
-                                                <option>----Tất cả----</option>
-                                                <option value="1">Nhân viên</option>
-                                                <option value="2">Trưởng phòng / Trưởng nhóm</option>
-                                                <option value="3">Quản lý cấp cao</option>
-                                                <option value="4">Giám đốc</option>
-                                                <option value="5">Giám đốc điều hành</option>
-                                            </select>
-                                        </div>
-                                        <div class="item_input_log item_button_act">
-                                            <button id="btn_save_job_level" class="pri_button btn_log btn_disable has_transition" disabled="disabled">Lưu thay đổi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <a id="btn_change_job_level" href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                </div>
-                            </div>
-
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Lĩnh vực công ty</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_job_category" class="width_common box_edit_form" style="display:none;">
-                                    <p class="width_common tit_edit">Lĩnh vực hoạt động</p>
-                                    <div class="width_common form_edit form_log">
-                                        <div class="item_input_log">
-                                            <select class="input_form has_transition" name="job_category" id="job_category">
-                                                <option>----Tất cả----</option>
-                                                <option value="1">IT - Phần mềm</option>
-                                                <option value="2">Kế toán / Kiểm toán</option>
-                                                <option value="3">Luật</option>
-                                                <option value="4">Bảo hiểm</option>
-                                                <option value="5">Bất động sản</option>
-                                                <option value="6">Dược phẩm / Y tế / Công nghệ sinh học</option>
-                                                <option value="7">Internet / Online</option>
-                                                <option value="8">Marketing / Truyền thông / Quảng cáo</option>
-                                                <option value="9">Nhà hàng / Khách sạn</option>
-                                                <option value="10">In ấn / Xuất bản</option>
-                                                <option value="11">Bán lẻ - Hàng tiêu dùng - FMCG</option>
-                                                <option value="12">Sản xuất</option>
-                                                <option value="13">Chứng khoán</option>
-                                                <option value="14">Xây dựng</option>
-                                                <option value="15">Ngân hàng</option>
-                                                <option value="16">Nhân sự</option>
-                                                <option value="17">Thiết kế / kiến trúc</option>
-                                                <option value="18">Môi trường</option>
-                                                <option value="19">Xuất nhập khẩu</option>
-                                                <option value="20">Bảo trì / Sửa chữa</option>
-                                                <option value="21">Điện tử / Điện lạnh</option>
-                                                <option value="22">Thời trang</option>
-                                                <option value="23">Cơ khí</option>
-                                                <option value="24">Tư vấn</option>
-                                                <option value="25">Viễn thông</option>
-                                                <option value="26">Giáo dục / Đào tạo</option>
-                                                <option value="27">Thương mại điện tử</option>
-                                                <option value="28">Logistics - Vận tải</option>
-                                                <option value="29">Tổ chức phi lợi nhuận</option>
-                                                <option value="30">Cơ quan nhà nước</option>
-                                                <option value="31">Du lịch</option>
-                                                <option value="32">Tự động hóa</option>
-                                                <option value="33">Agency (Design/Development)</option>
-                                                <option value="34">Agency (Marketing/Advertising)</option>
-                                                <option value="35">Năng lượng</option>
-                                                <option value="36">Giải trí</option>
-                                                <option value="37">IT - Phần cứng</option>
-                                                <option value="38">Nông Lâm Ngư nghiệp</option>
-                                                <option value="39">Tài chính</option>
-                                                <option value="40">Khác</option>
-                                            </select>
-                                        </div>
-                                        <div class="item_input_log item_button_act">
-                                            <button id="btn_save_job_category" class="pri_button btn_log btn_disable has_transition" disabled="disabled">Lưu thay đổi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <a id="btn_change_job_category" href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                </div>
-                            </div>
-
-                            <div class="item_fill_user">
-                                <div class="ctn_fill">
-                                    <div class="label_fill">Thu nhập hàng tháng</div>
-                                    <p class="main_txt">Chưa có thông tin</p>                        <div id="form_update_salary_level" class="width_common box_edit_form" style="display:none;">
-                                    <p class="width_common tit_edit">Chọn khoảng thu nhập (đơn vị: đồng/tháng)</p>
-                                    <div class="width_common form_edit form_log">
-                                        <div class="item_input_log">
-                                            <select class="input_form has_transition" name="salary_level" id="salary_level">
-                                                <option>----Tất cả----</option>
-                                                <option value="1">Không có thu nhập</option>
-                                                <option value="2">≤ 11.000.000</option>
-                                                <option value="3">11.000.000 - 21.000.000</option>
-                                                <option value="4">21.000.000 - 29.000.000</option>
-                                                <option value="5">29.000.000 - 43.000.000</option>
-                                                <option value="6">43.000.000 - 63.000.000</option>
-                                                <option value="7">&gt; 63.000.000</option>
-                                            </select>
-                                        </div>
-                                        <div class="item_input_log item_button_act">
-                                            <button id="btn_save_salary_level" class="pri_button btn_log btn_disable has_transition" disabled="disabled">Lưu thay đổi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <a id="btn_change_salary_level" href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                </div>
-                            </div>
+                            
 
                             <div class="item_fill_user">
                                 <div class="ctn_fill">
@@ -591,6 +342,7 @@
     document.getElementById("fullname").innerHTML = Account.account_fullname;
     document.getElementById("email").innerHTML = Account.account_email;
     document.getElementById("sdt").innerHTML = Account.account_telephone;
+    document.getElementById("diachi").innerHTML = Account.account_country;
 </script>
 </body>
 </html>
