@@ -1,6 +1,7 @@
 package com.crawldata.trangtintucbongda.service;
 
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -17,6 +18,14 @@ public interface NewsService {
     NewsEntity updateNews(NewsEntity newsEntity);// cập nhật tin tức
 
     void deleteNews(int id);// xóa tin tức theo id
+    List<Long> getAllNewsId();
+    NewsEntity getNewsRandomId(Long id);
+
+
+
+
+
+
 
 
 }

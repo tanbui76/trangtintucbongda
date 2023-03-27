@@ -46,4 +46,16 @@ public class NewsImpl implements NewsService {
     public void deleteNews(int id) {
 
     }
+
+    @Override
+    public List<Long> getAllNewsId() {
+        return newsRepository.getListIdNews();
+    }
+
+    @Override
+    public NewsEntity getNewsRandomId(Long id) {
+        return newsRepository.getNewsRandomId(id);
+    }
+
+
 }
