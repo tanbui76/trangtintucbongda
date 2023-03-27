@@ -3,6 +3,7 @@ package com.crawldata.trangtintucbongda.service;
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import org.springframework.data.jpa.repository.Query;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -20,6 +21,8 @@ public interface NewsService {
     void deleteNews(int id);// xóa tin tức theo id
     List<Long> getAllNewsId();
     NewsEntity getNewsRandomId(Long id);
+    List<NewsEntity> getAllNewsEqualTwoDay();
+
 
 
 
