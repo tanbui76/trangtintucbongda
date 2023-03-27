@@ -85,13 +85,12 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_fullname"
-                                                        class="pri_button btn_log  has_transition btn_disable"
-                                                        disabled="disabled">Đổi tên
+                                                        class="pri_button btn_log">Đổi tên
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a id="btn_change_fullname" href="javascript:void(0)"
+                                    <a id="btn_change_fullname" href="javascript:void(0)" onclick="changeSomething('fullname')"
                                        class="click_edit js_click_edit">Thay đổi</a></div>
                             </div>
 
@@ -129,15 +128,14 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_email"
-                                                        class="pri_button btn_log  has_transition btn_disable"
-                                                        disabled="disabled">Đổi email
+                                                        class="pri_button btn_log  ">Đổi email
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="box_notify_change_mail" class="width_common box_edit_form"
                                          style="display: none"></div>
-                                    <a id="btn_change_email" href="javascript:void(0)" class="click_edit js_click_edit">Thay
+                                    <a id="btn_change_email"  href="javascript:void(0)" onclick="changeSomething('email')" class="click_edit js_click_edit">Thay
                                         đổi</a>
                                 </div>
                             </div>
@@ -146,7 +144,7 @@
                                 <div class="ctn_fill">
                                     <div class="label_fill">Mật khẩu</div>
                                     <p class="main_txt">
-                                        <input type="password" readonly="" value="1111111111111"
+                                        <input id="password" type="password" readonly="" value="1111111111111"
                                                style="font-size: 20px;width: unset !important;">
                                     </p>
                                     <div id="form_update_password" class="width_common box_edit_form"
@@ -184,8 +182,7 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_password"
-                                                        class="pri_button btn_log  has_transition btn_disable"
-                                                        disabled="disabled">Đổi mật khẩu
+                                                        class="pri_button btn_log  ">Đổi mật khẩu
                                                 </button>
                                                 <div class="right note_edit_mk">
                                                     <a href="javascript:void(0)" id="btn_forgot_pass"
@@ -195,7 +192,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a id="btn_change_password" href="javascript:void(0)"
+                                    <a id="btn_change_password" onclick="changeSomething('password')" href="javascript:void(0)"
                                        class="click_edit js_click_edit">Thay đổi</a>
                                 </div>
                             </div>
@@ -208,7 +205,7 @@
                             <div class="item_fill_user">
                                 <div class="ctn_fill">
                                     <div class="label_fill">Ngày sinh</div>
-                                    <p class="main_txt">Chưa có thông tin</p>
+                                    <p class="main_txt" id="birthday"></p>
                                     <div class="width_common box_edit_form" id="form_update_birthday"
                                          style="display:none;">
                                         <p class="width_common tit_edit">Ngày sinh (ngày / tháng / năm)</p>
@@ -219,13 +216,13 @@
                                                 <span class="error_fullname width_common mess_error"></span>
                                             </div>
                                             <div class="item_input_log item_button_act">
-                                                <button class="pri_button btn_log btn_disable has_transition"
-                                                        id="btn_save_birthday" disabled="disabled">Lưu thay đổi
+                                                <button class="pri_button btn_log "
+                                                        id="btn_save_birthday" >Lưu thay đổi
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="javascript:;" class="click_edit js_click_edit" id="btn_change_birthday">Thay
+                                    <a href="javascript:;" onclick="changeSomething('birthday')" class="click_edit js_click_edit" id="btn_change_birthday">Thay
                                         đổi</a>
                                 </div>
                             </div>
@@ -249,13 +246,12 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_sex"
-                                                        class="pri_button btn_log btn_disable has_transition"
-                                                        disabled="disabled">Lưu thay đổi
+                                                        class="pri_button btn_log ">Lưu thay đổi
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a id="btn_change_sex" href="javascript:void(0)" class="click_edit js_click_edit">Thay
+                                    <a id="btn_change_sex" onclick="changeSomething('sex')" href="javascript:void(0)" class="click_edit js_click_edit">Thay
                                         đổi</a></div>
                             </div>
 
@@ -274,13 +270,12 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_mobile"
-                                                        class="pri_button btn_log  has_transition btn_disable"
-                                                        disabled="disabled">Lưu thay đổi
+                                                        class="pri_button btn_log  ">Lưu thay đổi
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a id="btn_change_mobile" href="javascript:void(0)"
+                                    <a id="btn_change_mobile" href="javascript:void(0)" onclick="changeSomething('mobile')"
                                        class="click_edit js_click_edit">Thay đổi</a></div>
                             </div>
 
@@ -301,13 +296,12 @@
                                             </div>
                                             <div class="item_input_log item_button_act">
                                                 <button id="btn_save_address"
-                                                        class="pri_button btn_log  has_transition btn_disable"
-                                                        disabled="disabled">Lưu thay đổi
+                                                        class="pri_button btn_log  ">Lưu thay đổi
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a id="btn_change_address" href="javascript:void(0)"
+                                    <a id="btn_change_address" href="javascript:void(0)" onclick="changeSomething('address')"
                                        class="click_edit js_click_edit">Thay đổi</a>
                                 </div>
                             </div>
@@ -350,13 +344,12 @@
                                         <div class="width_common block_log block_log_onlytext">
                                             <div class="width_common item_input_log item_button_act btn_xtemail">
                                                 <button id="btnConfirmDelAcc"
-                                                        class="pri_button btn_disable has_transition"
-                                                        disabled="disabled">Xóa tài khoản
+                                                        class="pri_button ">Xóa tài khoản
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="javascript:void(0)" class="click_edit js_click_edit" id="btnDelAcc">Xóa</a>
+                                    <a href="javascript:void(0)" class="click_edit js_click_edit" onclick="changeDeleteAccount()" id="btnDelAcc">Xóa</a>
                                 </div>
                             </div>
                         </div>
@@ -387,6 +380,7 @@
     <div class="clear"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/static/js/moment.js"></script>
 <script>
     var Account = sessionStorage.getItem("Account");
     Account = JSON.parse(Account);
@@ -403,9 +397,26 @@
     {
     document.getElementById("gender").innerHTML = "Nữ";
     }
+    document.getElementById("birthday").innerHTML = moment(Account.account_birthday).format("DD/MM/YYYY");
 </script>
 <script>
-
+    // show ô chỉnh sửa
+    function changeSomething(id){
+        var x = document.getElementById("form_update_"+id);
+        if (x.style.display == "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function changeDeleteAccount(){
+        var x = document.getElementById("form_delete_acc");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 </script>
 </body>
 </html>
