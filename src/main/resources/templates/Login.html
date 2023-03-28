@@ -15,7 +15,7 @@
 <div class="container"></div>
 <div class="modal">
     <div class="modal-container">
-        <form id="LoginForm" action="/account/getAccountByUserAndPass" method="post">
+        <form id="LoginForm" action="http://localhost:8088/account/getAccountByUserAndPass" method="post">
             <div class="modal-left">
                 <h1 class="modal-title">Welcome!</h1>
                 <p class="modal-desc">Please login below.</p>
@@ -70,8 +70,6 @@ $(document).ready(function() {
             alert("Tên đăng nhập hoặc mật khẩu không đúng!");
         }else{
             sessionStorage.setItem("Account",JSON.stringify(data));
-           
-
             window.location.href = "index.html";
         }
       },
