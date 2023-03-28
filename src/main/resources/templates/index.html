@@ -46,18 +46,18 @@
                   </li>
                 </ul>
                 <ul class="navbar-top-right-menu">
+<!--                  <li class="nav-item">-->
+<!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
+<!--                  </li>-->
                   <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Sign in</a>
+<!--                    <a href="#" class="nav-link">Sign in</a>-->
                     <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
                     <a href="thongtincanhan.html">
-                      <p style="font-weight: 700;color: chocolate;" id="AccountName"></p>
+                      <p style="font-weight: 750;padding-top: 8%;color: chocolate;" id="AccountName"></p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="Login.html" class="nav-link">Logout</a>
+                    <a href="#" onclick="Logout()" class="nav-link">Logout</a>
                   </li>
                 </ul>
               </div>
@@ -107,23 +107,23 @@
                     </ul>
                   </div>
                 </div>
-                <ul class="social-media">
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-youtube"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-twitter"></i>
-                    </a>
-                  </li>
-                </ul>
+<!--                <ul class="social-media">-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-facebook"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-youtube"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-twitter"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
               </div>
             </div>
           </nav>
@@ -595,23 +595,23 @@
                   provide you with the latest breaking news and videos straight from
                   the entertainment industry.
                 </h5>
-                <ul class="social-media mb-3">
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-youtube"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-twitter"></i>
-                    </a>
-                  </li>
-                </ul>
+<!--                <ul class="social-media mb-3">-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-facebook"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-youtube"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a href="#">-->
+<!--                      <i class="mdi mdi-twitter"></i>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
               </div>
               <div class="col-sm-4">
                 <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
@@ -854,6 +854,12 @@ fetch(getRandomNewsApi)
       })
       .catch(err => console.log('Error:', err));
   </script>
+<script>
+  function Logout(){
+  sessionStorage.removeItem('Account');
+  window.location.href = "Login.html";
+  }
+</script>
 </body>
 
 </html>
