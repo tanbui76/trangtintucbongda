@@ -32,7 +32,7 @@ public class NewsEntity {
     @Column(name = "news_images", columnDefinition = "nvarchar(max)")
     private String news_images;
     @Column(name = "news_submitdate")
-
+    @Temporal(TemporalType.TIMESTAMP)
     private Date news_submitdate;
     @Column(name = "news_describe", columnDefinition = "nvarchar(max)")
 

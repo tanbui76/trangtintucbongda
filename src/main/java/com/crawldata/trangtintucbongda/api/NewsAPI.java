@@ -40,7 +40,11 @@ public class NewsAPI {
         Random random = new Random();
         Long next = listNewsId.get((int) random.nextLong(listNewsId.size())) ;
         return newsService.getNewsRandomId(next);
-
+    }
+    @CrossOrigin
+    @GetMapping("/getAllNewsEqualsTwoDay")
+    public List<NewsEntity> getAllNewsEqualsTwoDay(){
+        return newsService.getAllNewsEqualTwoDay();
     }
 
 
