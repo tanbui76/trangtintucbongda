@@ -56,7 +56,7 @@ public class AccountEntity {
 
     public AccountEntity() {
     }
-
+    
     public AccountEntity(String account_username,String account_fullname, String account_email, String account_telephone, String account_country, String account_password, Date account_createdate, RoleEntity role, Set<CommentEntity> comments, Set<ViewedEntity> viewed, Set<LikesEntity> likes,String account_gender,Date account_birthday) {
         this.account_fullname = account_fullname;
         this.account_email = account_email;
