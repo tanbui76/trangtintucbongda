@@ -49,6 +49,16 @@
     <script src="/static/js/Login.js"></script>
 
 </div>
+<script src="/static/js/Login.js"></script>
+<script>
+    Validator({
+        form: '#LoginForm',
+        rules: [
+            Validator.isRequired('#Username'),
+            Validator.isRequired('#Password'),
+        ],
+    })
+</script>
 <script>
     function checkLogin(){
         var Account = sessionStorage.getItem("Account");
@@ -57,6 +67,7 @@
         }
     }
 </script>
+
 <script>
 $(document).ready(function() {
   $('#LoginForm').submit(function(e) {

@@ -30,3 +30,10 @@ document.onkeydown = evt => {
   evt = evt || window.event;
   evt.keyCode === 27 ? closeModal() : false;
 };
+
+function Validator(options){
+  console.log(options);
+}
+Validator.isRequire = function(){
+   
+}
