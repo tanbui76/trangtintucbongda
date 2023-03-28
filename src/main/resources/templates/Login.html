@@ -31,7 +31,7 @@
                 <!--    <a href="" class="">Forgot your password?</a>-->
                     <button class="input-button">Login</button>
                 </div>
-                <p class="sign-up">Don't have an account? <a href="#">Sign up now</a></p>
+                <p class="sign-up">Don't have an account? <a href="registery.html">Sign up now</a></p>
             </div>
         </form>
         <div class="modal-right">
@@ -81,8 +81,6 @@ $(document).ready(function() {
             alert("Tên đăng nhập hoặc mật khẩu không đúng!");
         }else{
             sessionStorage.setItem("Account",JSON.stringify(data));
-           
-
             window.location.href = "index.html";
         }
       },

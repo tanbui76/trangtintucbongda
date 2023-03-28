@@ -41,4 +41,17 @@ public class AccountAPI {
         account.setAccount_password(account_password);
         return accountService.addAccount(account);
     }
+
+    @CrossOrigin
+    @PostMapping("/updateAccountFullName")
+    public int updateAccountFullName(Long account_id, String account_fullname){
+        return accountService.updateAccountFullName(account_id,account_fullname);
+    }
+
+    @CrossOrigin
+    @PostMapping("/updateAccountEmail")
+    public int updateAccountEmail(Long account_id, String account_email){
+        return accountService.updateAccountEmail(account_id,account_email);
+    }
+
 }

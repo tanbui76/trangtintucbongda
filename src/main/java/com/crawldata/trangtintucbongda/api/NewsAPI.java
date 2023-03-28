@@ -5,6 +5,7 @@ import com.crawldata.trangtintucbongda.service.NewsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/news")
@@ -32,4 +33,19 @@ public class NewsAPI {
     public List<NewsEntity> getAllNewsByCategoryID(@PathVariable Long id){
         return newsService.getAllNewsByCategoryId(id);
     }
+    @CrossOrigin
+    @GetMapping("/getRandomId")
+    public NewsEntity getNewsRandomId(){
+        List<Long> listNewsId = newsService.getAllNewsId();
+        Random random = new Random();
+        Long next = listNewsId.get((int) random.nextLong(listNewsId.size())) ;
+        return newsService.getNewsRandomId(next);
+    }
+    @CrossOrigin
+    @GetMapping("/getAllNewsEqualsTwoDay")
+    public List<NewsEntity> getAllNewsEqualsTwoDay(){
+        return newsService.getAllNewsEqualTwoDay();
+    }
+
+
 }

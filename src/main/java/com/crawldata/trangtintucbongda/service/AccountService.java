@@ -11,4 +11,9 @@ public interface AccountService {
     AccountEntity getAccountByUserAndPass(String Username, String Password);
 
     AccountEntity addAccount(AccountEntity account);
+
+    int updateAccountFullName(Long account_id, String account_fullname);
+
+    int updateAccountEmail(Long account_id, String account_email);
+
 }
