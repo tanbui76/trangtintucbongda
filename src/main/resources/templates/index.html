@@ -21,7 +21,7 @@
     <!-- endinject -->
   </head>
 
-  <body>
+  <body onload="getAccount()">
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
@@ -52,10 +52,12 @@
                       <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a href="Login.html" class="nav-link">Logout</a>
+                      <a href="#" class="nav-link">Sign in</a>
+                      <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
+                      <a href="thongtincanhan.html"><p style="font-weight: 700;color: chocolate;" id="AccountName"></p></a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Sign in</a>
+                      <a href="Login.html" class="nav-link">Logout</a>
                     </li>
                   </ul>
                 </div>
@@ -889,6 +891,16 @@
     <!-- End custom js for this page-->
 
   <script>
+  function getAccount(){
+  var accountName = sessionStorage.getItem('Account');
+  const convertAccount = JSON.parse(accountName);
+ // console.log(convertAccount);
+  document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
+
+    }
+  </script>
+
+  <script>
     const getApi = 'http://localhost:8088/category';
     const getNewsApi = 'http://localhost:8088/news/getAllNews';
 
@@ -936,11 +948,9 @@
     var html = news.join('');
     console.log(html);
     var list =  document.getElementById('listNew').innerHTML = html;
-    console.log(list);
+   // console.log(list);
     })
     .catch(err => console.log('Error:',err));
-
-
 
     fetch(getApi)
     .then(function(response){
@@ -951,12 +961,12 @@
       console.log(gets);
       var categorys = gets.map(function(gets){
         return`
-        <li><a href="#">${gets.category_name}</a></li>
+        <li><a href="http://localhost:8088/news/getAllNewsByCategoryID/${gets.category_id}">${gets.category_name}</a></li>
         `;
       });
       var html = categorys.join('');
     var listCatgory =  document.getElementById('category-list').innerHTML = html;
-    console.log(listCatgory);
+  //  console.log(listCatgory);
     })
     .catch(err => console.log('Error:',err));
   </script>

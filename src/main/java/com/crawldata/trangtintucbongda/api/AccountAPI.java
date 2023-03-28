@@ -11,6 +11,7 @@ import java.util.List;
 public class AccountAPI {
     private AccountService accountService;
 
+
     public AccountAPI(AccountService accountService){
         this.accountService = accountService;
     }
@@ -31,11 +32,12 @@ public class AccountAPI {
 
     @CrossOrigin
     @PostMapping("/addAccount")
-    public AccountEntity addAccount(String account_telephone,String account_fullname, String account_email,String account_password){
+    public AccountEntity addAccount(String account_username,String account_telephone,String account_fullname, String account_email,String account_password){
         AccountEntity account = new AccountEntity();
         account.setAccount_email(account_email);
         account.setAccount_telephone(account_telephone);
         account.setAccount_fullname(account_fullname);
+        account.setAccount_username(account_username);
         account.setAccount_password(account_password);
         return accountService.addAccount(account);
     }
