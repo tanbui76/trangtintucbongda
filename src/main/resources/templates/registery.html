@@ -28,29 +28,35 @@
                 <div class="signup-content" style="margin-top:8%">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form">
+                        <form method="POST" class="register-form" id="register-form" action="http://localhost:8088/account/addAccount" >
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                                <label><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="account_fullname" id="name" placeholder="Name"/>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Username"/>
+                                <label><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="email" id="email" name="account_email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                <label><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="account_username" id="username" placeholder="Username"/>
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                <label><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="account_password" id="pass" placeholder="Password"/>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                            </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+<!--                            <div class="form-group">-->
+<!--                                <label><i class="zmdi zmdi-lock-outline"></i></label>-->
+<!--                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />-->
+<!--                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>-->
+<!--                            </div>-->
+
+                            <div class="modal-buttons">
+                                <!--    <a href="" class="">Forgot your password?</a>-->
+                                <button class="btn btn-primary">Register</button>
                             </div>
                         </form>
                     </div>
@@ -63,8 +69,37 @@
         </section>
     </div>
 
+    <script>
+$(document).ready(function() {
+  $('#register-form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: $(this).attr('action'),
+      type: $(this).attr('method'),
+      data: $(this).serialize(),
+      success: function(data) {
+        if(data==""){
+            alert("Error");
+        }else{
+
+        sessionStorage.setItem("Account",JSON.stringify(data));
+        console.log(data);
+
+            window.location.href = "index.html";
+        }
+      },
+      error: function(xhr, status, error) {
+        // Xử lý lỗi nếu có.
+        console.log(error);
+      }
+    });
+  });
+});
+  </script>
+
     <!-- JS -->
     <script src="/static/Registery/vendor/jquery/jquery.min.js"></script>
     <script src="/static/Registery/js/main.js"></script>
+
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
