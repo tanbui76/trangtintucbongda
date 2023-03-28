@@ -33,5 +33,11 @@ public class AccountImpl implements AccountService {
         return accountRepository.save(account);
     }
 
+    @Override
+    public int updateAccountFullName(Long account_id, String account_fullname) {
+
+        return accountRepository.updateAccountFullName(account_fullname,account_id);
+    }
+
 
 }
