@@ -39,5 +39,10 @@ public class AccountImpl implements AccountService {
         return accountRepository.updateAccountFullName(account_fullname,account_id);
     }
 
+    @Override
+    public int updateAccountEmail(Long account_id, String account_email) {
+        return accountRepository.updateAccountEmail(account_email,account_id);
+    }
+
 
 }

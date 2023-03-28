@@ -14,4 +14,6 @@ public interface AccountService {
 
     int updateAccountFullName(Long account_id, String account_fullname);
 
+    int updateAccountEmail(Long account_id, String account_email);
+
 }
