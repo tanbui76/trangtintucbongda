@@ -25,6 +25,9 @@ public class AccountImpl implements AccountService {
     public AccountEntity getAccountByUserAndPass(String Username, String Password) {
         return accountRepository.getAccountByUserAndPass(Username, Password);
     }
+
+
+
     @Override
     public AccountEntity addAccount(AccountEntity account) {
         return accountRepository.save(account);
