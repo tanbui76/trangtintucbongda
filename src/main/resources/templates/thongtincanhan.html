@@ -88,7 +88,7 @@
                                                 <form id="FullNameForm"
                                                     action="http://localhost:8088/account/updateAccountFullName"
                                                     method="post">
-                                                    <input type="text" id="account_id_email" name="account_id"
+                                                    <input type="text" id="account_id_fullname" name="account_id"
                                                         style="display: none;" />
                                                     <div class="item_input_log">
                                                         <input id="account_fullname_form" name="account_fullname"
@@ -120,7 +120,7 @@
                                                 action="http://localhost:8088/account/updateAccountEmail" method="post">
                                                 <div class="width_common form_edit form_log">
                                                     <div class="item_input_log">
-                                                        <input type="text" id="account_id_form" name="account_id" />
+                                                        <input type="text" id="account_id_email" name="account_id" />
                                                         <p class="width_common tit_edit">Nhập email mới</p>
                                                         <input id="txtEmail" class="input_form has_transition" name="account_email"
                                                             type="text" placeholder="Nhập email mới"
@@ -414,6 +414,9 @@
             </div>
         </div>
         <div class="clear"></div>
+        <div style="display: none;">
+            <input type="text" id="account_id"/>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/static/js/moment.js"></script>
@@ -423,6 +426,7 @@
         var Account = sessionStorage.getItem("Account");
         Account = JSON.parse(Account);
         console.log(Account);
+        console.log(Account.account_id);
         document.getElementById("account_id").value = Account.account_id;
         document.getElementById("fullname").innerHTML = Account.account_fullname;
         document.getElementById("email").innerHTML = Account.account_email;
@@ -556,7 +560,32 @@
         // });
         $('#EmailFormn').submit(function (e){
             e.preventDefault();
-            
+            $.ajax({
+            url: "http://localhost:8088/account/updateAccountEmail",
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            success: function (data) {
+                // Xử lý dữ liệu trả về
+                console.log("ket qua return:");
+                console.log(data);
+                if (data == "1") {
+                    alert("Cập nhật thành công!");
+                    var Account = sessionStorage.getItem("Account");
+                    Account = JSON.parse(Account);
+                    Account.account_email = document.getElementById("txtEmail").value;
+                    console.log(Account.account_fullname);
+                    sessionStorage.setItem("Account", JSON.stringify(Account));
+                    document.getElementById("fullname").innerHTML = Account.account_fullname;
+                } else {
+                    alert("Cập nhật thất bại!");
+                }
+            },
+            error: function (xhr, status, error) {
+                // Xử lý lỗi nếu có.
+                console.log(error);
+                alert("Cập nhật thất bại!");
+            }
+        });
         })
     </script>
 </body>
