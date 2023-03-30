@@ -72,7 +72,7 @@
               </div>
               <!--THÔNG BÁO-->
               <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
-                6%;">
+                9%;">
               </div>
 
 
@@ -843,6 +843,34 @@
 
     }
   </script>
+    <script>
+        const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
+    fetch(getNotifications)
+      .then(function (response) {
+        return response.json();
+        // JSON.parse -> Javascript type
+      })
+      .then(function (gets) {
+        var notifications = gets.map(function (gets) {
+          return `
+          <div class="inner-scroll-notify" style="background-color:
+                  white;border-radius: 5px;width: 100%;">
+                  <div class="list-noti list-n content-news">
+                    <a href="https://vnexpress.net/danh-thue-nuoc-ngot-4583520.html">
+                      <span class="title-n">${gets.notification_title}</span>
+                    </a>
+                  </div>
+                </div>
+
+        `;
+        });
+        var html = notifications.join('');
+        var list = document.getElementById('noitification').innerHTML = html;
+         console.log(list);
+      })
+
+      .catch(err => console.log('Error:', err));
+      </script>
     <script>
      const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay";
   
