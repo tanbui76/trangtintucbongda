@@ -88,7 +88,7 @@
                                                 <form id="FullNameForm"
                                                     action="http://localhost:8088/account/updateAccountFullName"
                                                     method="post">
-                                                    <input type="text" id="account_id" name="account_id"
+                                                    <input type="text" id="account_id_email" name="account_id"
                                                         style="display: none;" />
                                                     <div class="item_input_log">
                                                         <input id="account_fullname_form" name="account_fullname"
@@ -116,38 +116,13 @@
                                         <p class="main_txt" id="email"></p>
                                         <div id="form_update_email" class="width_common box_edit_form"
                                             style="display: none">
-                                            <form action="http://localhost:8088/account/updateAccountEmail" method="post">
+                                            <form id="EmailForm"
+                                                action="http://localhost:8088/account/updateAccountEmail" method="post">
                                                 <div class="width_common form_edit form_log">
-                                                    <p class="width_common tit_edit">Nhập mật khẩu hiện tại</p>
                                                     <div class="item_input_log">
-                                                        <input type="text" id="account_id" name="account_id"
-                                                        style="display: none;" />
-                                                        <input id="account_username_form" name="account_username"
-                                                            class="input_form has_transition" type="text"
-                                                           style="display: none;">
-                                                        <input id="txtPassword" name="account_password"
-                                                            class="input_form has_transition input_pass" type="password"
-                                                            placeholder="Nhập mật khẩu">
-                                                        <span class="icon_eye_show_null icon_input ">
-                                                            <svg class="icon eye-show">
-                                                                <use xlink:href="#eye-show" style="fill: #828282"></use>
-                                                            </svg>
-                                                        </span>
-                                                        <span class="icon_eye_show icon_input" style="display: none;">
-                                                            hiện <svg class="icon eye-show">
-                                                                <use xlink:href="#eye-show"></use>
-                                                            </svg>
-                                                        </span>
-                                                        <span class="icon_eye_hide icon_input" style="display: none;">
-                                                            ẩn <svg class="icon eye-hide">
-                                                                <use xlink:href="#eye-hide"></use>
-                                                            </svg>
-                                                        </span>
-                                                        <span class="error_password width_common mess_error"></span>
-                                                    </div>
-                                                    <div class="item_input_log">
+                                                        <input type="text" id="account_id_form" name="account_id" />
                                                         <p class="width_common tit_edit">Nhập email mới</p>
-                                                        <input id="txtEmail" class="input_form has_transition"
+                                                        <input id="txtEmail" class="input_form has_transition" name="account_email"
                                                             type="text" placeholder="Nhập email mới"
                                                             autocomplete="rutjfkde" readonly=""
                                                             onfocus="this.removeAttribute('readonly');"
@@ -551,6 +526,38 @@
                 }
             });
         });
+    </script>
+    <script>
+        // $.ajax({
+        //     url: "http://localhost:8088/account",
+        //     type: $(this).attr('method'),
+        //     data: $(this).serialize(),
+        //     success: function (data) {
+        //         // Xử lý dữ liệu trả về
+        //         console.log("ket qua return:");
+        //         console.log(data);
+        //         if (data == "1") {
+        //             alert("Cập nhật thành công!");
+        //             var Account = sessionStorage.getItem("Account");
+        //             Account = JSON.parse(Account);
+        //             Account.account_fullname = document.getElementById("account_fullname_form").value;
+        //             console.log(Account.account_fullname);
+        //             sessionStorage.setItem("Account", JSON.stringify(Account));
+        //             document.getElementById("fullname").innerHTML = Account.account_fullname;
+        //         } else {
+        //             alert("Cập nhật thất bại!");
+        //         }
+        //     },
+        //     error: function (xhr, status, error) {
+        //         // Xử lý lỗi nếu có.
+        //         console.log(error);
+        //         alert("Cập nhật thất bại!");
+        //     }
+        // });
+        $('#EmailFormn').submit(function (e){
+            e.preventDefault();
+            
+        })
     </script>
 </body>
 
