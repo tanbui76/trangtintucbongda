@@ -120,7 +120,7 @@
                                                 action="http://localhost:8088/account/updateAccountEmail" method="post">
                                                 <div class="width_common form_edit form_log">
                                                     <div class="item_input_log">
-                                                        <input type="text" id="account_id_email" name="account_id" />
+                                                        <input type="text" id="account_id_email" name="account_id" style="display: none;"/>
                                                         <p class="width_common tit_edit">Nhập email mới</p>
                                                         <input id="txtEmail" class="input_form has_transition" name="account_email"
                                                             type="text" placeholder="Nhập email mới"
@@ -394,19 +394,8 @@
                 <script src="https://s1.vnecdn.net/myvne/j/v110/lib/ajaxupload.3.5.js"></script>
                 <input type="hidden" name="recaptcha"
                     value="03AKH6MRFTnYIAPwlTXXh01020M8cp9gZmDyfIX-Fjpt10cwLClOca-LMcM4LXvHKiY5Bmt_M1ZkYWhAwrq4dn8sUvgQD5QWJGbTloGdh7TfG4gxq2ehaLsiRkD91cs6W_IlbMoxsZGmfT4bnLJ8uUgoEkwPGOOaUtNzJs04LrkEDha_PXbNlI-HKar0yj-lSDpUdhn93nTbCmZmR1ywkaKXdn-9nSlvB6OexFvvYB7tKIAFGS7gHG3OKOWKwmmzT3ESuuVE_hVG9Uu8A_rQfB9GGLPfDbfeOZ4hr8yIf1UPXPNu9f25pBDQwBPhoNeLOzp6BUyTBhyKkuDAhkp7ks2aaNV76wB4jEqilcsCaEMZuXJEMxwrRnee__ZPIQuC2ICd-OODBXbz-ZVvBxV1zFucDBe_aNJJJPcy2qaca_tIAsPpTjBjX9HBm_ZaIFwcYmFMkhiT9rLOPm0IRj80DW94-xq7BmjbCyk6qAaEjcb3B3vYLhK5bYYlPTe5B4EFlbRlVnbwF586-Iyr1A95ZR7ZY1_Oxh0u2GQ4WUMpXmC0EACbndIrX5aLgvNnu-Gyx6n7U8nC9gN1KjjU05NQTfmTVNIVXMazMS8g">
-                <script
-                    src="https://www.google.com/recaptcha/api.js?render=6LdsCA8bAAAAAChYa4MI5R8VGGvBtMWvWqeoNVOW"></script>
-                <script>
-                    grecaptcha.ready(function () {
-                        $('.grecaptcha-badge').css("display", "none");
-                        grecaptcha.execute('6LdsCA8bAAAAAChYa4MI5R8VGGvBtMWvWqeoNVOW', { action: 'homepage' }).then(function (token) {
-                            $('input[name="recaptcha"]').val(token);
-                        });
-                    });
-                    var GG_SITE_KEY = '6LdsCA8bAAAAAChYa4MI5R8VGGvBtMWvWqeoNVOW';
-
-
-                </script>
+                
+                
                 <!-- InstanceEndEditable -->
                 <div class="banner_980x60" style="padding-bottom: 10px;margin-top: 20px;">
                     <script type="text/javascript" src="//e.eclick.vn/delivery/zone/3132.js"></script>
@@ -503,6 +492,7 @@
     <script>
         $('#FullNameForm').submit(function (e) {
             e.preventDefault();
+            document.getElementById("account_id_fullname").value = document.getElementById("account_id").value;
             $.ajax({
                 url: $(this).attr('action'),
                 type: $(this).attr('method'),
@@ -558,8 +548,9 @@
         //         alert("Cập nhật thất bại!");
         //     }
         // });
-        $('#EmailFormn').submit(function (e){
+        $('#EmailForm').submit(function (e){
             e.preventDefault();
+            document.getElementById("account_id_email").value = document.getElementById("account_id").value;
             $.ajax({
             url: "http://localhost:8088/account/updateAccountEmail",
             type: $(this).attr('method'),
@@ -575,7 +566,7 @@
                     Account.account_email = document.getElementById("txtEmail").value;
                     console.log(Account.account_fullname);
                     sessionStorage.setItem("Account", JSON.stringify(Account));
-                    document.getElementById("fullname").innerHTML = Account.account_fullname;
+                    document.getElementById("email").innerHTML = Account.account_email;
                 } else {
                     alert("Cập nhật thất bại!");
                 }

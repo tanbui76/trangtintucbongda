@@ -1,11 +1,10 @@
 package com.crawldata.trangtintucbongda.api;
 
+import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.ViewedEntity;
 import com.crawldata.trangtintucbongda.service.ViewedService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,9 +18,9 @@ public class ViewedAPI {
     }
 
     @CrossOrigin
-    @GetMapping
-    public List<ViewedEntity> getAllViewed(){
-        return viewedService.getAllViewed();
+    @GetMapping("/getViewsNews/{id}")
+    public List<NewsEntity> getAllViewed(@PathVariable("id") Long account_id){
+        return viewedService.getAllNewsViewed(account_id);
     }
 
 }
