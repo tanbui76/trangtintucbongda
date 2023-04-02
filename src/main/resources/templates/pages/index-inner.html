@@ -19,7 +19,7 @@
     <!-- endinject -->
   </head>
 
-  <body>
+  <body onload="getAccount()">
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:../partials/_navbar.html -->
@@ -30,10 +30,12 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <ul class="navbar-top-left-menu">
                     <li class="nav-item">
-                      <a href="./index-inner.html" class="nav-link">Advertise</a>
+                      <a href="/static/templates/pages/index-inner.html"
+                         class="nav-link">Advertise</a>
                     </li>
                     <li class="nav-item">
-                      <a href="./aboutus.html" class="nav-link">About</a>
+                      <a href="/static/templates/pages/aboutus.html"
+                         class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">Events</a>
@@ -46,92 +48,103 @@
                     </li>
                   </ul>
                   <ul class="navbar-top-right-menu">
+                    <!--                  <li class="nav-item">-->
+                    <!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
+                    <!--                  </li>-->
                     <li class="nav-item">
-                      <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                      <!--                    <a href="#" class="nav-link">Sign in</a>-->
+                      <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
+                      <a href="thongtincanhan.html">
+                        <p style="font-weight: 750;padding-top: 8%;color:
+                          chocolate;" id="AccountName"></p>
+                      </a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Login</a>
+                      <a href="#"><i class="fa-solid fa-bell"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Sign in</a>
+                      <a href="#" onclick="Logout()" class="nav-link">Logout</a>
                     </li>
                   </ul>
                 </div>
               </div>
+              <!--THÔNG BÁO-->
+              <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
+                9%;">
+              </div>
+
+
+
+
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a class="navbar-brand" href="#"
-                      ><img src="/static/assets/images/logo.svg" alt=""
-                    /></a>
+                    <a class="navbar-brand" href="#"><img
+                            src="/static/assets/images/logo.svg" alt="" /></a>
                   </div>
                   <div>
-                    <button
-                      class="navbar-toggler"
-                      type="button"
-                      data-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation"
-                    >
+                    <button class="navbar-toggler" type="button"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div
-                      class="navbar-collapse justify-content-center collapse"
-                      id="navbarSupportedContent"
-                    >
-                      <ul
-                        class="navbar-nav d-lg-flex justify-content-between align-items-center"
-                      >
+                    <div class="navbar-collapse justify-content-center collapse"
+                         id="navbarSupportedContent">
+                      <ul class="navbar-nav d-lg-flex justify-content-between
+                        align-items-center">
                         <li>
                           <button class="navbar-close">
                             <i class="mdi mdi-close"></i>
                           </button>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link" href="../index.html">Home</a>
+                          <a class="nav-link" href="/static/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./magazine.html">MAGAZINE</a>
+                          <a class="nav-link" href="/pages/magazine.html">MAGAZINE</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./business.html">Business</a>
+
+                          <a class="nav-link" href="/pages/business.html">Business</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./sports.html">Sports</a>
+                          <a class="nav-link" href="/static/pages/sports.html">Sports</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./art.html">Art</a>
+                          <a class="nav-link" href="/static/pages/art.html">Art</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./politics.html">POLITICS</a>
+                          <a class="nav-link"
+                             href="/static/pages/politics.html">POLITICS</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./travel.html">Travel</a>
+                          <a class="nav-link" href="/static/pages/travel.html">Travel</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./contactus.html">Contact</a>
+                          <a class="nav-link"
+                             href="/static/pages/contactus.html">Contact</a>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <ul class="social-media">
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-twitter"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  <!--                <ul class="social-media">-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-facebook"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-youtube"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-twitter"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                </ul>-->
                 </div>
               </div>
             </nav>
@@ -457,6 +470,15 @@
         <!-- partial -->
       </div>
     </div>
+    <script>
+    function getAccount() {
+      var accountName = sessionStorage.getItem('Account');
+      const convertAccount = JSON.parse(accountName);
+      // console.log(convertAccount);
+      document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
+
+    }
+  </script>
     <!-- inject:js -->
     <script src="/static/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -469,6 +491,7 @@
     <script src="/static/assets/js/jquery.easeScroll.js"></script>
     <!-- End custom js for this page-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
       const queryString = window.location.search;
       console.log(queryString);
