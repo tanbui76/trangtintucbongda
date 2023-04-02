@@ -61,19 +61,54 @@
                           chocolate;" id="AccountName"></p>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a href="#"><i class="fa-solid fa-bell"></i></a>
-                    </li>
+                    <li class="nav-item dropdown notification-ui show">
+                      <a class="nav-link dropdown-toggle notification-ui_icon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-bell"></i>
+                          <span class="unread-notification"></span>
+                      </a>
+                      <div class="dropdown-menu notification-ui_dd show" aria-labelledby="navbarDropdown">
+                          <div class="notification-ui_dd-header" style="border-bottom: 1px solid #dddcdc;">
+                              <h3 class="text-center">Thông báo</h3>
+                          </div>
+                          <div class="notification-ui_dd-content">
+                              <div class="notification-list notification-list--unread">
+                                  <div class="notification-list_detail">
+                                      <p class="title-n" style="font-size: 17px;">Arsenal tái lập cách biệt tám điểm với Man City<small>10 mins ago</small></p>
+                                  </div>
+                              </div>
+                              <div class="notification-list notification-list--unread">
+                                  <div class="notification-list_detail">
+                                      <p class="title-n" style="font-size: 17px;">Arsenal tái lập cách biệt tám điểm với Man City<small>10 mins ago</small></p>
+                                  </div>
+                              </div>
+                              <div class="notification-list notification-list--unread">
+                                <div class="notification-list_detail">
+                                    <p class="title-n" style="font-size: 17px;">Arsenal tái lập cách biệt tám điểm với Man City<small>10 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="notification-list notification-list--unread">
+                              <div class="notification-list_detail">
+                                  <p class="title-n" style="font-size: 17px;">Arsenal tái lập cách biệt tám điểm với Man City<small>10 mins ago</small></p>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="notification-ui_dd-footer">
+                              <a href="#!" class="btn btn-success btn-block">View All</a>
+                          </div>
+                      </div>
+                  </li>
                     <li class="nav-item">
                       <a href="#" onclick="Logout()" class="nav-link">Logout</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!--THÔNG BÁO-->
-              <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
+              <!-- THÔNG BÁO -->
+              <!-- <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
                 6%;">               
-              </div>
+              </div> -->
+
+              
 
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
@@ -824,7 +859,7 @@
 
     }
   </script>
-      <script>
+      <!-- <script>
         const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
     fetch(getNotifications)
       .then(function (response) {
@@ -838,9 +873,6 @@
                   white;border-radius: 5px;width: 100%;">
                   <div class="list-noti list-n content-news">
                     <a href="${gets.notification_id}">
-                      // <span class="meta-noti">
-                      //   <span class="time">${gets.notification_datetime}</span>
-                      // </span>
                       <span class="title-n">${gets.notification_title}</span>
                     </a>
                   </div>
@@ -855,7 +887,7 @@
       
       .catch(err => console.log('Error:', err));
       </script>
-    <script>
+    <script> -->
      const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay";
   
   </script>
