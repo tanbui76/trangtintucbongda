@@ -470,8 +470,12 @@
     <!-- End custom js for this page-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+      const queryString = window.location.search;
+      console.log(queryString);
+      const urlParams = new URLSearchParams(queryString);
+      const id = urlParams.get('id')
       $.ajax({
-      url: "http://localhost:8088/news/getNewsByID/1",
+      url: "http://localhost:8088/news/getNewsByID/"+id+"",
       method: "GET",
       dataType: "json",
       success: function (data) {
