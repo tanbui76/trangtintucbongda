@@ -72,8 +72,11 @@
               </div>
               <!--THÔNG BÁO-->
               <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
-                6%;">               
+                9%;">
               </div>
+
+
+
 
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
@@ -672,7 +675,23 @@
                     straight from
                     the entertainment industry.
                   </h5>
-                 
+                  <!--                <ul class="social-media mb-3">-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-facebook"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-youtube"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="#">-->
+                  <!--                      <i class="mdi mdi-twitter"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                </ul>-->
                 </div>
                 <div class="col-sm-4">
                   <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
@@ -824,7 +843,7 @@
 
     }
   </script>
-      <script>
+    <script>
         const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
     fetch(getNotifications)
       .then(function (response) {
@@ -837,29 +856,25 @@
           <div class="inner-scroll-notify" style="background-color:
                   white;border-radius: 5px;width: 100%;">
                   <div class="list-noti list-n content-news">
-                    <a href="${gets.notification_id}">
-                      // <span class="meta-noti">
-                      //   <span class="time">${gets.notification_datetime}</span>
-                      // </span>
+                    <a href="https://vnexpress.net/danh-thue-nuoc-ngot-4583520.html">
                       <span class="title-n">${gets.notification_title}</span>
                     </a>
                   </div>
-                </div>    
-       
+                </div>
+
         `;
         });
         var html = notifications.join('');
         var list = document.getElementById('noitification').innerHTML = html;
          console.log(list);
       })
-      
+
       .catch(err => console.log('Error:', err));
       </script>
     <script>
      const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay";
   
   </script>
-  
     <script>
     const getRandomNewsApi = "http://localhost:8088/news/getRandomId";
 fetch(getRandomNewsApi)
