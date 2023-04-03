@@ -276,7 +276,7 @@
 
               <div class="col-lg-9 stretch-card grid-margin">
                 <div class="card">
-                  <div id="listNew" class="card-body">
+                  <div id="listNew" class="card-body"onload="funcCategoryNews()">
                   </div>
                 </div>
               </div>
@@ -888,13 +888,18 @@
       .catch(err => console.log('Error:', err));
       </script>
     <script> -->
-     const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay";
+     <!-- const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay"; -->
   
   </script>
-  
-    <script>
-    const getRandomNewsApi = "http://localhost:8088/news/getRandomId";
-fetch(getRandomNewsApi)
+
+  <script>
+    function funcCategoryNews(){
+      const getCategoryNewsApi = "http://localhost:8088/news/getAllNewsByCategoryID/+{id}";
+      var urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      console.log(id);
+      
+ fetch(getCategoryNewsApi)
   .then(function (response) {
     return response.json();
     // JSON.parse -> Javascript type
@@ -922,18 +927,49 @@ fetch(getRandomNewsApi)
     console.log(container.innerHTML);
   })
   .catch(err => console.log('Error:', err));
+    }
+  </script>
+  
+    <script>
+    const getRandomNewsApi = "http://localhost:8088/news/getRandomId";
+ fetch(getRandomNewsApi)
+  .then(function (response) {
+    return response.json();
+    // JSON.parse -> Javascript type
+  })
+  .then(function (data) {
+    console.log(data);
+    var news = function (data) {
+      return `
+        <div class="position-relative" style="width: 100%;">
+          <img style="width: 100%;" src="${data.news_images}" alt="banner" class="img-fluid"/>
+          <div class="banner-content">
+            <div class="badge badge-danger fs-12 font-weight-bold mb-3">
+              global news
+            </div>
+            <h1 class="mb-0">${data.news_title}</h1>
+            <div class="fs-12">
+              <span class="mr-2">Photo </span>10 Minutes ago
+            </div>
+          </div>
+        </div>  
+    `;
+    };
+    var container = document.getElementById('container-slider');
+    container.innerHTML = news(data);
+    // console.log(container.innerHTML);
+  })
+  .catch(err => console.log('Error:', err));
   </script>
     <script>
     const getApi = 'http://localhost:8088/category';
     const getNewsApi = 'http://localhost:8088/news/getAllNews';
-
     fetch(getNewsApi)
       .then(function (response) {
         return response.json();
         // JSON.parse -> Javascript type
       })
       .then(function (gets) {
-        console.log(gets);
         var news = gets.map(function (gets) {
           const news_title = gets.news_title;
           const news_images = gets.news_images;
@@ -968,7 +1004,6 @@ fetch(getRandomNewsApi)
         });
         var html = news.join('');
         var list = document.getElementById('listNew').innerHTML = html;
-        // console.log(list);
       })
       .catch(err => console.log('Error:', err));
 
