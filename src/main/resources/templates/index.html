@@ -974,6 +974,7 @@
           const news_title = gets.news_title;
           const news_images = gets.news_images;
           const news_describe = gets.news_describe;
+          const news_id = gets.news_id;
           return `
         <div class="row">
                       <div class="col-sm-4 grid-margin">
@@ -989,9 +990,9 @@
                         </div>
                       </div>
                       <div class="col-sm-8  grid-margin">
-                        <h2 class="mb-2 font-weight-600">
+                        <a href="pages/index-inner.html?id=${news_id}"><h2 class="mb-2 font-weight-600">
                           ${news_title}
-                        </h2>
+                        </h2></a>
                         <div class="fs-13 mb-2">
                           <span class="mr-2">Photo </span>10 Minutes ago
                         </div>
