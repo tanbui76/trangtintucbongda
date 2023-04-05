@@ -3215,8 +3215,10 @@ input[type="button"].btn-block {
 }
 
 .dropdown-menu.show {
-  display: block;
-  min-width: 35vh;
+      display: block;
+      min-width: 41vh;
+      border: 10px;
+      padding: 10px;
 }
 
 .dropdown-header {
@@ -10868,4 +10870,9 @@ footer .footer-bottom {
 
 .notification-ui_dd-content p .title-n{
   color: #222;
+}
+.title-n{
+  font-size: 17px;
+    text-decoration: none;
+    color: black;
 }

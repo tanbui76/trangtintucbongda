@@ -11,12 +11,12 @@ public class LikesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long likes_id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE )
     @JoinColumn(name = "account_id")
     @JsonIgnore
     private AccountEntity account;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE )
     @JoinColumn(name = "news_id")
     @JsonIgnore
     private NewsEntity news;
