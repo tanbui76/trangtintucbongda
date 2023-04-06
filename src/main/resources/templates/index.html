@@ -3,18 +3,15 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>World Time</title>
     <!-- plugin css for this page -->
-    <link rel="stylesheet"
-          href="/static/assets/vendors/mdi/css/materialdesignicons.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="/static/assets/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- End plugin css for this page -->
-    <link rel="shortcut icon" href="/static/assets/images/favicon.png"/>
+    <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
 
     <!-- inject:css -->
     <link rel="stylesheet" href="/static/assets/css/style.css">
@@ -32,12 +29,10 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <ul class="navbar-top-left-menu">
                                 <li class="nav-item">
-                                    <a href="/static/templates/pages/index-inner.html"
-                                       class="nav-link">Advertise</a>
+                                    <a href="/static/templates/pages/index-inner.html" class="nav-link">Advertise</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/static/templates/pages/aboutus.html"
-                                       class="nav-link">About</a>
+                                    <a href="/static/templates/pages/aboutus.html" class="nav-link">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">Events</a>
@@ -61,8 +56,22 @@
                           chocolate;" id="AccountName"></p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                                <li class="nav-item dropdown notification-ui show">
+                                    <a class="nav-link dropdown-toggle notification-ui_icon" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-bell"></i>
+                                        <span class="unread-notification"></span>
+                                    </a>
+                                    <div class="dropdown-menu notification-ui_dd show" aria-labelledby="navbarDropdown">
+                                        <div class="notification-ui_dd-header" style="border-bottom: 1px solid #dddcdc;">
+                                            <h3 class="text-center">Thông báo</h3>
+                                        </div>
+                                        <div id="notification">
+                                            <div class="notification-ui_dd-footer">
+                                                <a href="#!" class="btn btn-success btn-block">View All</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" onclick="Logout()" class="nav-link">Logout</a>
@@ -70,28 +79,24 @@
                             </ul>
                         </div>
                     </div>
-                    <!--THÔNG BÁO-->
-                    <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
-                9%;">
-                    </div>
+                    <!-- THÔNG BÁO -->
+                    <!-- <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
+                        6%;">
+                      </div> -->
 
 
 
                     <div class="navbar-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <a class="navbar-brand" href="index.html"><img
-                                        src="/static/assets/images/logo.svg" alt=""/></a>
+                                <a class="navbar-brand" href="#"><img src="/static/assets/images/logo.svg" alt="" /></a>
                             </div>
                             <div>
-                                <button class="navbar-toggler" type="button"
-                                        data-target="#navbarSupportedContent"
-                                        aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="navbar-collapse justify-content-center collapse"
-                                     id="navbarSupportedContent">
+                                <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav d-lg-flex justify-content-between
                         align-items-center">
                                         <li>
@@ -116,15 +121,13 @@
                                             <a class="nav-link" href="/static/pages/art.html">Art</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link"
-                                               href="/static/pages/politics.html">POLITICS</a>
+                                            <a class="nav-link" href="/static/pages/politics.html">POLITICS</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="/static/pages/travel.html">Travel</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link"
-                                               href="/static/pages/contactus.html">Contact</a>
+                                            <a class="nav-link" href="/static/pages/contactus.html">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -192,8 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="rotate-img">
-                                        <img src="/static/assets/images/dashboard/home_1.jpg"
-                                             alt="thumb" class="img-fluid img-lg"/>
+                                        <img src="/static/assets/images/dashboard/home_1.jpg" alt="thumb" class="img-fluid img-lg" />
                                     </div>
                                 </div>
 
@@ -206,8 +208,7 @@
                                         </div>
                                     </div>
                                     <div class="rotate-img">
-                                        <img src="/static/assets/images/dashboard/home_2.jpg"
-                                             alt="thumb" class="img-fluid img-lg"/>
+                                        <img src="/static/assets/images/dashboard/home_2.jpg" alt="thumb" class="img-fluid img-lg" />
                                     </div>
                                 </div>
 
@@ -220,8 +221,7 @@
                                         </div>
                                     </div>
                                     <div class="rotate-img">
-                                        <img src="/static/assets/images/dashboard/home_3.jpg"
-                                             alt="thumb" class="img-fluid img-lg"/>
+                                        <img src="/static/assets/images/dashboard/home_3.jpg" alt="thumb" class="img-fluid img-lg" />
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
 
                     <div class="col-lg-9 stretch-card grid-margin">
                         <div class="card">
-                            <div id="listNew" class="card-body">
+                            <div id="listNew" class="card-body" onload="funcCategoryNews()">
                             </div>
                         </div>
                     </div>
@@ -261,14 +261,12 @@
                                             <div class="col-sm-6 grid-margin">
                                                 <div class="position-relative">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_7.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_7.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <div class="badge-positioned w-90">
                                                         <div class="d-flex justify-content-between
                                   align-items-center">
-                                  <span class="badge badge-danger
+                                <span class="badge badge-danger
                                     font-weight-bold">Lifestyle</span>
                                                             <div class="video-icon">
                                                                 <i class="mdi mdi-play"></i>
@@ -281,14 +279,12 @@
                                             <div class="col-sm-6 grid-margin">
                                                 <div class="position-relative">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_8.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_8.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <div class="badge-positioned w-90">
                                                         <div class="d-flex justify-content-between
                                   align-items-center">
-                                  <span class="badge badge-danger
+                                <span class="badge badge-danger
                                     font-weight-bold">National News</span>
                                                             <div class="video-icon">
                                                                 <i class="mdi mdi-play"></i>
@@ -302,14 +298,12 @@
                                             <div class="col-sm-6 grid-margin">
                                                 <div class="position-relative">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_9.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_9.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <div class="badge-positioned w-90">
                                                         <div class="d-flex justify-content-between
                                   align-items-center">
-                                  <span class="badge badge-danger
+                                <span class="badge badge-danger
                                     font-weight-bold">Lifestyle</span>
                                                             <div class="video-icon">
                                                                 <i class="mdi mdi-play"></i>
@@ -322,14 +316,12 @@
                                             <div class="col-sm-6 grid-margin">
                                                 <div class="position-relative">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_10.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_10.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <div class="badge-positioned w-90">
                                                         <div class="d-flex justify-content-between
                                   align-items-center">
-                                  <span class="badge badge-danger
+                                <span class="badge badge-danger
                                     font-weight-bold">National News</span>
                                                             <div class="video-icon">
                                                                 <i class="mdi mdi-play"></i>
@@ -352,9 +344,7 @@
                           align-items-center border-bottom pb-2">
                                             <div class="div-w-80 mr-3">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_11.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_11.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                             </div>
                                             <h3 class="font-weight-600 mb-0">
@@ -365,9 +355,7 @@
                           align-items-center border-bottom pt-3 pb-2">
                                             <div class="div-w-80 mr-3">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_12.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_12.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                             </div>
                                             <h3 class="font-weight-600 mb-0">
@@ -378,9 +366,7 @@
                           align-items-center border-bottom pt-3 pb-2">
                                             <div class="div-w-80 mr-3">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_13.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_13.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                             </div>
                                             <h3 class="font-weight-600 mb-0">
@@ -391,9 +377,7 @@
                           align-items-center border-bottom pt-3 pb-2">
                                             <div class="div-w-80 mr-3">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_14.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_14.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                             </div>
                                             <h3 class="font-weight-600">
@@ -404,9 +388,7 @@
                           align-items-center pt-3">
                                             <div class="div-w-80 mr-3">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_15.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_15.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                             </div>
                                             <h3 class="font-weight-600 mb-0">
@@ -431,9 +413,7 @@
                                         <div class="row">
                                             <div class="col-xl-6 col-lg-8 col-sm-6">
                                                 <div class="rotate-img">
-                                                    <img
-                                                            src="/static/assets/images/dashboard/home_16.jpg"
-                                                            alt="thumb" class="img-fluid"/>
+                                                    <img src="/static/assets/images/dashboard/home_16.jpg" alt="thumb" class="img-fluid" />
                                                 </div>
                                                 <h2 class="mt-3 text-primary mb-2">
                                                     Newsrooms exercise..
@@ -505,9 +485,7 @@
                                                 </div>
                                                 <div class="border-bottom pb-3">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_17.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_17.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <p class="fs-16 font-weight-600 mb-0 mt-3">
                                                         Kaine: Trump Jr. may have
@@ -518,9 +496,7 @@
                                                 </div>
                                                 <div class="pt-3 pb-3">
                                                     <div class="rotate-img">
-                                                        <img
-                                                                src="/static/assets/images/dashboard/home_18.jpg"
-                                                                alt="thumb" class="img-fluid"/>
+                                                        <img src="/static/assets/images/dashboard/home_18.jpg" alt="thumb" class="img-fluid" />
                                                     </div>
                                                     <p class="fs-16 font-weight-600 mb-0 mt-3">
                                                         Kaine: Trump Jr. may have
@@ -540,10 +516,8 @@
                                                             <div class="row">
                                                                 <div class="col-sm-5 pr-2">
                                                                     <div class="rotate-img">
-                                                                        <img
-                                                                                src="/static/assets/images/dashboard/home_19.jpg"
-                                                                                alt="thumb"
-                                                                                class="img-fluid w-100"/>
+                                                                        <img src="/static/assets/images/dashboard/home_19.jpg" alt="thumb"
+                                                                             class="img-fluid w-100" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-7 pl-2">
@@ -568,10 +542,8 @@
                                                             <div class="row">
                                                                 <div class="col-sm-5 pr-2">
                                                                     <div class="rotate-img">
-                                                                        <img
-                                                                                src="/static/assets/images/dashboard/home_20.jpg"
-                                                                                alt="thumb"
-                                                                                class="img-fluid w-100"/>
+                                                                        <img src="/static/assets/images/dashboard/home_20.jpg" alt="thumb"
+                                                                             class="img-fluid w-100" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-7 pl-2">
@@ -596,10 +568,8 @@
                                                             <div class="row">
                                                                 <div class="col-sm-5 pr-2">
                                                                     <div class="rotate-img">
-                                                                        <img
-                                                                                src="/static/assets/images/dashboard/home_21.jpg"
-                                                                                alt="thumb"
-                                                                                class="img-fluid w-100"/>
+                                                                        <img src="/static/assets/images/dashboard/home_21.jpg" alt="thumb"
+                                                                             class="img-fluid w-100" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-7 pl-2">
@@ -624,10 +594,8 @@
                                                             <div class="row">
                                                                 <div class="col-sm-5 pr-2">
                                                                     <div class="rotate-img">
-                                                                        <img
-                                                                                src="/static/assets/images/dashboard/home_22.jpg"
-                                                                                alt="thumb"
-                                                                                class="img-fluid w-100"/>
+                                                                        <img src="/static/assets/images/dashboard/home_22.jpg" alt="thumb"
+                                                                             class="img-fluid w-100" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-7 pl-2">
@@ -665,8 +633,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-5">
-                            <img src="/static/assets/images/logo.svg" class="footer-logo"
-                                 alt=""/>
+                            <img src="/static/assets/images/logo.svg" class="footer-logo" alt="" />
                             <h5 class="font-weight-normal mt-4 mb-5">
                                 Newspaper is your news, entertainment, music fashion
                                 website. We
@@ -674,23 +641,7 @@
                                 straight from
                                 the entertainment industry.
                             </h5>
-                            <!--                <ul class="social-media mb-3">-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-facebook"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-youtube"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-twitter"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                </ul>-->
+
                         </div>
                         <div class="col-sm-4">
                             <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
@@ -699,9 +650,7 @@
                                     <div class="footer-border-bottom pb-2">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img
-                                                        src="/static/assets/images/dashboard/home_1.jpg"
-                                                        alt="thumb" class="img-fluid"/>
+                                                <img src="/static/assets/images/dashboard/home_1.jpg" alt="thumb" class="img-fluid" />
                                             </div>
                                             <div class="col-9">
                                                 <h5 class="font-weight-600">
@@ -719,9 +668,7 @@
                                     <div class="footer-border-bottom pb-2 pt-2">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img
-                                                        src="/static/assets/images/dashboard/home_2.jpg"
-                                                        alt="thumb" class="img-fluid"/>
+                                                <img src="/static/assets/images/dashboard/home_2.jpg" alt="thumb" class="img-fluid" />
                                             </div>
                                             <div class="col-9">
                                                 <h5 class="font-weight-600">
@@ -739,9 +686,7 @@
                                     <div>
                                         <div class="row">
                                             <div class="col-3">
-                                                <img
-                                                        src="/static/assets/images/dashboard/home_3.jpg"
-                                                        alt="thumb" class="img-fluid"/>
+                                                <img src="/static/assets/images/dashboard/home_3.jpg" alt="thumb" class="img-fluid" />
                                             </div>
                                             <div class="col-9">
                                                 <h5 class="font-weight-600 mb-3">
@@ -803,13 +748,11 @@
                             <div class="d-sm-flex justify-content-between
                     align-items-center">
                                 <div class="fs-14 font-weight-600">
-                                    © 2020 @ <a href="https://www.bootstrapdash.com/"
-                                                target="_blank" class="text-white">
+                                    © 2020 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white">
                                     BootstrapDash</a>. All rights reserved.
                                 </div>
                                 <div class="fs-14 font-weight-600">
-                                    Handcrafted by <a href="https://www.bootstrapdash.com/"
-                                                      target="_blank"
+                                    Handcrafted by <a href="https://www.bootstrapdash.com/" target="_blank"
                                                       class="text-white">BootstrapDash</a>
                                 </div>
                             </div>
@@ -836,18 +779,14 @@
 <script>
     function getAccount() {
       var accountName = sessionStorage.getItem('Account');
-      if(accountName == null){
-        window.location.href = "Login.html";
-      }
       const convertAccount = JSON.parse(accountName);
       // console.log(convertAccount);
       document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
 
     }
-
-</script>
+  </script>
 <script>
-        const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
+    const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
     fetch(getNotifications)
       .then(function (response) {
         return response.json();
@@ -855,42 +794,51 @@
       })
       .then(function (gets) {
         var notifications = gets.map(function (gets) {
+          console.log(gets);
+
           return `
-          <div class="inner-scroll-notify" style="background-color:
-                  white;border-radius: 5px;width: 100%;">
-                  <div class="list-noti list-n content-news">
-                    <a href="https://vnexpress.net/danh-thue-nuoc-ngot-4583520.html">
-                      <span class="title-n">${gets.notification_title}</span>
-                    </a>
-                  </div>
-                </div>
+                          <div class="notification-ui_dd-content">
+                            <div class="notification-list notification-list--unread">
+                              <div class="notification-list_detail">
+                                <a href="${gets.notification_id}">
+                                  <p class="title-n" style="font-size: 17px;">${gets.notification_title}<small>10 mins ago</small></p>
+                                  </a>
+
+                              </div>
+                          </div>
+                          </div>
+
 
         `;
         });
         var html = notifications.join('');
-        var list = document.getElementById('noitification').innerHTML = html;
-         console.log(list);
+        var list = document.getElementById('notification').innerHTML = html;
+        console.log(list);
       })
 
       .catch(err => console.log('Error:', err));
-
-</script>
+  </script>
 <script>
-     const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay";
-  
+    <!-- const getAllNewsEqualsTwoDay = "http://localhost:8088/news/getAllNewsEqualsTwoDay"; -->
 
-</script>
+  </script>
+
 <script>
-    const getRandomNewsApi = "http://localhost:8088/news/getRandomId";
-fetch(getRandomNewsApi)
-  .then(function (response) {
-    return response.json();
-    // JSON.parse -> Javascript type
-  })
-  .then(function (data) {
-    console.log(data);
-    var news = function (data) {
-      return `
+    function funcCategoryNews() {
+      const getCategoryNewsApi = "http://localhost:8088/news/getAllNewsByCategoryID/+{id}";
+      var urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      console.log(id);
+
+      fetch(getCategoryNewsApi)
+        .then(function (response) {
+          return response.json();
+          // JSON.parse -> Javascript type
+        })
+        .then(function (data) {
+          console.log(data);
+          var news = function (data) {
+            return `
         <div class="position-relative" style="width: 100%;">
           <img style="width: 100%;" src="${data.news_images}" alt="banner" class="img-fluid"/>
           <div class="banner-content">
@@ -902,27 +850,57 @@ fetch(getRandomNewsApi)
               <span class="mr-2">Photo </span>10 Minutes ago
             </div>
           </div>
-        </div>  
+        </div>
     `;
-    };
-    var container = document.getElementById('container-slider');
-    container.innerHTML = news(data);
-    console.log(container.innerHTML);
-  })
-  .catch(err => console.log('Error:', err));
+          };
+          var container = document.getElementById('container-slider');
+          container.innerHTML = news(data);
+          console.log(container.innerHTML);
+        })
+        .catch(err => console.log('Error:', err));
+    }
+  </script>
 
-</script>
+<script>
+    const getRandomNewsApi = "http://localhost:8088/news/getRandomId";
+    fetch(getRandomNewsApi)
+      .then(function (response) {
+        return response.json();
+        // JSON.parse -> Javascript type
+      })
+      .then(function (data) {
+        console.log(data);
+        var news = function (data) {
+          return `
+        <div class="position-relative" style="width: 100%;">
+          <img style="width: 100%;" src="${data.news_images}" alt="banner" class="img-fluid"/>
+          <div class="banner-content">
+            <div class="badge badge-danger fs-12 font-weight-bold mb-3">
+              global news
+            </div>
+            <h1 class="mb-0">${data.news_title}</h1>
+            <div class="fs-12">
+              <span class="mr-2">Photo </span>10 Minutes ago
+            </div>
+          </div>
+        </div>
+    `;
+        };
+        var container = document.getElementById('container-slider');
+        container.innerHTML = news(data);
+        // console.log(container.innerHTML);
+      })
+      .catch(err => console.log('Error:', err));
+  </script>
 <script>
     const getApi = 'http://localhost:8088/category';
     const getNewsApi = 'http://localhost:8088/news/getAllNews';
-
     fetch(getNewsApi)
       .then(function (response) {
         return response.json();
         // JSON.parse -> Javascript type
       })
       .then(function (gets) {
-        console.log(gets);
         var news = gets.map(function (gets) {
           const news_title = gets.news_title;
           const news_images = gets.news_images;
@@ -953,12 +931,11 @@ fetch(getRandomNewsApi)
                          ${news_describe}
                         </p>
                       </div>
-                    </div>      
+                    </div>
         `;
         });
         var html = news.join('');
         var list = document.getElementById('listNew').innerHTML = html;
-        // console.log(list);
       })
       .catch(err => console.log('Error:', err));
 
@@ -978,15 +955,13 @@ fetch(getRandomNewsApi)
         //  console.log(listCatgory);
       })
       .catch(err => console.log('Error:', err));
-
-</script>
+  </script>
 <script>
-  function Logout(){
-  sessionStorage.removeItem('Account');
-  window.location.href = "Login.html";
-  }
-
-</script>
+    function Logout() {
+      sessionStorage.removeItem('Account');
+      window.location.href = "Login.html";
+    }
+  </script>
 </body>
 
 </html>
