@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Main css -->
     <link rel="stylesheet" href="/static/Registery/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         @font-face {
             font-family: Heebo-Medium;
@@ -27,58 +28,58 @@
 </head>
 <body>
 
-    <div class="main" style="    padding: 0;
+<div class="main" style="    padding: 0;
     position: relative;
     width: 100vw;">
 
-        <!-- Sign up form -->
-        <section class="signup" style="position:absolute;top:0;left:0;right:0;bottom:0;margin-top:auto;margin-bottom:auto">
-            <div class="container">
-                <div class="signup-content" style="margin-top:8%">
-                    <div class="signup-form" input>
-                        <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form" action="http://localhost:8088/account/addAccount" >
-                            <div class="form-group">
-                                <label><i class="fa-solid fa-user"></i></label>
-                                <input type="text" name="account_fullname" id="name" placeholder="Name"/>
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fa-regular fa-envelope"></i></label>
-                                <input type="email" id="email" name="account_email" placeholder="Email"/>
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fa-solid fa-address-card"></i></label>
-                                <input type="text" name="account_username" id="username" placeholder="Tên đăng nhập"/>
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fa-solid fa-lock"></i></label>
-                                <input type="password" name="account_password" id="pass" placeholder="Mật khẩu"/>
-                            </div>
-<!--                            <div class="form-group">-->
-<!--                                <label><i class="zmdi zmdi-lock-outline"></i></label>-->
-<!--                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>-->
-<!--                            </div>-->
-<!--                            <div class="form-group">-->
-<!--                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />-->
-<!--                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>-->
-<!--                            </div>-->
+    <!-- Sign up form -->
+    <section class="signup" style="position:absolute;top:0;left:0;right:0;bottom:0;margin-top:auto;margin-bottom:auto">
+        <div class="container">
+            <div class="signup-content" style="margin-top:8%">
+                <div class="signup-form" input>
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="register-form" action="http://localhost:8088/account/addAccount" >
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-user"></i></label>
+                            <input type="text" name="account_fullname" id="name" placeholder="Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-regular fa-envelope"></i></label>
+                            <input type="email" id="email" name="account_email" placeholder="Email" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-address-card"></i></label>
+                            <input type="text" name="account_username" id="username" placeholder="Tên đăng nhập" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-lock"></i></label>
+                            <input type="password" name="account_password" id="pass" placeholder="Mật khẩu" required="required"/>
+                        </div>
+                        <!--                            <div class="form-group">-->
+                        <!--                                <label><i class="zmdi zmdi-lock-outline"></i></label>-->
+                        <!--                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>-->
+                        <!--                            </div>-->
+                        <!--                            <div class="form-group">-->
+                        <!--                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />-->
+                        <!--                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>-->
+                        <!--                            </div>-->
 
-                            <div class="modal-buttons">
-                                <!--    <a href="" class="">Forgot your password?</a>-->
-                                <button class="btn btn-primary" type="submit">Register</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-image">
-                        <figure><img src="/static/Registery/images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="#" class="signup-image-link">I am already member</a>
-                    </div>
+                        <div class="modal-buttons">
+                            <!--    <a href="" class="">Forgot your password?</a>-->
+                            <button class="btn btn-primary" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="/static/Registery/images/signup-image.jpg" alt="sing up image"></figure>
+                    <a href="#" class="signup-image-link">I am already member</a>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 
-    <script>
+<script>
 $(document).ready(function() {
   $('#register-form').submit(function(e) {
     e.preventDefault();
@@ -93,12 +94,14 @@ $(document).ready(function() {
 
         sessionStorage.setItem("Account",JSON.stringify(data));
         console.log(data);
+        alert('Đăng kí thành công');
 
-            window.location.href = "index.html";
+            window.location.href = "Login.html";
         }
       },
       error: function(xhr, status, error) {
         // Xử lý lỗi nếu có.
+        alert('Account đã tồn tại! Vui lòng đăng kí lại!');
         console.log(error);
       }
     });
@@ -106,9 +109,9 @@ $(document).ready(function() {
 });
   </script>
 
-    <!-- JS -->
-    <script src="/static/Registery/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/Registery/js/main.js"></script>
+<!-- JS -->
+<script src="/static/Registery/vendor/jquery/jquery.min.js"></script>
+<script src="/static/Registery/js/main.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
