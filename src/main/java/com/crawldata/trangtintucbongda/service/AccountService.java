@@ -16,4 +16,6 @@ public interface AccountService {
 
     int updateAccountEmail(Long account_id, String account_email);
 
+    AccountEntity getAccountById(Long account_id);
+
 }

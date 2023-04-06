@@ -44,5 +44,10 @@ public class AccountImpl implements AccountService {
         return accountRepository.updateAccountEmail(account_email,account_id);
     }
 
+    @Override
+    public AccountEntity getAccountById(Long account_id) {
+        return accountRepository.getById(account_id);
+    }
+
 
 }
