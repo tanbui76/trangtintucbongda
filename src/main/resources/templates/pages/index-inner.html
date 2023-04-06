@@ -167,11 +167,11 @@
                       <div id="divdonoidung">
 
                       </div>
-                      
+
 
                     </div>
-                    
-                    
+
+
                     <div class="col-lg-4">
                       <h2 class="mb-4 text-primary font-weight-600">
                         Latest news
@@ -510,7 +510,28 @@
             news_title: data.news_title,
             news_detailContent: data.news_detailContent,
           }
+
          container.innerHTML = news.news_detailContent;
+         var accountName = sessionStorage.getItem('Account');
+         const convertAccount = JSON.parse(accountName);
+         var input = {
+            "account_id": convertAccount.account_id
+            "news_id": news.news_id
+         };
+
+           $.ajax({
+      url: "http://localhost:8088/viewed/addViewed",
+      method: "POST",
+      dataType: JSON.stringify(input),
+      success: function (data) {
+        console.log(data);
+        console.log("add viewed complete!!!");
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
+
       },
       error: function (xhr, status, error) {
         console.log(error);
