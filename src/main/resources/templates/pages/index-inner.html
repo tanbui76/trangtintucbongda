@@ -485,7 +485,7 @@
         
         document.getElementById("submit_viewed").click();
         $('#viewed_add').submit(function (e) {
-          e.preventDefault();
+          e.preventDefault(); 
           $.ajax({
             url: $(this).attr('action'),
             method: $(this).attr('method'),
