@@ -26,4 +26,9 @@ public class ViewedImpl implements ViewedService {
     public List<NewsEntity> getAllNewsViewed(Long account_id) {
         return viewedRepository.getAllNewsViewed(account_id);
     }
+
+    @Override
+    public ViewedEntity addViewed(ViewedEntity viewedEntity) {
+        return viewedRepository.save(viewedEntity);
+    }
 }

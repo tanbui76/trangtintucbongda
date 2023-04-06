@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+//const body = document.querySelector("body");
 const modal = document.querySelector(".modal");
 const modalButton = document.querySelector(".modal-button");
 const closeButton = document.querySelector(".close-button");
