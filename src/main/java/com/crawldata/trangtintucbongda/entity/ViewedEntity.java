@@ -13,12 +13,10 @@ public class ViewedEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
-    @JsonIgnore
     private AccountEntity account;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "news_id")
-    @JsonIgnore
     private NewsEntity news;
 
     public ViewedEntity() {
