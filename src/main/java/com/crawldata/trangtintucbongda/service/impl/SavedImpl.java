@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 public class SavedImpl implements SavedService {
     private SavedRepository savedRepository;
 
+    public SavedImpl(SavedRepository savedRepository) {
+        this.savedRepository = savedRepository;
+    }
+
     @Override
     public SavedEntity savedNews(SavedEntity savedEntity) {
         return  savedRepository.save(savedEntity);
