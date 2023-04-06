@@ -46,7 +46,7 @@ public class AccountImpl implements AccountService {
 
     @Override
     public AccountEntity getAccountById(Long account_id) {
-        return accountRepository.getById(account_id);
+        return accountRepository.findById(account_id).get();
     }
 
 
