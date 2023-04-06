@@ -1,474 +1,439 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>World Time</title>
-    <!-- plugin css for this page -->
-    <link
-      rel="stylesheet"
-      href="/static/assets/vendors/mdi/css/materialdesignicons.min.css"
-    />
-    <link rel="stylesheet" href="/static/assets/vendors/aos/dist/aos.css/aos.css" />
-    <!-- End plugin css for this page -->
-    <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/static/assets/css/style.css">
-    <!-- endinject -->
-  </head>
 
-  <body onload="getAccount()">
-    <a id="50048995" class="link_thich control-action" data-name="" href="javascript:;" rel="50048995">
-      <i class="ic ic-like"></i>
-      <span class="total_like">Thích</span>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>World Time</title>
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="/static/assets/vendors/mdi/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="/static/assets/vendors/aos/dist/aos.css/aos.css" />
+  <!-- End plugin css for this page -->
+  <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/static/assets/css/style.css">
+  <!-- endinject -->
+</head>
+
+<body onload="getAccount()">
+  <a id="50048995" class="link_thich control-action" data-name="" href="javascript:;" rel="50048995">
+    <i class="ic ic-like"></i>
+    <span class="total_like">Thích</span>
   </a>
   <div class="myvne_save_for_later" title="Lưu bài viết" data-save-added="1">
-    <a href="javascript:void(0);" class="save">Lưu</a></div>
-    <div class="container-scroller">
-      <div class="main-panel">
-        <!-- partial:../partials/_navbar.html -->
-        <header id="header">
-          <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <div class="navbar-top">
-                <div class="d-flex justify-content-between align-items-center">
-                  <ul class="navbar-top-left-menu">
-                    <li class="nav-item">
-                      <a href="/static/templates/pages/index-inner.html"
-                         class="nav-link">Advertise</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="/static/templates/pages/aboutus.html"
-                         class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Write for Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">In the Press</a>
-                    </li>
-                  </ul>
-                  <ul class="navbar-top-right-menu">
-                    <!--                  <li class="nav-item">-->
-                    <!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
-                    <!--                  </li>-->
-                    <li class="nav-item">
-                      <!--                    <a href="#" class="nav-link">Sign in</a>-->
-                      <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
-                      <a href="thongtincanhan.html">
-                        <p style="font-weight: 750;padding-top: 8%;color:
+    <a href="javascript:void(0);" class="save">Lưu</a>
+  </div>
+  <div class="container-scroller">
+    <div class="main-panel">
+      <!-- partial:../partials/_navbar.html -->
+      <header id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-top">
+              <div class="d-flex justify-content-between align-items-center">
+                <ul class="navbar-top-left-menu">
+                  <li class="nav-item">
+                    <a href="/static/templates/pages/index-inner.html" class="nav-link">Advertise</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/static/templates/pages/aboutus.html" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Write for Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">In the Press</a>
+                  </li>
+                </ul>
+                <ul class="navbar-top-right-menu">
+                  <!--                  <li class="nav-item">-->
+                  <!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
+                  <!--                  </li>-->
+                  <li class="nav-item">
+                    <!--                    <a href="#" class="nav-link">Sign in</a>-->
+                    <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
+                    <a href="thongtincanhan.html">
+                      <p style="font-weight: 750;padding-top: 8%;color:
                           chocolate;" id="AccountName"></p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#"><i class="fa-solid fa-bell"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" onclick="Logout()" class="nav-link">Logout</a>
-                    </li>
-                  </ul>
-                </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" onclick="Logout()" class="nav-link">Logout</a>
+                  </li>
+                </ul>
               </div>
-              <!--THÔNG BÁO-->
-              <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
+            </div>
+            <!--THÔNG BÁO-->
+            <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
                 9%;">
-              </div>
+            </div>
 
 
 
 
-              <div class="navbar-bottom">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <a class="navbar-brand" href="#"><img
-                            src="/static/assets/images/logo.svg" alt="" /></a>
-                  </div>
-                  <div>
-                    <button class="navbar-toggler" type="button"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse justify-content-center collapse"
-                         id="navbarSupportedContent">
-                      <ul class="navbar-nav d-lg-flex justify-content-between
+            <div class="navbar-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <a class="navbar-brand" href="#"><img src="/static/assets/images/logo.svg" alt="" /></a>
+                </div>
+                <div>
+                  <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-lg-flex justify-content-between
                         align-items-center">
-                        <li>
-                          <button class="navbar-close">
-                            <i class="mdi mdi-close"></i>
-                          </button>
-                        </li>
-                        <li class="nav-item active">
-                          <a class="nav-link" href="/static/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/pages/magazine.html">MAGAZINE</a>
-                        </li>
-                        <li class="nav-item">
+                      <li>
+                        <button class="navbar-close">
+                          <i class="mdi mdi-close"></i>
+                        </button>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/static/index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/pages/magazine.html">MAGAZINE</a>
+                      </li>
+                      <li class="nav-item">
 
-                          <a class="nav-link" href="/pages/business.html">Business</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/static/pages/sports.html">Sports</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/static/pages/art.html">Art</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link"
-                             href="/static/pages/politics.html">POLITICS</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/static/pages/travel.html">Travel</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link"
-                             href="/static/pages/contactus.html">Contact</a>
-                        </li>
-                      </ul>
-                    </div>
+                        <a class="nav-link" href="/pages/business.html">Business</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/static/pages/sports.html">Sports</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/static/pages/art.html">Art</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/static/pages/politics.html">POLITICS</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/static/pages/travel.html">Travel</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/static/pages/contactus.html">Contact</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </nav>
-          </div>
-        </header>
+            </div>
+          </nav>
+        </div>
+      </header>
 
-        <!-- partial -->
-        <div class="flash-news-banner">
-          <div class="container">
-            <div class="d-lg-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <span class="badge badge-dark mr-3">Flash news</span>
-                <p class="mb-0">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s.
-                </p>
-              </div>
-              <div class="d-flex">
-                <span class="mr-3 text-danger">Wed, March 4, 2020</span>
-                <span class="text-danger">30°C,London</span>
-              </div>
+      <!-- partial -->
+      <div class="flash-news-banner">
+        <div class="container">
+          <div class="d-lg-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <span class="badge badge-dark mr-3">Flash news</span>
+              <p class="mb-0">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s.
+              </p>
+            </div>
+            <div class="d-flex">
+              <span class="mr-3 text-danger">Wed, March 4, 2020</span>
+              <span class="text-danger">30°C,London</span>
             </div>
           </div>
         </div>
-        <div class="content-wrapper">
-          <div class="container">
-            <div class="col-sm-12">
-              <div class="card" data-aos="fade-up">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-lg-8">
-                      <div id="divdonoidung">
-
-                      </div>
-
-
-                    </div>
-
-
-                    <div class="col-lg-4">
-                      <h2 class="mb-4 text-primary font-weight-600">
-                        Latest news
-                      </h2>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="border-bottom pb-4 pt-4">
-                            <div class="row">
-                              <div class="col-sm-8">
-                                <h5 class="font-weight-600 mb-1">
-                                  Ways to stay social online while in self..
-                                </h5>
-                                <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Photo </span>10 Minutes ago
-                                </p>
-                              </div>
-                              <div class="col-sm-4">
-                                <div class="rotate-img">
-                                  <img
-                                    src="/static/assets/images/inner/inner_7.jpg"
-                                    alt="banner"
-                                    class="img-fluid"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="border-bottom pb-4 pt-4">
-                            <div class="row">
-                              <div class="col-sm-8">
-                                <h5 class="font-weight-600 mb-1">
-                                  Premier League players join charity..
-                                </h5>
-                                <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Photo </span>10 Minutes ago
-                                </p>
-                              </div>
-                              <div class="col-sm-4">
-                                <div class="rotate-img">
-                                  <img
-                                    src="/static/assets/images/inner/inner_8.jpg"
-                                    alt="banner"
-                                    class="img-fluid"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="pt-4">
-                            <div class="row">
-                              <div class="col-sm-8">
-                                <h5 class="font-weight-600 mb-1">
-                                  UK Athletics board changed stance on..
-                                </h5>
-                                <p class="fs-13 text-muted mb-0">
-                                  <span class="mr-2">Photo </span>10 Minutes ago
-                                </p>
-                              </div>
-                              <div class="col-sm-4">
-                                <div class="rotate-img">
-                                  <img
-                                    src="/static/assets/images/inner/inner_9.jpg"
-                                    alt="banner"
-                                    class="img-fluid"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="trending">
-                        <h2 class="mb-4 text-primary font-weight-600">
-                          Trending
-                        </h2>
-                        <div class="mb-4">
-                          <div class="rotate-img">
-                            <img
-                              src="/static/assets/images/inner/inner_10.jpg"
-                              alt="banner"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="mt-3 font-weight-600">
-                            Virus Kills Member Of Advising Iran’s Supreme
-                          </h3>
-                          <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Photo </span>10 Minutes ago
-                          </p>
-                        </div>
-                        <div class="mb-4">
-                          <div class="rotate-img">
-                            <img
-                              src="/static/assets/images/inner/inner_11.jpg"
-                              alt="banner"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="mt-3 font-weight-600">
-                            Virus Kills Member Of Advising Iran’s Supreme
-                          </h3>
-                          <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Photo </span>10 Minutes ago
-                          </p>
-                        </div>
-                        <div class="mb-4">
-                          <div class="rotate-img">
-                            <img
-                              src="/static/assets/images/inner/inner_12.jpg"
-                              alt="banner"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="mt-3 font-weight-600">
-                            Virus Kills Member Of Advising Iran’s Supreme
-                          </h3>
-                          <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Photo </span>10 Minutes ago
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- main-panel ends -->
-        <!-- container-scroller ends -->
-
-        <!-- partial:../partials/_footer.html -->
-        <footer>
-          <div class="footer-top">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-5">
-                  <img src="/static/assets/images/logo.svg" class="footer-logo" alt="" />
-                  <h5 class="font-weight-normal mt-4 mb-5">
-                    Newspaper is your news, entertainment, music fashion website. We
-                    provide you with the latest breaking news and videos straight from
-                    the entertainment industry.
-                  </h5>
-                  <ul class="social-media mb-3">
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-twitter"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-sm-4">
-                  <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="footer-border-bottom pb-2">
-                        <div class="row">
-                          <div class="col-3">
-                            <img
-                              src="/static/assets/images/dashboard/home_1.jpg"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="footer-border-bottom pb-2 pt-2">
-                        <div class="row">
-                          <div class="col-3">
-                            <img
-                              src="../assets/images/dashboard/home_2.jpg"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div>
-                        <div class="row">
-                          <div class="col-3">
-                            <img
-                              src="../assets/images/dashboard/home_3.jpg"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <h5 class="font-weight-600 mb-3">
-                              Cotton import from USA to soar was American traders
-                              predict
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
-                  <div class="footer-border-bottom pb-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Magazine</h5>
-                      <div class="count">1</div>
-                    </div>
-                  </div>
-                  <div class="footer-border-bottom pb-2 pt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Business</h5>
-                      <div class="count">1</div>
-                    </div>
-                  </div>
-                  <div class="footer-border-bottom pb-2 pt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Sports</h5>
-                      <div class="count">1</div>
-                    </div>
-                  </div>
-                  <div class="footer-border-bottom pb-2 pt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Arts</h5>
-                      <div class="count">1</div>
-                    </div>
-                  </div>
-                  <div class="pt-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0 font-weight-600">Politics</h5>
-                      <div class="count">1</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="d-sm-flex justify-content-between align-items-center">
-                    <div class="fs-14 font-weight-600">
-                      © 2020 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white"> BootstrapDash</a>. All rights reserved.
-                    </div>
-                    <div class="fs-14 font-weight-600">
-                      Handcrafted by <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white">BootstrapDash</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-
-        <!-- partial -->
       </div>
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="col-sm-12">
+            <div class="card" data-aos="fade-up">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div id="divdonoidung">
+
+                    </div>
+
+
+                  </div>
+
+
+                  <div class="col-lg-4">
+                    <h2 class="mb-4 text-primary font-weight-600">
+                      Latest news
+                    </h2>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="border-bottom pb-4 pt-4">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <h5 class="font-weight-600 mb-1">
+                                Ways to stay social online while in self..
+                              </h5>
+                              <p class="fs-13 text-muted mb-0">
+                                <span class="mr-2">Photo </span>10 Minutes ago
+                              </p>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="rotate-img">
+                                <img src="/static/assets/images/inner/inner_7.jpg" alt="banner" class="img-fluid" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="border-bottom pb-4 pt-4">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <h5 class="font-weight-600 mb-1">
+                                Premier League players join charity..
+                              </h5>
+                              <p class="fs-13 text-muted mb-0">
+                                <span class="mr-2">Photo </span>10 Minutes ago
+                              </p>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="rotate-img">
+                                <img src="/static/assets/images/inner/inner_8.jpg" alt="banner" class="img-fluid" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="pt-4">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <h5 class="font-weight-600 mb-1">
+                                UK Athletics board changed stance on..
+                              </h5>
+                              <p class="fs-13 text-muted mb-0">
+                                <span class="mr-2">Photo </span>10 Minutes ago
+                              </p>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="rotate-img">
+                                <img src="/static/assets/images/inner/inner_9.jpg" alt="banner" class="img-fluid" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="trending">
+                      <h2 class="mb-4 text-primary font-weight-600">
+                        Trending
+                      </h2>
+                      <div class="mb-4">
+                        <div class="rotate-img">
+                          <img src="/static/assets/images/inner/inner_10.jpg" alt="banner" class="img-fluid" />
+                        </div>
+                        <h3 class="mt-3 font-weight-600">
+                          Virus Kills Member Of Advising Iran’s Supreme
+                        </h3>
+                        <p class="fs-13 text-muted mb-0">
+                          <span class="mr-2">Photo </span>10 Minutes ago
+                        </p>
+                      </div>
+                      <div class="mb-4">
+                        <div class="rotate-img">
+                          <img src="/static/assets/images/inner/inner_11.jpg" alt="banner" class="img-fluid" />
+                        </div>
+                        <h3 class="mt-3 font-weight-600">
+                          Virus Kills Member Of Advising Iran’s Supreme
+                        </h3>
+                        <p class="fs-13 text-muted mb-0">
+                          <span class="mr-2">Photo </span>10 Minutes ago
+                        </p>
+                      </div>
+                      <div class="mb-4">
+                        <div class="rotate-img">
+                          <img src="/static/assets/images/inner/inner_12.jpg" alt="banner" class="img-fluid" />
+                        </div>
+                        <h3 class="mt-3 font-weight-600">
+                          Virus Kills Member Of Advising Iran’s Supreme
+                        </h3>
+                        <p class="fs-13 text-muted mb-0">
+                          <span class="mr-2">Photo </span>10 Minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main-panel ends -->
+      <!-- container-scroller ends -->
+
+      <!-- partial:../partials/_footer.html -->
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-5">
+                <img src="/static/assets/images/logo.svg" class="footer-logo" alt="" />
+                <h5 class="font-weight-normal mt-4 mb-5">
+                  Newspaper is your news, entertainment, music fashion website. We
+                  provide you with the latest breaking news and videos straight from
+                  the entertainment industry.
+                </h5>
+                <ul class="social-media mb-3">
+                  <li>
+                    <a href="#">
+                      <i class="mdi mdi-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="mdi mdi-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="mdi mdi-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="footer-border-bottom pb-2">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="/static/assets/images/dashboard/home_1.jpg" alt="thumb" class="img-fluid" />
+                        </div>
+                        <div class="col-9">
+                          <h5 class="font-weight-600">
+                            Cotton import from USA to soar was American traders
+                            predict
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="footer-border-bottom pb-2 pt-2">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="../assets/images/dashboard/home_2.jpg" alt="thumb" class="img-fluid" />
+                        </div>
+                        <div class="col-9">
+                          <h5 class="font-weight-600">
+                            Cotton import from USA to soar was American traders
+                            predict
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div>
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="../assets/images/dashboard/home_3.jpg" alt="thumb" class="img-fluid" />
+                        </div>
+                        <div class="col-9">
+                          <h5 class="font-weight-600 mb-3">
+                            Cotton import from USA to soar was American traders
+                            predict
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
+                <div class="footer-border-bottom pb-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 font-weight-600">Magazine</h5>
+                    <div class="count">1</div>
+                  </div>
+                </div>
+                <div class="footer-border-bottom pb-2 pt-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 font-weight-600">Business</h5>
+                    <div class="count">1</div>
+                  </div>
+                </div>
+                <div class="footer-border-bottom pb-2 pt-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 font-weight-600">Sports</h5>
+                    <div class="count">1</div>
+                  </div>
+                </div>
+                <div class="footer-border-bottom pb-2 pt-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 font-weight-600">Arts</h5>
+                    <div class="count">1</div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 font-weight-600">Politics</h5>
+                    <div class="count">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                  <div class="fs-14 font-weight-600">
+                    © 2020 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white">
+                      BootstrapDash</a>. All rights reserved.
+                  </div>
+                  <div class="fs-14 font-weight-600">
+                    Handcrafted by <a href="https://www.bootstrapdash.com/" target="_blank"
+                      class="text-white">BootstrapDash</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- partial -->
     </div>
-    <script>
+  </div>
+  <div style="display: none;">
+    <form id="viewed_add" action="http://localhost:8088/viewed/addViewed" method="post">
+      <input type="text" name="account_id" id="account_id_viewed">
+      <input type="text" name="news_id" id="news_id_viewed">
+      <input type="submit" value="submit" id="submit_viewed">
+    </form>
+
+  </div>
+  <script>
     function getAccount() {
       var accountName = sessionStorage.getItem('Account');
-      if(accountName == null){
+      if (accountName == null) {
         window.location.href = "Login.html";
       }
       const convertAccount = JSON.parse(accountName);
@@ -477,67 +442,71 @@
 
     }
   </script>
-    <!-- inject:js -->
-    <script src="/static/assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/static/assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
 
-    <script src="/static/assets/vendors/aos/dist/aos.js/aos.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- Custom js for this page-->
-    <script src="/static/assets/js/demo.js"></script>
-    <script src="/static/assets/js/jquery.easeScroll.js"></script>
-    <!-- End custom js for this page-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Code của ngân-->
-    <script>
-      const queryString = window.location.search;
-      console.log(queryString);
-      const urlParams = new URLSearchParams(queryString);
-      const id = urlParams.get('id')
-      $.ajax({
-      url: "http://localhost:8088/news/getNewsByID/"+id+"",
+  <script src="/static/assets/vendors/aos/dist/aos.js/aos.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="/static/assets/js/demo.js"></script>
+  <script src="/static/assets/js/jquery.easeScroll.js"></script>
+  <!-- End custom js for this page-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--Code của ngân-->
+  <script>
+    var accountName = sessionStorage.getItem('Account');
+        const convertAccount = JSON.parse(accountName);
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id')
+    $.ajax({
+      url: "http://localhost:8088/news/getNewsByID/" + id + "",
       method: "GET",
       dataType: "json",
       success: function (data) {
         var container = document.getElementById("divdonoidung");
         console.log(data);
         var news = {
-            news_author: data.news_author,
-            news_describe: data.news_describe,
-            news_id: data.news_id,
-            news_images: data.news_images,
-            news_submitdate: data.news_submitdate,
-            news_title: data.news_title,
-            news_detailContent: data.news_detailContent,
-          }
+          news_author: data.news_author,
+          news_describe: data.news_describe,
+          news_id: data.news_id,
+          news_images: data.news_images,
+          news_submitdate: data.news_submitdate,
+          news_title: data.news_title,
+          news_detailContent: data.news_detailContent,
+        }
+        document.getElementById("news_id_viewed").value = news.news_id;
+        document.getElementById("account_id_viewed").value = convertAccount.account_id;
 
-         container.innerHTML = news.news_detailContent;
-         var accountName = sessionStorage.getItem('Account');
-         const convertAccount = JSON.parse(accountName);
-         var input = {
-            "account_id": convertAccount.account_id
-            "news_id": news.news_id
-         };
+        container.innerHTML = news.news_detailContent;
+        
+        document.getElementById("submit_viewed").click();
+        $('#viewed_add').submit(function (e) {
+          e.preventDefault();
+          $.ajax({
+            url: $(this).attr('action'),
+            method: $(this).attr('method'),
+            dataType: $(this).serialize(),
+            success: function (data) {
+              console.log(data);
+              console.log("add viewed complete!!!");
+            },
+            error: function (xhr, status, error) {
+              console.log(error);
+            }
+          });
+        });
 
-           $.ajax({
-      url: "http://localhost:8088/viewed/addViewed",
-      method: "POST",
-      dataType: JSON.stringify(input),
-      success: function (data) {
-        console.log(data);
-        console.log("add viewed complete!!!");
+
       },
       error: function (xhr, status, error) {
         console.log(error);
       }
     });
+  </script>
+</body>
 
-      },
-      error: function (xhr, status, error) {
-        console.log(error);
-      }
-    });
-    </script>
-  </body>
 </html>

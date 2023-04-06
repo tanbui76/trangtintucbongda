@@ -33,10 +33,12 @@ public class ViewedAPI {
 
     @CrossOrigin
     @PostMapping("/addViewed")
-    public ViewedEntity addNewsViewed(Long account_id, Long news_id){
+    public ViewedEntity addNewsViewed(String account_id, String news_id){
+        Long idacc = Long.parseLong(account_id);
+        Long idnews = Long.parseLong(news_id);
         ViewedEntity viewedEntity = new ViewedEntity();
-        viewedEntity.setAccount(accountService.getAccountById(account_id));
-        viewedEntity.setNews(newsService.getNewsById(news_id));
+        viewedEntity.setAccount(accountService.getAccountById(idacc));
+        viewedEntity.setNews(newsService.getNewsById(idnews));
         return viewedService.addViewed(viewedEntity);
     }
 }
