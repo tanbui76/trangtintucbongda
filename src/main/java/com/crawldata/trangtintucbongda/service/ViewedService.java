@@ -9,4 +9,6 @@ public interface ViewedService {
     List<ViewedEntity> getAllViewed();
 
     List<NewsEntity> getAllNewsViewed (Long account_id);
+
+    ViewedEntity addViewed(ViewedEntity viewedEntity);
 }

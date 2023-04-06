@@ -1,5 +1,7 @@
 package com.crawldata.trangtintucbongda.api;
 
+import com.crawldata.trangtintucbongda.dto.AccountDTO;
+import com.crawldata.trangtintucbongda.entity.AccountEntity;
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.ViewedEntity;
 import com.crawldata.trangtintucbongda.service.ViewedService;
@@ -23,4 +25,11 @@ public class ViewedAPI {
         return viewedService.getAllNewsViewed(account_id);
     }
 
+    @CrossOrigin
+    @PostMapping("/addViewed")
+    public ViewedEntity addNewsViewed(AccountEntity accountEntity, NewsEntity newsEntity){
+
+
+        return viewedService.addViewed(viewedEntity);
+    }
 }
