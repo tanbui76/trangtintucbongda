@@ -12,406 +12,548 @@
     <link rel="stylesheet" href="https://s1.vnecdn.net/myvne/c/v110/ls/myvne_2019.css" media="all">
     <link rel="stylesheet" href="https://s1.vnecdn.net/myvne/c/v110/Merriweather-woff2.css" media="all">
     <link rel="stylesheet" href="https://s1.vnecdn.net/myvne/c/v110/myvne_v2.css" media="all">
-
+    <link
+            rel="stylesheet"
+            href="/static/assets/vendors/mdi/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="/static/assets/vendors/aos/dist/aos.css/aos.css"/>
+    <!-- End plugin css for this page -->
+    <link rel="shortcut icon" href="/static/assets/images/favicon.png"/>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
 </head>
 
-<body>
-    <div id="wrapper_container">
-        <div id="container" style="display: block;">
-            <div id="detail_page_myvne" class="width_common">
-                <div id="col_250" class="left col_250_v2">
-                    <div class="box_navigationuser width_common box_category">
-                        <ul class="width_common myvne_user_link">
-                            <li>
-                                <a href="/users/chi-tiet-tai-khoan" class="active">Thông tin chung</a>
-                            </li>
-                            <li>
-                                <a href="/users/feed/1087014360">Ý kiến của bạn</a>
-                            </li>
-                            <li>
-                                <a class="total_save_article " href="/users/tin-da-luu">Tin đã lưu</a>
-                            </li>
-                            <li>
-                                <a href="news-viewed.html">Tin đã xem</a>
-                            </li>
-                            <!-- <li class="li_bd">
-                        <a  href="" title="Bài đăng">Bài đăng</a>
-                    </li> -->
-                            <li>
-                                <a href="index.html" id="myvne_logout_link_left">
-                                    Thoát
-                                    <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H6.25716C6.00353 15.6929 5.78261 15.3578 5.59971 15H2C1.44772 15 1 14.5523 1 14V2C1 1.44772 1.44772 1 2 1H10C10.5523 1 11 1.44772 11 2V7.02242C11.3434 7.05337 11.6777 7.11588 12 7.20703V2C12 0.895431 11.1046 0 10 0H2ZM4 8C4 8.55229 3.55228 9 3 9C2.44772 9 2 8.55229 2 8C2 7.44771 2.44772 7 3 7C3.55228 7 4 7.44771 4 8ZM10.5 17C12.9853 17 15 14.9853 15 12.5C15 10.0147 12.9853 8 10.5 8C8.01472 8 6 10.0147 6 12.5C6 14.9853 8.01472 17 10.5 17ZM10.8536 14.8536C10.6583 15.0488 10.3417 15.0488 10.1464 14.8536C9.95118 14.6583 9.95118 14.3417 10.1464 14.1464L11.2929 13H8.5C8.22386 13 8 12.7761 8 12.5C8 12.2239 8.22386 12 8.5 12H11.2929L10.1464 10.8536C9.95119 10.6583 9.95119 10.3417 10.1464 10.1464C10.3417 9.95118 10.6583 9.95118 10.8536 10.1464L12.8536 12.1464C12.9015 12.1944 12.9377 12.2496 12.9621 12.3086C12.9861 12.3667 12.9996 12.4303 13 12.497L13 12.5L13 12.503C12.9996 12.5697 12.9861 12.6333 12.9621 12.6914C12.938 12.7495 12.9026 12.804 12.8557 12.8514L12.8532 12.854L10.8536 14.8536Z"
-                                            fill="#757575"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+<body onload="getAccount()">
+<div class="container-scroller">
+    <div class="main-panel">
+
+        <header id="header" style="max-width: none;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="navbar-top">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <ul class="navbar-top-left-menu">
+                                <li class="nav-item">
+                                    <a href="/static/templates/pages/index-inner.html"
+                                       class="nav-link">Advertise</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/static/templates/pages/aboutus.html"
+                                       class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Write for Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">In the Press</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-top-right-menu">
+                                <!--                  <li class="nav-item">-->
+                                <!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
+                                <!--                  </li>-->
+                                <li class="nav-item">
+                                    <!--                    <a href="#" class="nav-link">Sign in</a>-->
+                                    <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
+                                    <a href="thongtincanhan.html">
+                                        <p style="font-weight: 750;padding-top: 8%;color:
+                          chocolate;" id="AccountName"></p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="Logout()" class="nav-link">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--THÔNG BÁO-->
+                    <div id="noitification" class="content-notify" style="position: fixed; right: 1%;top:
+                9%;">
                     </div>
 
 
+
+                    <div class="navbar-bottom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <a class="navbar-brand" href="#"><img
+                                        src="/static/assets/images/logo.svg" alt=""/></a>
+                            </div>
+                            <div>
+                                <button class="navbar-toggler" type="button"
+                                        data-target="#navbarSupportedContent"
+                                        aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="navbar-collapse justify-content-center collapse"
+                                     id="navbarSupportedContent" style="top: 69%;left: 66.5%;">
+                                    <ul class="navbar-nav d-lg-flex justify-content-between
+                        align-items-center" >
+                                        <li>
+                                            <button class="navbar-close">
+                                                <i class="mdi mdi-close"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="/static/index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/pages/magazine.html">MAGAZINE</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/pages/business.html">Business</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/static/pages/sports.html">Sports</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/static/pages/art.html">Art</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                               href="/static/pages/politics.html">POLITICS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/static/pages/travel.html">Travel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                               href="/static/pages/contactus.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--                <ul class="social-media">-->
+                            <!--                  <li>-->
+                            <!--                    <a href="#">-->
+                            <!--                      <i class="mdi mdi-facebook"></i>-->
+                            <!--                    </a>-->
+                            <!--                  </li>-->
+                            <!--                  <li>-->
+                            <!--                    <a href="#">-->
+                            <!--                      <i class="mdi mdi-youtube"></i>-->
+                            <!--                    </a>-->
+                            <!--                  </li>-->
+                            <!--                  <li>-->
+                            <!--                    <a href="#">-->
+                            <!--                      <i class="mdi mdi-twitter"></i>-->
+                            <!--                    </a>-->
+                            <!--                  </li>-->
+                            <!--                </ul>-->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+</div>
+<div id="wrapper_container">
+    <div id="container" style="display: block;">
+        <div id="detail_page_myvne" class="width_common">
+            <div id="col_250" class="left col_250_v2">
+                <div class="box_navigationuser width_common box_category">
+                    <ul class="width_common myvne_user_link">
+                        <li>
+                            <a href="/users/chi-tiet-tai-khoan" class="active">Thông tin chung</a>
+                        </li>
+                        <li>
+                            <a href="/users/feed/1087014360">Ý kiến của bạn</a>
+                        </li>
+                        <li>
+                            <a class="total_save_article " href="/users/tin-da-luu">Tin đã lưu</a>
+                        </li>
+                        <li>
+                            <a href="news-viewed.html">Tin đã xem</a>
+                        </li>
+                        <!-- <li class="li_bd">
+                    <a  href="" title="Bài đăng">Bài đăng</a>
+                </li> -->
+                        <li>
+                            <a href="index.html" id="myvne_logout_link_left">
+                                Thoát
+                                <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H6.25716C6.00353 15.6929 5.78261 15.3578 5.59971 15H2C1.44772 15 1 14.5523 1 14V2C1 1.44772 1.44772 1 2 1H10C10.5523 1 11 1.44772 11 2V7.02242C11.3434 7.05337 11.6777 7.11588 12 7.20703V2C12 0.895431 11.1046 0 10 0H2ZM4 8C4 8.55229 3.55228 9 3 9C2.44772 9 2 8.55229 2 8C2 7.44771 2.44772 7 3 7C3.55228 7 4 7.44771 4 8ZM10.5 17C12.9853 17 15 14.9853 15 12.5C15 10.0147 12.9853 8 10.5 8C8.01472 8 6 10.0147 6 12.5C6 14.9853 8.01472 17 10.5 17ZM10.8536 14.8536C10.6583 15.0488 10.3417 15.0488 10.1464 14.8536C9.95118 14.6583 9.95118 14.3417 10.1464 14.1464L11.2929 13H8.5C8.22386 13 8 12.7761 8 12.5C8 12.2239 8.22386 12 8.5 12H11.2929L10.1464 10.8536C9.95119 10.6583 9.95119 10.3417 10.1464 10.1464C10.3417 9.95118 10.6583 9.95118 10.8536 10.1464L12.8536 12.1464C12.9015 12.1944 12.9377 12.2496 12.9621 12.3086C12.9861 12.3667 12.9996 12.4303 13 12.497L13 12.5L13 12.503C12.9996 12.5697 12.9861 12.6333 12.9621 12.6914C12.938 12.7495 12.9026 12.804 12.8557 12.8514L12.8532 12.854L10.8536 14.8536Z"
+                                            fill="#757575"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
 
-                <style>
+            </div>
+
+
+            <style>
                     .box_upload_anh .act_upload {
                         cursor: auto;
                     }
-                </style>
-                <div id="col_710" class="right col_710_v2">
-                    <!-- <div class="width_common row_info_user">
-                <div class="tit_row">Thống kê hoạt động</div>
-                <div class="width_common list_fill_user">
-                <div class="box-tk-activ">
-                    <div class="item-tk"><span class="txt">Lượt thích<br><strong></strong></span></div>
-                    <div class="item-tk"><span class="txt">Ý kiến<br><strong></strong></span></div>
-                    <div class="item-tk"><span class="txt">Bài đăng<br><strong></strong></span></div>
-                </div>
-                </div>
-            </div> -->
-                    <div class="tit_row">Thông tin tài khoản</div>
-                    <div class="width_common wrapper_user">
-                        <div class="width_common row_info_user">
-                            <div class="width_common list_fill_user">
+
+            </style>
+            <div id="col_710" class="right col_710_v2">
+                <!-- <div class="width_common row_info_user">
+            <div class="tit_row">Thống kê hoạt động</div>
+            <div class="width_common list_fill_user">
+            <div class="box-tk-activ">
+                <div class="item-tk"><span class="txt">Lượt thích<br><strong></strong></span></div>
+                <div class="item-tk"><span class="txt">Ý kiến<br><strong></strong></span></div>
+                <div class="item-tk"><span class="txt">Bài đăng<br><strong></strong></span></div>
+            </div>
+            </div>
+        </div> -->
+                <div class="tit_row">Thông tin tài khoản</div>
+                <div class="width_common wrapper_user">
+                    <div class="width_common row_info_user">
+                        <div class="width_common list_fill_user">
 
 
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Họ tên</div>
-                                        <p class="main_txt" id="fullname"></p>
-                                        <div id="form_update_fullname" class="width_common box_edit_form"
-                                            style="display: none">
-                                            <p class="width_common tit_edit">Nhập họ tên</p>
-                                            <div class="width_common form_edit form_log">
-                                                <form id="FullNameForm"
-                                                    action="http://localhost:8088/account/updateAccountFullName"
-                                                    method="post">
-                                                    <input type="text" id="account_id_fullname" name="account_id"
-                                                        style="display: none;" />
-                                                    <div class="item_input_log">
-                                                        <input id="account_fullname_form" name="account_fullname"
-                                                            class="input_form has_transition" type="text"
-                                                            placeholder="Nhập họ tên">
-                                                        <span class="error_fullname width_common mess_error"></span>
-                                                    </div>
-                                                    <div class="item_input_log item_button_act">
-                                                        <button id="btn_save_fullname" type="submit"
-                                                            class="pri_button btn_log">Đổi tên
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <a id="btn_change_fullname" href="javascript:void(0)"
-                                            onclick="changeSomething('fullname')" class="click_edit js_click_edit">Thay
-                                            đổi</a>
-                                    </div>
-                                </div>
-
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Email</div>
-                                        <p class="main_txt" id="email"></p>
-                                        <div id="form_update_email" class="width_common box_edit_form"
-                                            style="display: none">
-                                            <form id="EmailForm"
-                                                action="http://localhost:8088/account/updateAccountEmail" method="post">
-                                                <div class="width_common form_edit form_log">
-                                                    <div class="item_input_log">
-                                                        <input type="text" id="account_id_email" name="account_id" style="display: none;"/>
-                                                        <p class="width_common tit_edit">Nhập email mới</p>
-                                                        <input id="txtEmail" class="input_form has_transition" name="account_email"
-                                                            type="text" placeholder="Nhập email mới"
-                                                            autocomplete="rutjfkde" readonly=""
-                                                            onfocus="this.removeAttribute('readonly');"
-                                                            oncopy="return false" ondrag="return false"
-                                                            ondrop="return false" onpaste="return false"
-                                                            oncontextmenu="return false">
-                                                        <span class="error_email width_common mess_error"></span>
-                                                    </div>
-                                                    <div class="item_input_log item_button_act">
-                                                        <button id="btn_save_email" class="pri_button btn_log  ">Đổi
-                                                            email
-                                                        </button>
-                                                    </div>
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div id="box_notify_change_mail" class="width_common box_edit_form"
-                                            style="display: none"></div>
-                                        <a id="btn_change_email" href="javascript:void(0)"
-                                            onclick="changeSomething('email')" class="click_edit js_click_edit">Thay
-                                            đổi</a>
-                                    </div>
-                                </div>
-
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Mật khẩu</div>
-                                        <p class="main_txt">
-                                            <input id="password" type="password" readonly="" value="1111111111111"
-                                                style="font-size: 20px;width: unset !important;">
-                                        </p>
-                                        <div id="form_update_password" class="width_common box_edit_form"
-                                            style="display: none">
-                                            <div class="width_common form_edit form_log">
-                                                <p class="width_common tit_edit">Nhập mật khẩu hiện tại</p>
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Họ tên</div>
+                                    <p class="main_txt" id="fullname"></p>
+                                    <div id="form_update_fullname" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <p class="width_common tit_edit">Nhập họ tên</p>
+                                        <div class="width_common form_edit form_log">
+                                            <form id="FullNameForm"
+                                                  action="http://localhost:8088/account/updateAccountFullName"
+                                                  method="post">
+                                                <input type="text" id="account_id_fullname" name="account_id"
+                                                       style="display: none;"/>
                                                 <div class="item_input_log">
-                                                    <input id="pass_old" class="input_form has_transition input_pass"
-                                                        type="password" placeholder="Nhập mật khẩu hiện tại">
-                                                    <span class="icon_eye_show_null icon_input ">
-                                                        <svg class="icon eye-show">
-                                                            <use xlink:href="#eye-show"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="icon_eye_show icon_input" style="display: none;">
-                                                        hiện <svg class="icon eye-show">
-                                                            <use xlink:href="#eye-show"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="icon_eye_hide icon_input" style="display: none;">
-                                                        ẩn <svg class="icon eye-hide">
-                                                            <use xlink:href="#eye-hide"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="error_password_old width_common mess_error"></span>
-                                                </div>
-                                                <p class="width_common tit_edit">Nhập mật khẩu mới</p>
-                                                <div class="item_input_log">
-                                                    <input id="pass_new" class="input_form has_transition input_pass"
-                                                        type="password" placeholder="Tạo mật khẩu mới">
-                                                    <span class="icon_eye_show_null icon_input ">
-                                                        <svg class="icon eye-show">
-                                                            <use xlink:href="#eye-show"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="icon_eye_show icon_input" style="display: none;">
-                                                        hiện <svg class="icon eye-show">
-                                                            <use xlink:href="#eye-show"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="icon_eye_hide icon_input" style="display: none;">
-                                                        ẩn <svg class="icon eye-hide">
-                                                            <use xlink:href="#eye-hide"></use>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="error_password_new width_common mess_error"></span>
-                                                </div>
-                                                <div class="item_input_log item_button_act">
-                                                    <button id="btn_save_password" class="pri_button btn_log  ">Đổi mật
-                                                        khẩu
-                                                    </button>
-                                                    <div class="right note_edit_mk">
-                                                        <a href="javascript:void(0)" id="btn_forgot_pass"
-                                                            data-email="buinguyennhattan12122002@gmail.com">Đặt lại mật
-                                                            khẩu</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a id="btn_change_password" onclick="changeSomething('password')"
-                                            href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="width_common row_info_user">
-                            <div class="tit_row">Thông tin cá nhân</div>
-                            <div class="width_common list_fill_user">
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Ngày sinh</div>
-                                        <p class="main_txt" id="birthday"></p>
-                                        <div class="width_common box_edit_form" id="form_update_birthday"
-                                            style="display:none;">
-                                            <p class="width_common tit_edit">Ngày sinh (ngày / tháng / năm)</p>
-                                            <div class="width_common form_edit form_log">
-                                                <div class="item_input_log">
-                                                    <input id="txtBirthDay" class="input_form has_transition"
-                                                        type="date" placeholder="dd / mm / yyyy" min="1933-03-26"
-                                                        max="2023-03-26">
+                                                    <input id="account_fullname_form" name="account_fullname"
+                                                           class="input_form has_transition" type="text"
+                                                           placeholder="Nhập họ tên">
                                                     <span class="error_fullname width_common mess_error"></span>
                                                 </div>
                                                 <div class="item_input_log item_button_act">
-                                                    <button class="pri_button btn_log " id="btn_save_birthday">Lưu thay
-                                                        đổi
+                                                    <button id="btn_save_fullname" type="submit"
+                                                            class="pri_button btn_log">Đổi tên
                                                     </button>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                        <a href="javascript:;" onclick="changeSomething('birthday')"
-                                            class="click_edit js_click_edit" id="btn_change_birthday">Thay
-                                            đổi</a>
                                     </div>
+                                    <a id="btn_change_fullname" href="javascript:void(0)"
+                                       onclick="changeSomething('fullname')" class="click_edit js_click_edit">Thay
+                                        đổi</a>
                                 </div>
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Giới tính</div>
-                                        <p class="val_sex main_txt " id="gender"></p>
-                                        <div id="form_update_sex" class="width_common box_edit_form"
-                                            style="display: none">
+                            </div>
+
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Email</div>
+                                    <p class="main_txt" id="email"></p>
+                                    <div id="form_update_email" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <form id="EmailForm"
+                                              action="http://localhost:8088/account/updateAccountEmail" method="post">
                                             <div class="width_common form_edit form_log">
                                                 <div class="item_input_log">
-                                                    <p class="gt_option flex">
-                                                        <label for="sl_nam"><input type="radio" name="sex" id="sl_nam"
-                                                                value="1"> Nam</label>
-                                                        <label for="sl_nu"><input type="radio" name="sex" id="sl_nu"
-                                                                value="2"> Nữ</label>
-                                                        <label for="sl_khac"><input checked="" type="radio" name="sex"
-                                                                id="sl_khac" value="0"> Không chia
-                                                            sẻ</label>
-                                                    </p>
-                                                    <span class="error_sex width_common mess_error"></span>
+                                                    <input type="text" id="account_id_email" name="account_id"
+                                                           style="display: none;"/>
+                                                    <p class="width_common tit_edit">Nhập email mới</p>
+                                                    <input id="txtEmail" class="input_form has_transition"
+                                                           name="account_email"
+                                                           type="text" placeholder="Nhập email mới"
+                                                           autocomplete="rutjfkde" readonly=""
+                                                           onfocus="this.removeAttribute('readonly');"
+                                                           oncopy="return false" ondrag="return false"
+                                                           ondrop="return false" onpaste="return false"
+                                                           oncontextmenu="return false">
+                                                    <span class="error_email width_common mess_error"></span>
                                                 </div>
                                                 <div class="item_input_log item_button_act">
-                                                    <button id="btn_save_sex" class="pri_button btn_log ">Lưu thay đổi
+                                                    <button id="btn_save_email" class="pri_button btn_log  ">Đổi
+                                                        email
                                                     </button>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <a id="btn_change_sex" onclick="changeSomething('sex')"
-                                            href="javascript:void(0)" class="click_edit js_click_edit">Thay
-                                            đổi</a>
-                                    </div>
-                                </div>
 
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Số điện thoại cá nhân</div>
-                                        <p class="main_txt" id="sdt"></p>
-                                        <div id="form_update_mobile" class="width_common box_edit_form"
-                                            style="display: none">
-                                            <p class="width_common tit_edit">Nhập số di động (Việt Nam)</p>
-                                            <div class="width_common form_edit form_log">
-                                                <div class="item_input_log">
-                                                    <input id="txtMobile" class="input_form has_transition"
-                                                        type="number" min="0" placeholder="Nhập số điện thoại">
-                                                    <span class="error_mobile width_common mess_error"></span>
-                                                </div>
-                                                <div class="item_input_log item_button_act">
-                                                    <button id="btn_save_mobile" class="pri_button btn_log  ">Lưu thay
-                                                        đổi
-                                                    </button>
-                                                </div>
                                             </div>
-                                        </div>
-                                        <a id="btn_change_mobile" href="javascript:void(0)"
-                                            onclick="changeSomething('mobile')" class="click_edit js_click_edit">Thay
-                                            đổi</a>
+                                        </form>
                                     </div>
+                                    <div id="box_notify_change_mail" class="width_common box_edit_form"
+                                         style="display: none"></div>
+                                    <a id="btn_change_email" href="javascript:void(0)"
+                                       onclick="changeSomething('email')" class="click_edit js_click_edit">Thay
+                                        đổi</a>
                                 </div>
+                            </div>
 
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Địa chỉ</div>
-                                        <p class="main_txt" id="country"></p>
-                                        <div id="form_update_address" class="width_common box_edit_form"
-                                            style="display: none">
-                                            <p class="width_common tit_edit">Nhập địa chỉ</p>
-                                            <div class="width_common form_edit form_log">
-                                                <div class="item_input_log wrap-suggest">
-                                                    <input id="txtAddress" class="input_form has_transition" type="text"
-                                                        placeholder="Nhập địa chỉ">
-                                                    <div class="suggest-search">
-                                                        <ul></ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item_input_log item_button_act">
-                                                    <button id="btn_save_address" class="pri_button btn_log  ">Lưu thay
-                                                        đổi
-                                                    </button>
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Mật khẩu</div>
+                                    <p class="main_txt">
+                                        <input id="password" type="password" readonly="" value="1111111111111"
+                                               style="font-size: 20px;width: unset !important;">
+                                    </p>
+                                    <div id="form_update_password" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <div class="width_common form_edit form_log">
+                                            <p class="width_common tit_edit">Nhập mật khẩu hiện tại</p>
+                                            <div class="item_input_log">
+                                                <input id="pass_old" class="input_form has_transition input_pass"
+                                                       type="password" placeholder="Nhập mật khẩu hiện tại">
+                                                <span class="icon_eye_show_null icon_input ">
+                                                        <svg class="icon eye-show">
+                                                            <use xlink:href="#eye-show"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="icon_eye_show icon_input" style="display: none;">
+                                                        hiện <svg class="icon eye-show">
+                                                            <use xlink:href="#eye-show"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="icon_eye_hide icon_input" style="display: none;">
+                                                        ẩn <svg class="icon eye-hide">
+                                                            <use xlink:href="#eye-hide"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="error_password_old width_common mess_error"></span>
+                                            </div>
+                                            <p class="width_common tit_edit">Nhập mật khẩu mới</p>
+                                            <div class="item_input_log">
+                                                <input id="pass_new" class="input_form has_transition input_pass"
+                                                       type="password" placeholder="Tạo mật khẩu mới">
+                                                <span class="icon_eye_show_null icon_input ">
+                                                        <svg class="icon eye-show">
+                                                            <use xlink:href="#eye-show"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="icon_eye_show icon_input" style="display: none;">
+                                                        hiện <svg class="icon eye-show">
+                                                            <use xlink:href="#eye-show"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="icon_eye_hide icon_input" style="display: none;">
+                                                        ẩn <svg class="icon eye-hide">
+                                                            <use xlink:href="#eye-hide"></use>
+                                                        </svg>
+                                                    </span>
+                                                <span class="error_password_new width_common mess_error"></span>
+                                            </div>
+                                            <div class="item_input_log item_button_act">
+                                                <button id="btn_save_password" class="pri_button btn_log  ">Đổi mật
+                                                    khẩu
+                                                </button>
+                                                <div class="right note_edit_mk">
+                                                    <a href="javascript:void(0)" id="btn_forgot_pass"
+                                                       data-email="buinguyennhattan12122002@gmail.com">Đặt lại mật
+                                                        khẩu</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a id="btn_change_address" href="javascript:void(0)"
-                                            onclick="changeSomething('address')" class="click_edit js_click_edit">Thay
-                                            đổi</a>
                                     </div>
+                                    <a id="btn_change_password" onclick="changeSomething('password')"
+                                       href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="width_common row_info_user">
-                            <div class="tit_row">Hành động tài khoản</div>
-                            <div class="width_common list_fill_user">
+                    <div class="width_common row_info_user">
+                        <div class="tit_row">Thông tin cá nhân</div>
+                        <div class="width_common list_fill_user">
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Ngày sinh</div>
+                                    <p class="main_txt" id="birthday"></p>
+                                    <div class="width_common box_edit_form" id="form_update_birthday"
+                                         style="display:none;">
+                                        <p class="width_common tit_edit">Ngày sinh (ngày / tháng / năm)</p>
+                                        <div class="width_common form_edit form_log">
+                                            <div class="item_input_log">
+                                                <input id="txtBirthDay" class="input_form has_transition"
+                                                       type="date" placeholder="dd / mm / yyyy" min="1933-03-26"
+                                                       max="2023-03-26">
+                                                <span class="error_fullname width_common mess_error"></span>
+                                            </div>
+                                            <div class="item_input_log item_button_act">
+                                                <button class="pri_button btn_log " id="btn_save_birthday">Lưu thay
+                                                    đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" onclick="changeSomething('birthday')"
+                                       class="click_edit js_click_edit" id="btn_change_birthday">Thay
+                                        đổi</a>
+                                </div>
+                            </div>
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Giới tính</div>
+                                    <p class="val_sex main_txt " id="gender"></p>
+                                    <div id="form_update_sex" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <div class="width_common form_edit form_log">
+                                            <div class="item_input_log">
+                                                <p class="gt_option flex">
+                                                    <label for="sl_nam"><input type="radio" name="sex" id="sl_nam"
+                                                                               value="1"> Nam</label>
+                                                    <label for="sl_nu"><input type="radio" name="sex" id="sl_nu"
+                                                                              value="2"> Nữ</label>
+                                                    <label for="sl_khac"><input checked="" type="radio" name="sex"
+                                                                                id="sl_khac" value="0"> Không chia
+                                                        sẻ</label>
+                                                </p>
+                                                <span class="error_sex width_common mess_error"></span>
+                                            </div>
+                                            <div class="item_input_log item_button_act">
+                                                <button id="btn_save_sex" class="pri_button btn_log ">Lưu thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a id="btn_change_sex" onclick="changeSomething('sex')"
+                                       href="javascript:void(0)" class="click_edit js_click_edit">Thay
+                                        đổi</a>
+                                </div>
+                            </div>
+
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Số điện thoại cá nhân</div>
+                                    <p class="main_txt" id="sdt"></p>
+                                    <div id="form_update_mobile" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <p class="width_common tit_edit">Nhập số di động (Việt Nam)</p>
+                                        <div class="width_common form_edit form_log">
+                                            <div class="item_input_log">
+                                                <input id="txtMobile" class="input_form has_transition"
+                                                       type="number" min="0" placeholder="Nhập số điện thoại">
+                                                <span class="error_mobile width_common mess_error"></span>
+                                            </div>
+                                            <div class="item_input_log item_button_act">
+                                                <button id="btn_save_mobile" class="pri_button btn_log  ">Lưu thay
+                                                    đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a id="btn_change_mobile" href="javascript:void(0)"
+                                       onclick="changeSomething('mobile')" class="click_edit js_click_edit">Thay
+                                        đổi</a>
+                                </div>
+                            </div>
+
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Địa chỉ</div>
+                                    <p class="main_txt" id="country"></p>
+                                    <div id="form_update_address" class="width_common box_edit_form"
+                                         style="display: none">
+                                        <p class="width_common tit_edit">Nhập địa chỉ</p>
+                                        <div class="width_common form_edit form_log">
+                                            <div class="item_input_log wrap-suggest">
+                                                <input id="txtAddress" class="input_form has_transition" type="text"
+                                                       placeholder="Nhập địa chỉ">
+                                                <div class="suggest-search">
+                                                    <ul></ul>
+                                                </div>
+                                            </div>
+                                            <div class="item_input_log item_button_act">
+                                                <button id="btn_save_address" class="pri_button btn_log  ">Lưu thay
+                                                    đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a id="btn_change_address" href="javascript:void(0)"
+                                       onclick="changeSomething('address')" class="click_edit js_click_edit">Thay
+                                        đổi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width_common row_info_user">
+                        <div class="tit_row">Hành động tài khoản</div>
+                        <div class="width_common list_fill_user">
 
 
-                                <div class="item_fill_user">
-                                    <div class="ctn_fill">
-                                        <div class="label_fill">Xóa tài khoản</div>
-                                        <p class="main_txt txt_small">
-                                            Tất cả tin đã lưu và lịch sử đọc sẽ bị xóa.<br>
-                                            Người dùng khác vẫn có thể thấy ý kiến và lượt thích của bạn.
-                                        </p>
-                                        <div id="form_delete_acc" class="width_common box_edit_form"
-                                            style="display:none;">
-                                            <p class="width_common tit_edit">Nhập mật khẩu để xác nhận</p>
-                                            <div class="width_common form_edit form_log">
-                                                <div class="item_input_log">
-                                                    <input id="txtPasswordDelAcc"
-                                                        class="input_form has_transition input_pass" type="password"
-                                                        placeholder="Nhập mật khẩu">
+                            <div class="item_fill_user">
+                                <div class="ctn_fill">
+                                    <div class="label_fill">Xóa tài khoản</div>
+                                    <p class="main_txt txt_small">
+                                        Tất cả tin đã lưu và lịch sử đọc sẽ bị xóa.<br>
+                                        Người dùng khác vẫn có thể thấy ý kiến và lượt thích của bạn.
+                                    </p>
+                                    <div id="form_delete_acc" class="width_common box_edit_form"
+                                         style="display:none;">
+                                        <p class="width_common tit_edit">Nhập mật khẩu để xác nhận</p>
+                                        <div class="width_common form_edit form_log">
+                                            <div class="item_input_log">
+                                                <input id="txtPasswordDelAcc"
+                                                       class="input_form has_transition input_pass" type="password"
+                                                       placeholder="Nhập mật khẩu">
 
-                                                    <span class="icon_eye_show_null icon_input">
+                                                <span class="icon_eye_show_null icon_input">
                                                         <svg class="icon eye-show">
                                                             <use xlink:href="#eye-show" style="fill: #828282"></use>
                                                         </svg>
                                                     </span>
-                                                    <span class="icon_eye_show icon_input" style="display: none;">
+                                                <span class="icon_eye_show icon_input" style="display: none;">
                                                         hiện <svg class="icon eye-show">
                                                             <use xlink:href="#eye-show"></use>
                                                         </svg>
                                                     </span>
-                                                    <span class="icon_eye_hide icon_input" style="display: none;">
+                                                <span class="icon_eye_hide icon_input" style="display: none;">
                                                         ẩn <svg class="icon eye-hide">
                                                             <use xlink:href="#eye-hide"></use>
                                                         </svg>
                                                     </span>
-                                                    <span
+                                                <span
                                                         class="error_password_delete_account width_common mess_error"></span>
-                                                </div>
-                                            </div>
-                                            <div class="width_common block_log block_log_onlytext">
-                                                <div class="width_common item_input_log item_button_act btn_xtemail">
-                                                    <button id="btnConfirmDelAcc" class="pri_button ">Xóa tài khoản
-                                                    </button>
-                                                </div>
                                             </div>
                                         </div>
-                                        <a href="javascript:void(0)" class="click_edit js_click_edit"
-                                            onclick="changeDeleteAccount()" id="btnDelAcc">Xóa</a>
+                                        <div class="width_common block_log block_log_onlytext">
+                                            <div class="width_common item_input_log item_button_act btn_xtemail">
+                                                <button id="btnConfirmDelAcc" class="pri_button ">Xóa tài khoản
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <a href="javascript:void(0)" class="click_edit js_click_edit"
+                                       onclick="changeDeleteAccount()" id="btnDelAcc">Xóa</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <script src="https://s1.vnecdn.net/myvne/j/v110/lib/ajaxupload.3.5.js"></script>
-                <input type="hidden" name="recaptcha"
-                    value="03AKH6MRFTnYIAPwlTXXh01020M8cp9gZmDyfIX-Fjpt10cwLClOca-LMcM4LXvHKiY5Bmt_M1ZkYWhAwrq4dn8sUvgQD5QWJGbTloGdh7TfG4gxq2ehaLsiRkD91cs6W_IlbMoxsZGmfT4bnLJ8uUgoEkwPGOOaUtNzJs04LrkEDha_PXbNlI-HKar0yj-lSDpUdhn93nTbCmZmR1ywkaKXdn-9nSlvB6OexFvvYB7tKIAFGS7gHG3OKOWKwmmzT3ESuuVE_hVG9Uu8A_rQfB9GGLPfDbfeOZ4hr8yIf1UPXPNu9f25pBDQwBPhoNeLOzp6BUyTBhyKkuDAhkp7ks2aaNV76wB4jEqilcsCaEMZuXJEMxwrRnee__ZPIQuC2ICd-OODBXbz-ZVvBxV1zFucDBe_aNJJJPcy2qaca_tIAsPpTjBjX9HBm_ZaIFwcYmFMkhiT9rLOPm0IRj80DW94-xq7BmjbCyk6qAaEjcb3B3vYLhK5bYYlPTe5B4EFlbRlVnbwF586-Iyr1A95ZR7ZY1_Oxh0u2GQ4WUMpXmC0EACbndIrX5aLgvNnu-Gyx6n7U8nC9gN1KjjU05NQTfmTVNIVXMazMS8g">
-                
-                
-                <!-- InstanceEndEditable -->
-                <div class="banner_980x60" style="padding-bottom: 10px;margin-top: 20px;">
-                    <script type="text/javascript" src="//e.eclick.vn/delivery/zone/3132.js"></script>
-                </div>
+            <script src="https://s1.vnecdn.net/myvne/j/v110/lib/ajaxupload.3.5.js"></script>
+            <input type="hidden" name="recaptcha"
+                   value="03AKH6MRFTnYIAPwlTXXh01020M8cp9gZmDyfIX-Fjpt10cwLClOca-LMcM4LXvHKiY5Bmt_M1ZkYWhAwrq4dn8sUvgQD5QWJGbTloGdh7TfG4gxq2ehaLsiRkD91cs6W_IlbMoxsZGmfT4bnLJ8uUgoEkwPGOOaUtNzJs04LrkEDha_PXbNlI-HKar0yj-lSDpUdhn93nTbCmZmR1ywkaKXdn-9nSlvB6OexFvvYB7tKIAFGS7gHG3OKOWKwmmzT3ESuuVE_hVG9Uu8A_rQfB9GGLPfDbfeOZ4hr8yIf1UPXPNu9f25pBDQwBPhoNeLOzp6BUyTBhyKkuDAhkp7ks2aaNV76wB4jEqilcsCaEMZuXJEMxwrRnee__ZPIQuC2ICd-OODBXbz-ZVvBxV1zFucDBe_aNJJJPcy2qaca_tIAsPpTjBjX9HBm_ZaIFwcYmFMkhiT9rLOPm0IRj80DW94-xq7BmjbCyk6qAaEjcb3B3vYLhK5bYYlPTe5B4EFlbRlVnbwF586-Iyr1A95ZR7ZY1_Oxh0u2GQ4WUMpXmC0EACbndIrX5aLgvNnu-Gyx6n7U8nC9gN1KjjU05NQTfmTVNIVXMazMS8g">
+
+
+            <!-- InstanceEndEditable -->
+            <div class="banner_980x60" style="padding-bottom: 10px;margin-top: 20px;">
+                <script type="text/javascript" src="//e.eclick.vn/delivery/zone/3132.js"></script>
             </div>
         </div>
-        <div class="clear"></div>
-        <div style="display: none;">
-            <input type="text" id="account_id"/>
-        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/static/js/moment.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js">
-    </script>
-    <script>
+    <div class="clear"></div>
+    <div style="display: none;">
+        <input type="text" id="account_id"/>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/static/js/moment.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js">
+</script>
+<script>
         var Account = sessionStorage.getItem("Account");
         Account = JSON.parse(Account);
         console.log(Account);
@@ -430,8 +572,9 @@
         }
         document.getElementById("birthday").innerHTML = moment(Account.account_birthday).format("DD/MM/YYYY");
 
-    </script>
-    <script>
+
+</script>
+<script>
         // show ô chỉnh sửa
         function changeSomething(id) {
             var x = document.getElementById("form_update_" + id);
@@ -488,8 +631,21 @@
 
         }
 
-    </script>
-    <script>
+
+</script>
+<script>
+    function getAccount() {
+      var accountName = sessionStorage.getItem('Account');
+      if(accountName == null){
+        window.location.href = "Login.html";
+      }
+      const convertAccount = JSON.parse(accountName);
+      // console.log(convertAccount);
+      document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
+
+    }
+  </script>
+<script>
         $('#FullNameForm').submit(function (e) {
             e.preventDefault();
             document.getElementById("account_id_fullname").value = document.getElementById("account_id").value;
@@ -520,8 +676,9 @@
                 }
             });
         });
-    </script>
-    <script>
+
+</script>
+<script>
         // $.ajax({
         //     url: "http://localhost:8088/account",
         //     type: $(this).attr('method'),
@@ -578,7 +735,8 @@
             }
         });
         })
-    </script>
+
+</script>
 </body>
 
 </html>
