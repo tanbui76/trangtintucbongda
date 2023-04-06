@@ -78,6 +78,7 @@
                     </div>
 
 
+
                     <div class="navbar-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
@@ -635,6 +636,9 @@
 <script>
     function getAccount() {
       var accountName = sessionStorage.getItem('Account');
+      if(accountName == null){
+        window.location.href = "Login.html";
+      }
       const convertAccount = JSON.parse(accountName);
       // console.log(convertAccount);
       document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
