@@ -3014,7 +3014,7 @@ input[type="button"].btn-block {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -120px;
   z-index: 1000;
   display: none;
   float: left;
@@ -4046,6 +4046,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .dropdown-menu {
+    left: -320%;
   margin-top: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
