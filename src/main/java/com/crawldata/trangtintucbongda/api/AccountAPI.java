@@ -53,5 +53,10 @@ public class AccountAPI {
     public int updateAccountEmail(Long account_id, String account_email){
         return accountService.updateAccountEmail(account_id,account_email);
     }
+    @CrossOrigin
+    @RequestMapping("/getAccountId")
+    public AccountEntity getIdAccount(Long account_id){
+        return  accountService.getAccountById(account_id);
+    }
 
 }
