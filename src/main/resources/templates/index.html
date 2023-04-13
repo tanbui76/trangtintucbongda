@@ -45,24 +45,22 @@
                                 </li>
                             </ul>
                             <ul class="navbar-top-right-menu">
-                                <!--                  <li class="nav-item">-->
-                                <!--                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>-->
-                                <!--                  </li>-->
                                 <li class="nav-item">
-                                    <!--                    <a href="#" class="nav-link">Sign in</a>-->
-                                    <!-- <input type="text" readonly="readonly" value="" id="AccountName" /> -->
                                     <a href="thongtincanhan.html">
                                         <p style="font-weight: 750;padding-top: 8%;color:
                           chocolate;" id="AccountName"></p>
                                     </a>
                                 </li>
-                                <li class="nav-item dropdown notification-ui show">
+                                <li class="nav-item dropdown notification-ui show">                           
+                                    <!-- <a href="#" onclick="funcNotifica()"> -->
                                     <a class="nav-link dropdown-toggle notification-ui_icon" href="#" id="navbarDropdown" role="button"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-bell"></i>
                                         <span class="unread-notification"></span>
                                     </a>
-                                    <div class="dropdown-menu notification-ui_dd show" aria-labelledby="navbarDropdown">
+                                    <!-- <a href="#" onclick="MyFunction();return false;"> -->
+                                        <button onclick="MyFunction()" style="position: relative;padding: 0 -9%;width: 5vh;height: 48%; left: -49%; background-color: transparent;border: none;">
+                                    <div class="dropdown-menu notification-ui_dd show" aria-labelledby="navbarDropdown" id="menu-dropdown" style="display:none;">
                                         <div class="notification-ui_dd-header" style="border-bottom: 1px solid #dddcdc;">
                                             <h3 class="text-center">Thông báo</h3>
                                         </div>
@@ -72,6 +70,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                <!-- </a> -->
+                            </button>
+                               
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" onclick="Logout()" class="nav-link">Logout</a>
@@ -132,23 +133,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!--                <ul class="social-media">-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-facebook"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-youtube"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                  <li>-->
-                            <!--                    <a href="#">-->
-                            <!--                      <i class="mdi mdi-twitter"></i>-->
-                            <!--                    </a>-->
-                            <!--                  </li>-->
-                            <!--                </ul>-->
                         </div>
                     </div>
                 </nav>
@@ -776,6 +760,24 @@
 <script src="/static/assets/js/jquery.easeScroll.js"></script>
 <!-- End custom js for this page-->
 
+
+<script>
+    function MyFunction(){
+      
+        if(document.getElementById('menu-dropdown').style.display =='none'){
+            document.getElementById('menu-dropdown').style.display ='block';
+            console.log('hello');
+        }
+        else{
+            document.getElementById('menu-dropdown').style.display ='none';
+            console.log('hi');
+        }
+ 
+      
+    }
+</script>
+
+
 <script>
     function getAccount() {
       var accountName = sessionStorage.getItem('Account');
@@ -787,7 +789,7 @@
       document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
 
     }
-  </script>
+</script>
 <script>
     const getNotifications = "http://localhost:8088/notifications/getAllNotifications";
     fetch(getNotifications)
@@ -797,7 +799,7 @@
       })
       .then(function (gets) {
         var notifications = gets.map(function (gets) {
-          console.log(gets);
+         // console.log(gets);
 
           return `
                           <div class="notification-ui_dd-content">
@@ -872,7 +874,7 @@
         // JSON.parse -> Javascript type
       })
       .then(function (data) {
-        console.log(data);
+      //  console.log(data);
         var news = function (data) {
           return `
         <div class="position-relative" style="width: 100%;">
