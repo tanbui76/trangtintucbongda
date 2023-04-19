@@ -9853,12 +9853,6 @@ h6, .h6 {
   font-weight: 500;
 }
 
-/* Pagination */
-.pagination {
-  padding-bottom: 100px;
-  padding-top: 92px;
-}
-
 .pagination .page-item .page-link {
   border-color: #e6e7e8;
   color: #ababac;
@@ -10876,4 +10870,11 @@ footer .footer-bottom {
   font-size: 17px;
     text-decoration: none;
     color: black;
+}
+
+.page{
+  display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 }
