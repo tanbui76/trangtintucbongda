@@ -791,11 +791,9 @@
       
         if(document.getElementById('menu-dropdown').style.display =='none'){
             document.getElementById('menu-dropdown').style.display ='block';
-            console.log('hello');
         }
         else{
             document.getElementById('menu-dropdown').style.display ='none';
-            console.log('hi');
         }
  
       
@@ -810,8 +808,10 @@
         window.location.href = "Login.html";
       }
       const convertAccount = JSON.parse(accountName);
-      // console.log(convertAccount);
+       console.log(convertAccount);
       document.getElementById('AccountName').innerHTML = convertAccount.account_fullname;
+      console.log(convertAccount.account_fullname);
+      console.log(convertAccount.account_id);
 
     }
 </script>
