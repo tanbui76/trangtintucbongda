@@ -38,6 +38,7 @@ public class SavedAPI {
         SavedEntity savedEntity = new SavedEntity();
         savedEntity.setAccount(accountService.getAccountById(account_id));
         savedEntity.setNews(newsService.getNewsById(news_id));
+        System.out.println("Them tin moi");
         return savedService.savedNews(savedEntity);
     }
 
