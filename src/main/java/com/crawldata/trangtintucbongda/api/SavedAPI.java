@@ -1,11 +1,14 @@
 package com.crawldata.trangtintucbongda.api;
 
 import com.crawldata.trangtintucbongda.entity.AccountEntity;
+import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.SavedEntity;
 import com.crawldata.trangtintucbongda.service.AccountService;
 import com.crawldata.trangtintucbongda.service.NewsService;
 import com.crawldata.trangtintucbongda.service.SavedService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/saved")
@@ -41,6 +44,12 @@ public class SavedAPI {
         System.out.println("Them tin moi");
         return savedService.savedNews(savedEntity);
     }
+    @CrossOrigin
+    @GetMapping("/getSavedNews/{id}")
+    public List<NewsEntity> getAllNewsSaved(@PathVariable("id") Long account_id){
+        return savedService.getAllNewsSaved(account_id);
+    }
+
 
 
 

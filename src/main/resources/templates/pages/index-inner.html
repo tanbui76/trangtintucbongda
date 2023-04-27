@@ -491,7 +491,8 @@
     $.post("http://localhost:8088/saved/saveNews",{
       account_id: account_id, news_id: newsId
     },function(data, stt){
-      alert(data, stt)
+      alert(data, stt);
+      console.log('success!!');
     })
   });
 });
