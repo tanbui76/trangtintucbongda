@@ -5,7 +5,6 @@ import com.crawldata.trangtintucbongda.repository.NewsRepository;
 import com.crawldata.trangtintucbongda.service.NewsService;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;

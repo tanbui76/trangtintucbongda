@@ -1,6 +1,5 @@
 package com.crawldata.trangtintucbongda.api;
 
-import com.crawldata.trangtintucbongda.entity.AccountEntity;
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.SavedEntity;
 import com.crawldata.trangtintucbongda.service.AccountService;

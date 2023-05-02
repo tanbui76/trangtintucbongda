@@ -1,10 +1,5 @@
 package com.crawldata.trangtintucbongda.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 public class NotificationDTO {
     private Long notification_id;
     private String notification_content;

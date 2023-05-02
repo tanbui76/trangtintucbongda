@@ -1,13 +1,10 @@
 package com.crawldata.trangtintucbongda.api;
 
-import com.crawldata.trangtintucbongda.dto.AccountDTO;
-import com.crawldata.trangtintucbongda.entity.AccountEntity;
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.ViewedEntity;
 import com.crawldata.trangtintucbongda.service.AccountService;
 import com.crawldata.trangtintucbongda.service.NewsService;
 import com.crawldata.trangtintucbongda.service.ViewedService;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

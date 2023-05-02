@@ -1,7 +1,6 @@
 package com.crawldata.trangtintucbongda.api;
 
 import com.crawldata.trangtintucbongda.entity.NotificationEntity;
-import com.crawldata.trangtintucbongda.repository.NotificationRepository;
 import com.crawldata.trangtintucbongda.service.NotificationService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

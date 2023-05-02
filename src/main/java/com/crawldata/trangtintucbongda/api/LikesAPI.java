@@ -1,10 +1,11 @@
 package com.crawldata.trangtintucbongda.api;
 
-import com.crawldata.trangtintucbongda.entity.AccountEntity;
 import com.crawldata.trangtintucbongda.entity.LikesEntity;
-import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.service.LikesService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/like")

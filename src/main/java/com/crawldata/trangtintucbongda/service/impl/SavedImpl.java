@@ -1,6 +1,5 @@
 package com.crawldata.trangtintucbongda.service.impl;
 
-import com.crawldata.trangtintucbongda.entity.AccountEntity;
 import com.crawldata.trangtintucbongda.entity.NewsEntity;
 import com.crawldata.trangtintucbongda.entity.SavedEntity;
 import com.crawldata.trangtintucbongda.repository.SavedRepository;

@@ -9,10 +9,6 @@ import com.crawldata.trangtintucbongda.repository.NewsRepository;
 import com.crawldata.trangtintucbongda.service.LikesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Objects;
-import java.util.Optional;
 
 @Service
 public class LikesImpl implements LikesService {
