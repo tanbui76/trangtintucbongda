@@ -6,6 +6,7 @@ import com.crawldata.trangtintucbongda.service.AccountService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class AccountImpl implements AccountService {
     private AccountRepository accountRepository;
@@ -50,11 +51,7 @@ public class AccountImpl implements AccountService {
 //    }
 @Override
 public AccountEntity getAccountById(Long account_id) {
-
-        accountRepository.findById(account_id);
     return accountRepository.findById(account_id).get();
-
 }
-
 
 }
