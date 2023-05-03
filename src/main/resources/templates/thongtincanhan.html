@@ -271,7 +271,8 @@
                                         </p>
                                         <div id="form_update_password" class="width_common box_edit_form"
                                             style="display: none">
-                                            <div class="width_common form_edit form_log">
+                                            <form id="PassForm" action="" method="post">
+                                              <div class="width_common form_edit form_log">
                                                 <p class="width_common tit_edit">Nhập mật khẩu hiện tại</p>
                                                 <div class="item_input_log">
                                                     <input id="pass_old" class="input_form has_transition input_pass"
@@ -325,6 +326,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            </form>
                                         </div>
                                         <a id="btn_change_password" onclick="changeSomething('password')"
                                             href="javascript:void(0)" class="click_edit js_click_edit">Thay đổi</a>
@@ -715,6 +717,35 @@
         //     }
         // });
         $('#EmailForm').submit(function (e) {
+            e.preventDefault();
+            document.getElementById("account_id_delete_account").value = document.getElementById("account_id").value;
+            $.ajax({
+                url: "http://localhost:8088/account/updateAccountEmail",
+                type: $(this).attr('method'),
+                data: $(this).serialize(),
+                success: function (data) {
+                    $.ajax({
+                        url: "http://localhost:8088/account/getAccountById",
+                        type: "POST",
+                        data: {
+                            account_id: Account.account_id,
+                        },
+                        success: function (data) {
+                            
+                        },
+                    })
+                },
+                error: function (xhr, status, error) {
+                    // Xử lý lỗi nếu có.
+                    console.log(error);
+                    alert("Cập nhật thất bại!");
+                }
+            });
+        })
+
+    </script>
+    <script>
+         $('#PassForm').submit(function (e) {
             e.preventDefault();
             document.getElementById("account_id_delete_account").value = document.getElementById("account_id").value;
             $.ajax({
