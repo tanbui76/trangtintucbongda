@@ -59,4 +59,32 @@ public class AccountAPI {
         return  accountService.getAccountById(account_id);
     }
 
+    @CrossOrigin
+    @PostMapping("/updateAccountPass")
+    public int updateAccountPass(Long account_id, String account_pass){
+        return accountService.updateAccountPass(account_id, account_pass);
+
+    }
+
+    @CrossOrigin
+    @PostMapping("/updateAccountAddress")
+    public int updateAccountAddress(Long account_id, String account_pass){
+        return accountService.updateAccountAddress(account_id, account_pass);
+
+    }
+
+    @CrossOrigin
+    @PostMapping("/updateAccountGender")
+    public int updateAccountGender(Long account_id, String account_gender){
+        return accountService.updateAccountGender(account_id, account_gender);
+    }
+
+    @CrossOrigin
+    @PostMapping("/updateAccountTelephone")
+    public int updateAccountTelephone(Long account_id, String account_telephoner){
+        return accountService.updateAccountTelephone(account_id, account_telephoner);
+    }
+
+
+
 }

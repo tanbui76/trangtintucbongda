@@ -45,13 +45,34 @@ public class AccountImpl implements AccountService {
         return accountRepository.updateAccountEmail(account_email,account_id);
     }
 
-//    @Override
-//    public AccountEntity getAccountById(Long account_id) {
-//        return accountRepository.getById(account_id);
-//    }
+    @Override
+    public int updateAccountPass(Long account_id, String account_Pass) {
+        return accountRepository.updateAccountPassword(account_Pass,account_id);
+    }
+
 @Override
 public AccountEntity getAccountById(Long account_id) {
     return accountRepository.findById(account_id).get();
 }
+
+    @Override
+    public int updateAccountBirthday(Long account_id, String account_Birthday) {
+        return accountRepository.updateAccountBirthday(account_Birthday, account_id);
+    }
+
+    @Override
+    public int updateAccountGender(Long account_id, String account_gender) {
+        return accountRepository.updateAccountGender(account_gender, account_id);
+    }
+
+    @Override
+    public int updateAccountTelephone(Long account_id, String account_telephone) {
+        return accountRepository.updateAccountTelephone(account_telephone, account_id);
+    }
+
+    @Override
+    public int updateAccountAddress(Long account_id, String account_address) {
+        return accountRepository.updateAccountAddress(account_address, account_id);
+    }
 
 }

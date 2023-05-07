@@ -316,13 +316,13 @@
                                                     <span class="error_password_new width_common mess_error"></span>
                                                 </div>
                                                 <div class="item_input_log item_button_act">
-                                                    <button id="btn_save_password" class="pri_button btn_log  ">Đổi mật
+                                                    <button id="btn_save_password" class="pri_button btn_log">Đổi mật
                                                         khẩu
                                                     </button>
                                                     <div class="right note_edit_mk">
-                                                        <a href="javascript:void(0)" id="btn_forgot_pass"
+                                                        <!-- <a href="javascript:void(0)" id="btn_forgot_pass"
                                                             data-email="buinguyennhattan12122002@gmail.com">Đặt lại mật
-                                                            khẩu</a>
+                                                            khẩu</a> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -772,6 +772,28 @@
             });
         })
 
+    </script>
+    <script>
+        function funcChangePass(){
+            var account = sessionStorage.getItem("Account");
+            Account = JSON.parse(account);
+            console.log(Account);
+            console.log(Account.account_password);
+
+            
+            console.log(account);
+            var oldPass = document.getElementById('pass_old');
+            var newPass = document.getElementById('pass_new');
+            if(oldPass === Account.account_password){
+                console.log("Mật khẩu cũ không đúng!!!");
+            }
+            else{
+
+               
+            } 
+
+
+        }
     </script>
 </body>
 

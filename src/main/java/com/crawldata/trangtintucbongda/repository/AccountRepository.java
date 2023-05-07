@@ -33,4 +33,28 @@ public interface AccountRepository extends JpaRepository<AccountEntity, Long> {
     @Query("UPDATE AccountEntity u SET u.account_password = :account_password WHERE u.account_id = :account_id")
     int updateAccountPassword(@Param("account_password") String account_password,@Param("account_id") Long account_id);
 
+    @Transactional
+    @Modifying
+    @Query("UPDATE AccountEntity u SET account_birthday = :account_birthday where u.account_id = :account_id")
+    int updateAccountBirthday(@Param("account_birthday") String account_birthday,@Param("account_id") Long account_id);
+
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE AccountEntity u SET account_gender = :account_gender where u.account_id = :account_id")
+    int updateAccountGender(@Param("account_gener") String account_gener, @Param("account_id") Long account_id);
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE AccountEntity u SET account_address = :account_address where u.account_id = :account_id")
+    int updateAccountAddress(@Param("account_telephone") String account_address, @Param("account_id") Long account_id);
+
+
+
+
+
+
+
+
+
 }
