@@ -68,8 +68,8 @@ public class AccountAPI {
 
     @CrossOrigin
     @PostMapping("/updateAccountAddress")
-    public int updateAccountAddress(Long account_id, String account_pass){
-        return accountService.updateAccountAddress(account_id, account_pass);
+    public int updateAccountAddress(Long account_id, String account_address){
+        return accountService.updateAccountAddress(account_id, account_address);
 
     }
 
