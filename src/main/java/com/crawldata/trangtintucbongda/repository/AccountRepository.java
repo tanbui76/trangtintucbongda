@@ -47,7 +47,7 @@ public interface AccountRepository extends JpaRepository<AccountEntity, Long> {
     @Transactional
     @Modifying
     @Query("UPDATE AccountEntity u SET account_country = :account_country where u.account_id = :account_id")
-    int updateAccountAddress(@Param("account_country") String account_address, @Param("account_id") Long account_id);
+    int updateAccountAddress(@Param("account_country") String account_country, @Param("account_id") Long account_id);
 
 
 
