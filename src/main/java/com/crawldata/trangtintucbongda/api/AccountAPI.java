@@ -85,6 +85,12 @@ public class AccountAPI {
         return accountService.updateAccountTelephone(account_id, account_telephoner);
     }
 
+    @CrossOrigin
+    @PostMapping("/updateAccountBirthday")
+    public int updateAccountBirthday(Long account_id, String account_birthday){
+        return accountService.updateAccountBirthday(account_id, account_birthday);
+    }
+
 
 
 }
