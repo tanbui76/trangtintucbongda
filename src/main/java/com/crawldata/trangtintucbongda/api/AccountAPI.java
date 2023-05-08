@@ -70,6 +70,7 @@ public class AccountAPI {
     @PostMapping("/updateAccountAddress")
     public int updateAccountAddress(Long account_id, String account_country){
         System.out.println("success");
+        System.out.println(account_id+"" + account_country);
         return accountService.updateAccountAddress(account_id, account_country);
 
     }
@@ -83,7 +84,7 @@ public class AccountAPI {
     @CrossOrigin
     @PostMapping("/updateAccountTelephone")
     public int updateAccountTelephone(Long account_id, String account_telephone){
-        System.out.println("succes");
+        System.out.println(account_id+" "+account_telephone);
         return accountService.updateAccountTelephone(account_id, account_telephone);
 
     }
